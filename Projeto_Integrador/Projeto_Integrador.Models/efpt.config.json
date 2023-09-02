@@ -1,0 +1,67 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "DOACAO_SANGUEContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Projeto_Integrador.Models",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[CAD_DATA_HORA_DISP]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CAD_DOACAO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CAD_DOADOR]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CAD_ENDERECO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CAD_LOCAL_DOACAO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CREDENCIAIS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FICHA_DOACAO]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "notebook-marcos\\sqlexpress.DOACAO_SANGUE.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
