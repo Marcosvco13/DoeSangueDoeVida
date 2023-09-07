@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <div class="container">
+        <div class="row justify-content-center">
+
+                <div class="loginArea">
+
+                    <img src="~/imgs/logo-clinica.svg" />
+
+                    <strong>Bem vindo(a) de volta!</strong>
+                    <br>
+                    <span>Não tem uma conta?</span>
+                    <a class="btnRegistrar" asp-area="" asp-controller="Home" asp-action="Register"> Registrar</a>
+
+
+                    <div class="secondLayer">
+                        <p>E-mail</p>
+                        <input type='text' placeholder='  Digite seu e-mail'></input>
+                        <p>Senha</p>
+                        <input type='password' placeholder='  **********'></input>
+                        <button type='submit'>
+                            <ArrowLineRight size={20} />
+                            Entrar
+                        </button>
+                    </div>
+                </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,29 @@
+﻿
+.header img {
+    height: 2.5em;
+    margin-left: 4em;
+}
+
+
+.enterButton {
+    display: flex;
+    padding: 5px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--base-white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.navbar-nav{
+    gap: 1rem;
+    margin-right: 2rem;
+}
+
+.logoContent{
+    margin-left: 2rem;
+}
+.logoContent > a{
+    margin-left: 1rem;
+}
+

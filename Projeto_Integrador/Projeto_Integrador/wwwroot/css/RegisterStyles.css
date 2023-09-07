@@ -1,0 +1,120 @@
+﻿body {
+    background-color: #fafafa;
+}
+
+.rowPrincipal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.colD {
+    background-color: #ffffff;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+.mesageText {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 40px;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 14rem;
+    margin-right: 10rem;
+}
+.mesageText > strong {
+    color: var(--gray-neutral-900, #111927);
+    font-family: Roboto;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px;
+    letter-spacing: -1.44px;
+}
+.mesageText > span {
+    color: var(--gray-neutral-700, #384250);
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.doctorIMG > img {
+    width: 70%;
+    height: 70%;
+    margin-left:9rem;
+    margin-right:10rem;
+    margin-bottom:1rem;
+}
+
+
+
+
+.colE {
+    background-color: #fafafa;
+    width: 50%;
+}
+
+.summary {
+    align-items: center;
+    text-align: left;
+    margin-left: 6rem;
+    margin-top:2rem;
+}
+
+.summary > strong {
+    color: rgba(0, 0, 0, 0.85);
+    font-family: Roboto;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.summary > span {
+    color: #444150;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+}
+
+
+.Inputs {
+    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-right: 7rem;
+}
+
+.Inputs > button {
+    border-radius: 6px;
+    background: #EF233C;
+    border: none;
+    color: white;
+    width: 50%;
+    height: 2.7rem;
+    margin-bottom: 0rem;
+}
+
+.row1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    gap: 3rem;
+}
+
+.col-md-6 mb-4 > input{
+    height: 2rem;
+}
+
