@@ -4,7 +4,7 @@
 
 .loginArea {
     background: red;
-    margin-top: 5rem;
+    margin-top: 4rem;
     display: inline-flex;
     flex-direction: column;
     padding: 0 40px;
@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     margin-top: 4rem;
+    justify-content: center;
 }
 
 .loginArea img {
