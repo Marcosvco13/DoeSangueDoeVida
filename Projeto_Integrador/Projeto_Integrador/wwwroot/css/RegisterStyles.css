@@ -2,24 +2,16 @@
     background-color: #fff;
 }
 
-.row1 {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-radius: 10px;
-    background: #f8f8f8;
-    ;
-    box-shadow: 0px 4px 56px 0px rgba(0, 0, 0, 0.04), 0px 12px 16px 0px rgba(0, 0, 0, 0.04);
+.row{
+
 }
 
 .colD {
-    background-color: #f8f8f8;
-    width: 30%;
+    background-color: #EF233C;
+    width: 40%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
+
 }
 
 .colD > img {
@@ -28,14 +20,15 @@
 }
 
 .colE {
-    background-color: rgb(255, 255, 255);
+    background-color: darkgray;
     width: 60%;
 }
+
 
 .summary {
     align-items: center;
     text-align: left;
-    margin-top: 3rem;
+
     margin-left: 7rem;
 }
 
@@ -75,29 +68,11 @@
 }
 
 
-.formGroup > input {
-    margin-bottom: 1rem;
-    border-radius: 6px;
-    border: 1px solid #D9D9D9;
-    background: #FFF;
-    width: 50%;
+.row1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    gap: 3rem;
 }
 
-.formGroup > label {
-    color: rgba(0, 0, 0, 0.85);
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; /* 150% */
-}
-
-.formGroup > select {
-    font-family: Roboto;
-    margin-bottom: 1rem;
-    border-radius: 6px;
-    border: 1px solid #D9D9D9;
-    background: #FFF;
-    width: 416px;
-    height: 2.3rem;
-}
