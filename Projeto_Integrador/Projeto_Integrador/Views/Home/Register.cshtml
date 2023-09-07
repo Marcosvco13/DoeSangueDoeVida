@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="row1">
+        <div class="colE">
+            
+            <div class="summary">
+                <strong>Bem vindo(a)!</strong>
+                <br>
+                <span>Já possui uma conta? <a href="#" class="text"> Entrar</a></span>
+            </div>
+
+            <div class="Inputs">
+
+                <div class="row1">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1m">Nome</label>
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1n">Data de Nascimento</label>
+                            <input type="date" id="form3Example1n" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row1">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1m">CPF</label>
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1n">RG</label>
+                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row1">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1m">Orgão Expedidor</label>
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1n">Profissão</label>
+                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row1">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1m">Religião</label>
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1n">Telefone</label>
+                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row1">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1m">E-mail</label>
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1n">Confirme seu E-mail</label>
+                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row1">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1m">Senha</label>
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" htmlFor="form3Example1n">Confirme sua senha</label>
+                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                    <h6 class="mb-0 me-4">Gênero: </h6>
+
+                    <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                               value="option1" />
+                        <label class="form-check-label" htmlFor="femaleGender">Feminio</label>
+                    </div>
+
+                    <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                               value="option2" />
+                        <label class="form-check-label" htmlFor="maleGender">Masculino</label>
+                    </div>
+
+                    <div class="form-check form-check-inline mb-0">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                               value="option3" />
+                        <label class="form-check-label" htmlFor="otherGender">Outro</label>
+                    </div>
+                </div>
+
+                <button type='submit'>
+                    <ArrowLineRight size={20} />
+                    Registrar
+                </button>
+            </div>
+        </div>
+
+        <div class="colD">
+            <img src={doctorImg} />
+        </div>
+    </div>
+</div>

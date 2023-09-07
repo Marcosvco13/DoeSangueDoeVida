@@ -16,3 +16,41 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+:root {
+    --white-background: #fff;
+    --red-button: #D90429;
+    --red-button-hover: #D81F1F;
+    --blue-background: #2B2D42;
+    --gray-background: #F9FAFB;
+    --gray-900: #111927;
+    --gray-700: #384250;
+    --gray-circle1: #2B2D42;
+    --gray-circle2: #8D99AE;
+    --yellow-circle: #FCD53A;
+    --blue-circle: #175CD3;
+    --gray-login-background: #F4F8FA;
+}
+
+focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--green-500);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--white-background);
+    color: var(--gray-900);
+    -webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}

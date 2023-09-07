@@ -1,10 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\imgs\blood-donate.svg" />
+    <None Include="wwwroot\imgs\blood-requirements.svg" />
+    <None Include="wwwroot\imgs\blood-test.svg" />
+    <None Include="wwwroot\imgs\blue-shape.svg" />
+    <None Include="wwwroot\imgs\doctor.svg" />
+    <None Include="wwwroot\imgs\login.svg" />
+    <None Include="wwwroot\imgs\logo-clinica.svg" />
+    <None Include="wwwroot\imgs\person.svg" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
@@ -17,6 +28,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Src\" />
   </ItemGroup>
 
 </Project>

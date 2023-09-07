@@ -1,0 +1,141 @@
+﻿.col {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 40px;
+    margin-top: 3rem;
+}
+
+.row1 {
+    display: flex;
+    align-items: center;
+}
+
+.col > strong {
+    color: var(--gray-neutral-900, #111927);
+    font-family: Roboto;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px;
+    letter-spacing: -1.44px;
+}
+
+.col > span {
+    color: var(--gray-neutral-700, #384250);
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.col img {
+    width: 534px;
+    height: 520px;
+    flex-shrink: 0;
+}
+
+.submitButton {
+    height: 44px;
+    width: 122px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid var(--bord-button-blood, #810319);
+    background: #D90429;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--white-background);
+}
+
+.sobreButton {
+    height: 44px;
+    width: 122px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    border-radius: 16px;
+    border: 1px solid var(--gray-300, #D0D5DD);
+    background: var(--base-white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+}
+
+.dados {
+    background: var(--gray-background);
+    display: inline-flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 20rem;
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.dados strong {
+    color: var(--gray-neutral-900, #111927);
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+}
+
+.dados span {
+    color: var(--gray-neutral-700, #384250);
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.requirements span {
+    color: var(--white-background);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 2rem;
+}
+
+.requirements strong {
+    color: var(--111927, #EDF2F4);
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; /* 125% */
+    letter-spacing: -0.96px;
+    margin-bottom: 30px;
+}
+
+.requirements {
+    background: var(--blue-background);
+    display: inline-flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.btnQueroDoar {
+    height: 44px;
+    width: 122px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--gray-warm-900, #1C1917);
+    background: var(--1-c-1917, #D90429);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: white;
+}
