@@ -3,28 +3,28 @@
 }
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="rowPrincipal">
         <div class="colE">
             
             <div class="summary">
                 <strong>Bem vindo(a)!</strong>
                 <br>
-                <span>Já possui uma conta? <a href="#" class="text"> Entrar</a></span>
+                <span>Já possui uma conta? 
+                <a class="btnEntrar" asp-area="" asp-controller="Home" asp-action="Login"> Entrar</a>
             </div>
 
             <div class="Inputs">
-
                 <div class="row1">
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1m">Nome</label>
-                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1m" class="form-control" />
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1n">Data de Nascimento</label>
-                            <input type="date" id="form3Example1n" class="form-control form-control-lg" />
+                            <input type="date" id="form3Example1n" class="form-control" />
                         </div>
                     </div>
                 </div>
@@ -33,13 +33,13 @@
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1m">CPF</label>
-                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1m" class="form-control" />
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1n">RG</label>
-                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1n" class="form-control" />
                         </div>
                     </div>
                 </div>
@@ -48,13 +48,13 @@
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1m">Orgão Expedidor</label>
-                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1m" class="form-control" />
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1n">Profissão</label>
-                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1n" class="form-control" />
                         </div>
                     </div>
                 </div>
@@ -63,13 +63,13 @@
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1m">Religião</label>
-                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1m" class="form-control" />
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1n">Telefone</label>
-                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1n" class="form-control" />
                         </div>
                     </div>
                 </div>
@@ -78,13 +78,13 @@
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1m">E-mail</label>
-                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1m" class="form-control" />
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1n">Confirme seu E-mail</label>
-                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1n" class="form-control" />
                         </div>
                     </div>
                 </div>
@@ -93,13 +93,13 @@
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1m">Senha</label>
-                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1m" class="form-control" />
                         </div>
                     </div>
                     <div class="col-md-6 mb-4">
                         <div class="form-outline">
                             <label class="form-label" htmlFor="form3Example1n">Confirme sua senha</label>
-                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                            <input type="text" id="form3Example1n" class="form-control" />
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,13 @@
         </div>
 
         <div class="colD">
-            <h1>Oi</h1>
+            <div class="mesageText">
+                <strong>Quase lá!</strong>
+                <span>Preencha os campos para completar seu cadastro.</span>
+            </div>
+            <div class="doctorIMG">
+                <img src="~/imgs/cadastro.svg" />
+            </div>
         </div>
     </div>
 </div>

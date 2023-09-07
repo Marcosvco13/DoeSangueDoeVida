@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MAEy1UBdNklCNDKA17MtCy9pY1iY5Vvz9jjh5au2ZGc=",
+  "Hash": "buzUrhu2Tz6xx3FNqH6ubhUlcC4LZnPH375x0yAdn50=",
   "Source": "Projeto_Integrador",
   "BasePath": "_content/Projeto_Integrador",
   "Mode": "Default",
@@ -219,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\blue-shape.svg"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\cadastro.svg",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "imgs/cadastro.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\cadastro.svg"
     },
     {
       "Identity": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\doctor.svg",
