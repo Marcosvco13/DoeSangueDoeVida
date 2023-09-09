@@ -68,8 +68,8 @@
     padding: 20px;
 }
 
-.dados {
-    background: var(--gray-background);
+.card-group {
+    background: #f0f0f0;
     display: inline-flex;
     align-items: center;
     padding: 0 40px;
@@ -78,7 +78,21 @@
     margin-top: 6rem;
 }
 
-.dados strong {
+.card > img {
+    height: 4.5rem;
+    width: 4.5rem;
+    
+}
+.card {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border: none;
+    background: none;
+    flex-direction:row;
+
+}
+.card-group strong {
     color: var(--gray-neutral-900, #111927);
     font-family: Roboto;
     font-size: 36px;
@@ -87,14 +101,17 @@
     line-height: 44px;
     letter-spacing: -0.72px;
 }
-
-.dados span {
+.card-group span {
     color: var(--gray-neutral-700, #384250);
     font-family: Roboto;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
+}
+.card-body {
+    justify-content: center;
+    align-items: center;
 }
 
 .requirements span {

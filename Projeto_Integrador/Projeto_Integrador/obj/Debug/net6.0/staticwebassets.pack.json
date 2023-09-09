@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\imgs\\blood-test.svg"
     },
     {
+      "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\blood.svg",
+      "PackagePath": "staticwebassets\\imgs\\blood.svg"
+    },
+    {
       "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\blue-shape.svg",
       "PackagePath": "staticwebassets\\imgs\\blue-shape.svg"
     },
@@ -69,8 +73,16 @@
       "PackagePath": "staticwebassets\\imgs\\logo-clinica.svg"
     },
     {
+      "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\people.svg",
+      "PackagePath": "staticwebassets\\imgs\\people.svg"
+    },
+    {
       "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\person.svg",
       "PackagePath": "staticwebassets\\imgs\\person.svg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\statistic.svg",
+      "PackagePath": "staticwebassets\\imgs\\statistic.svg"
     },
     {
       "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\js\\site.js",

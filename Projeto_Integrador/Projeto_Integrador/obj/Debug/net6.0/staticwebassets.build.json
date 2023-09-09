@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CMzi5N3PYinqaPETmVuJx0ChFF1N9thPtJcCkYNfGIs=",
+  "Hash": "qucW0QBroiiOtcoWorNyn9CC5JIxYLb2crOETyBQeaQ=",
   "Source": "Projeto_Integrador",
   "BasePath": "_content/Projeto_Integrador",
   "Mode": "Default",
@@ -187,6 +187,23 @@
       "OriginalItemSpec": "wwwroot\\imgs\\about-us.svg"
     },
     {
+      "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\blood.svg",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "imgs/blood.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\blood.svg"
+    },
+    {
       "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\blood-donate.svg",
       "SourceId": "Projeto_Integrador",
       "SourceType": "Discovered",
@@ -323,6 +340,23 @@
       "OriginalItemSpec": "wwwroot\\imgs\\logo-clinica.svg"
     },
     {
+      "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\people.svg",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "imgs/people.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\people.svg"
+    },
+    {
       "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\person.svg",
       "SourceId": "Projeto_Integrador",
       "SourceType": "Discovered",
@@ -338,6 +372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\person.svg"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\statistic.svg",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "imgs/statistic.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\statistic.svg"
     },
     {
       "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\js\\site.js",
