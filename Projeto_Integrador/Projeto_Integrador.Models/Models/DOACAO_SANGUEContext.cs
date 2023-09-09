@@ -18,6 +18,10 @@ namespace Projeto_Integrador.Models.Models
         {
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsbuilder)
+
+=> optionsbuilder.UseSqlServer("data source=Localhost\\SQLEXPRESS;Initial Catalog=DOACAO_SANGUE;Integrated Security=True; TrustServerCertificate=True");
+
         public virtual DbSet<CadDataHoraDisp> CadDataHoraDisp { get; set; }
         public virtual DbSet<CadDoacao> CadDoacao { get; set; }
         public virtual DbSet<CadDoador> CadDoador { get; set; }
