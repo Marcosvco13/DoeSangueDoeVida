@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Projeto_Integrador.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\css\\ContatoStyles.css",
+      "PackagePath": "staticwebassets\\css\\ContatoStyles.css"
+    },
+    {
       "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\css\\HeaderStyles.css",
       "PackagePath": "staticwebassets\\css\\HeaderStyles.css"
     },
@@ -61,8 +65,16 @@
       "PackagePath": "staticwebassets\\imgs\\cadastro.svg"
     },
     {
+      "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\contact.svg",
+      "PackagePath": "staticwebassets\\imgs\\contact.svg"
+    },
+    {
       "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\doctor.svg",
       "PackagePath": "staticwebassets\\imgs\\doctor.svg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\email.svg",
+      "PackagePath": "staticwebassets\\imgs\\email.svg"
     },
     {
       "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\login.svg",
@@ -81,8 +93,16 @@
       "PackagePath": "staticwebassets\\imgs\\person.svg"
     },
     {
+      "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\pin.svg",
+      "PackagePath": "staticwebassets\\imgs\\pin.svg"
+    },
+    {
       "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\statistic.svg",
       "PackagePath": "staticwebassets\\imgs\\statistic.svg"
+    },
+    {
+      "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\telephone.svg",
+      "PackagePath": "staticwebassets\\imgs\\telephone.svg"
     },
     {
       "Id": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\js\\site.js",

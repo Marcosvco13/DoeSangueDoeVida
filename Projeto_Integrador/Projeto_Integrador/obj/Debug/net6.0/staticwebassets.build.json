@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qucW0QBroiiOtcoWorNyn9CC5JIxYLb2crOETyBQeaQ=",
+  "Hash": "GkQsx6XUoxVMi5vlvJd7qecFz2tYi5mtDJtNHVg2JWE=",
   "Source": "Projeto_Integrador",
   "BasePath": "_content/Projeto_Integrador",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Projeto_Integrador.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\css\\ContatoStyles.css",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "css/ContatoStyles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ContatoStyles.css"
     },
     {
       "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\css\\HeaderStyles.css",
@@ -289,6 +306,23 @@
       "OriginalItemSpec": "wwwroot\\imgs\\cadastro.svg"
     },
     {
+      "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\contact.svg",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "imgs/contact.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\contact.svg"
+    },
+    {
       "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\doctor.svg",
       "SourceId": "Projeto_Integrador",
       "SourceType": "Discovered",
@@ -304,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\doctor.svg"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\email.svg",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "imgs/email.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\email.svg"
     },
     {
       "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\login.svg",
@@ -374,6 +425,23 @@
       "OriginalItemSpec": "wwwroot\\imgs\\person.svg"
     },
     {
+      "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\pin.svg",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "imgs/pin.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\pin.svg"
+    },
+    {
       "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\statistic.svg",
       "SourceId": "Projeto_Integrador",
       "SourceType": "Discovered",
@@ -389,6 +457,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\statistic.svg"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\telephone.svg",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "imgs/telephone.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\telephone.svg"
     },
     {
       "Identity": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\js\\site.js",

@@ -10,6 +10,22 @@
     display: flex;
     align-items: center;
 }
+.col > h1 {
+    color: var(--gray-neutral-900, #111927);
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -1.44px;
+}
+.col > h3 {
+    color: var(--gray-neutral-900, #111927);
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -1.44px;
+}
 
 .col > strong {
     color: var(--gray-neutral-900, #111927);
