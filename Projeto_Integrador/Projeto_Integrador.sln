@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto_Integrador", "Projeto_Integrador\Projeto_Integrador.csproj", "{AD4F09F0-E5AA-4EA1-ADD9-E8FD408DCDCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto_Integrador", "Projeto_Integrador\Projeto_Integrador.csproj", "{AD4F09F0-E5AA-4EA1-ADD9-E8FD408DCDCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto_Integrador.Models", "Projeto_Integrador.Models\Projeto_Integrador.Models.csproj", "{E7284F82-629F-4654-8FF3-DFF37468C1EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto_Integrador.Models", "Projeto_Integrador.Models\Projeto_Integrador.Models.csproj", "{E7284F82-629F-4654-8FF3-DFF37468C1EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
