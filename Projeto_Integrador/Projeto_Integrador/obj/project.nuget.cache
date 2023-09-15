@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wqxxI93Bl6zUgzBVeTLUJ9wNswif6q7SwxgBH9qAsU9fJ7ClFUNZkUBuO1zTdDeWOxc39MFPaRuSklUL46IB4Q==",
+  "dgSpecHash": "yD/MGF9UnsKOe1Tk/26gN7UTVtE9DIzqFif5BYLNWaJLaxxrgJrgs52QFg3tSoPoJdsymklMUXRMjpEVbMBe2Q==",
   "success": true,
   "projectFilePath": "D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\Projeto_Integrador.csproj",
   "expectedPackageFiles": [
@@ -230,5 +230,12 @@
     "C:\\Users\\marco\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

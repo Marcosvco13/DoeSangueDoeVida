@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MOh0a0bHRh2S1RAKRI7hhFaPZSC69eZE226655Xp9gsPsBvYTSZCaYNFiz06tNuQcsHpxivjCZVl1DOrehfhWg==",
+  "dgSpecHash": "PvyHw2oZ73MQjp1qmzmxYj98BUsFn4u4MD7wI1FKL8+0MmoP5rPw8V8TyaBcFOEBD9zejZRFEPTL6cPeTD7FYg==",
   "success": true,
   "projectFilePath": "D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj",
   "expectedPackageFiles": [
@@ -45,5 +45,12 @@
     "C:\\Users\\marco\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
