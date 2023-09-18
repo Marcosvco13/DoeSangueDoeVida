@@ -21,9 +21,11 @@ namespace Projeto_Integrador.ViewModel
         public string Email { get; set; }
         public string Telefone { get; set; }
         public DateTime? DataNascimento { get; set; }
-
+        public string Religiao { get; set; }
+        public string Profissao { get; set; }
         public string Sexo { get; set; }
         #endregion Doador
+
         #region Credencial
         public int CodCred { get; set; }
         public string login { get; set; }
@@ -35,17 +37,19 @@ namespace Projeto_Integrador.ViewModel
         {
             var db = new DOACAO_SANGUEContext();
             var doador = db.CadDoador.Find(id);
-            var credDoador = db.Credenciais.FirstOrDefault(x => x.IdUsuario == id);
+            var credencial = db.Credenciais.FirstOrDefault(x => x.IdUsuario == id);
             var doadorVM = new DoadorVM();
-            doadorVM.CodCred = credDoador.Id;
-            doadorVM.login = credDoador.Login;
-            doadorVM.senha = credDoador.Senha;
+            doadorVM.CodCred = credencial.Id;
+            doadorVM.login = credencial.Login;
+            doadorVM.senha = credencial.Senha;
             doadorVM.Cpf = doador.Cpf.Length < 14 ? doador.Cpf : "";
             doadorVM.Rg = doador.Rg;
             doadorVM.OrgExp = doador.OrgExp;
             doadorVM.Codigo = doador.Id;
             doadorVM.DataNascimento = doador.DataNasc;
             doadorVM.Email = doador.Email;
+            doadorVM.Religiao = doador.Religiao;
+            doadorVM.Profissao = doador.Profissao;
             doadorVM.Nome = doador.Nome;
             doadorVM.NomeMae = doador.NomeMae;
             doadorVM.NomePai = doador.NomePai;
@@ -57,13 +61,13 @@ namespace Projeto_Integrador.ViewModel
         {
             var db = new DOACAO_SANGUEContext();
             return (from doador in db.CadDoador
-                    join cred in db.Credenciais on doador.Id
-                    equals cred.IdUsuario
+                    join credencial in db.Credenciais on doador.Id
+                    equals credencial.IdUsuario
                     select new DoadorVM
                     {
-                        CodCred = cred.Id,
-                        login = cred.Login,
-                        senha = cred.Senha,
+                        CodCred = credencial.Id,
+                        login = credencial.Login,
+                        senha = credencial.Senha,
                         Cpf = doador.Cpf.Length < 14 ? doador.Cpf : "",
                         Rg = doador.Rg,
                         OrgExp = doador.OrgExp,
@@ -74,7 +78,9 @@ namespace Projeto_Integrador.ViewModel
                         NomeMae = doador.NomeMae,
                         NomePai = doador.NomePai,
                         Sexo = doador.Sexo,
-                        Telefone = doador.Telefone
+                        Telefone = doador.Telefone,
+                        Religiao = doador.Religiao,
+                        Profissao = doador.Profissao
                     }).ToList();
         }
     }

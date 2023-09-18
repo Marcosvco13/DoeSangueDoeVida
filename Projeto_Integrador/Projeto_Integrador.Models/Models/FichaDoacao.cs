@@ -3,24 +3,25 @@
 using System;
 using System.Collections.Generic;
 
-namespace Projeto_Integrador.Models.Models
+namespace Projeto_Integrador.Models.Models;
+
+public partial class FichaDoacao
 {
-    public partial class FichaDoacao
-    {
-        public FichaDoacao()
-        {
-            CadDoacao = new HashSet<CadDoacao>();
-        }
+    public int Id { get; set; }
 
-        public int Id { get; set; }
-        public int IdUsuario { get; set; }
-        public string TipoSangue { get; set; }
-        public DateTime UltimaDoacao { get; set; }
-        public int Peso { get; set; }
-        public int Fumante { get; set; }
-        public string TempFumante { get; set; }
+    public int IdUsuario { get; set; }
 
-        public virtual CadDoador IdUsuarioNavigation { get; set; }
-        public virtual ICollection<CadDoacao> CadDoacao { get; set; }
-    }
+    public string TipoSangue { get; set; }
+
+    public DateTime UltimaDoacao { get; set; }
+
+    public int Peso { get; set; }
+
+    public int Fumante { get; set; }
+
+    public string TempFumante { get; set; }
+
+    public virtual ICollection<CadDoacao> CadDoacao { get; set; } = new List<CadDoacao>();
+
+    public virtual CadDoador IdUsuarioNavigation { get; set; }
 }

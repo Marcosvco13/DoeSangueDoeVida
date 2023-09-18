@@ -3,15 +3,17 @@
 using System;
 using System.Collections.Generic;
 
-namespace Projeto_Integrador.Models.Models
-{
-    public partial class CadDataHoraDisp
-    {
-        public int Id { get; set; }
-        public int IdLocal { get; set; }
-        public DateTime Date { get; set; }
-        public bool Disp { get; set; }
+namespace Projeto_Integrador.Models.Models;
 
-        public virtual CadLocalDoacao IdLocalNavigation { get; set; }
-    }
+public partial class CadDataHoraDisp
+{
+    public int Id { get; set; }
+
+    public int IdLocal { get; set; }
+
+    public DateTime Date { get; set; }
+
+    public bool Disp { get; set; }
+
+    public virtual CadLocalDoacao IdLocalNavigation { get; set; }
 }

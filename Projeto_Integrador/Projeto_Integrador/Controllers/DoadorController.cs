@@ -8,7 +8,7 @@ namespace Projeto_Integrador.Controllers
     public class DoadorController : Controller
     {
         private ServiceDoador _ServiceDoador;
-        public DoadorController(DOACAO_SANGUEContext context)
+        public DoadorController()
         {
             _ServiceDoador = new ServiceDoador();
         }
@@ -20,28 +20,33 @@ namespace Projeto_Integrador.Controllers
         }
 
         [HttpPost]
-        public async  Task<IActionResult> Create(DoadorVM doadorVM)
+        public async Task<IActionResult> Create(DoadorVM doadorVM)
         {
             var doador = new CadDoador();
             doador.Nome = doadorVM.Nome;
             doador.NomeMae = doadorVM.NomeMae;
             doador.NomePai = doadorVM.NomePai;
+            doador.DataNasc = (DateTime)doadorVM.DataNascimento;
             doador.Cpf = doadorVM.Cpf;
             doador.Rg = doadorVM.Rg;
             doador.OrgExp = doadorVM.OrgExp;
             doador.Email = doadorVM.Email;
             doador.Telefone = doadorVM.Telefone;
             doador.Sexo = doadorVM.Sexo;
+            doador.Religiao = doadorVM.Religiao;
+            doador.Profissao = doadorVM.Profissao;
 
             var listarCred = new List<Credenciais>();
 
-            var cred = new Credenciais()
+            var credencial = new Credenciais()
             {
                 Login = doadorVM.login,
                 Senha = doadorVM.senha,
             };
 
-            await _ServiceDoador.oRepositoryDoador.IncluirAsync(doador, cred);
+            doador = await _ServiceDoador.oRepositoryDoador.IncluirAsync(doador);
+            credencial = await _ServiceDoador.oRepositoryCredenciais.IncluirAsync(credencial);
+
             return View(doadorVM);
         }
 

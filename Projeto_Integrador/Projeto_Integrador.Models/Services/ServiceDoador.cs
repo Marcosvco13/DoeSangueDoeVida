@@ -10,10 +10,12 @@ namespace Projeto_Integrador.Models.Services
     public class ServiceDoador
     {
         public RepositoryDoador oRepositoryDoador { get; set; }
+        public RepositoryCredenciais oRepositoryCredenciais { get; set; }
 
         public ServiceDoador()
         {
             oRepositoryDoador = new RepositoryDoador();
+            oRepositoryCredenciais = new RepositoryCredenciais();
         }
     }
 }

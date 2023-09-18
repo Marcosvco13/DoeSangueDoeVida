@@ -3,33 +3,39 @@
 using System;
 using System.Collections.Generic;
 
-namespace Projeto_Integrador.Models.Models
+namespace Projeto_Integrador.Models.Models;
+
+public partial class CadDoador
 {
-    public partial class CadDoador
-    {
-        public CadDoador()
-        {
-            CadEndereco = new HashSet<CadEndereco>();
-            Credenciais = new HashSet<Credenciais>();
-            FichaDoacao = new HashSet<FichaDoacao>();
-        }
+    public int Id { get; set; }
 
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Sexo { get; set; }
-        public string Cpf { get; set; }
-        public string Rg { get; set; }
-        public string OrgExp { get; set; }
-        public string Profissao { get; set; }
-        public string Religiao { get; set; }
-        public string Telefone { get; set; }
-        public string Email { get; set; }
-        public DateTime DataNasc { get; set; }
-        public string NomeMae { get; set; }
-        public string NomePai { get; set; }
+    public string Nome { get; set; }
 
-        public virtual ICollection<CadEndereco> CadEndereco { get; set; }
-        public virtual ICollection<Credenciais> Credenciais { get; set; }
-        public virtual ICollection<FichaDoacao> FichaDoacao { get; set; }
-    }
+    public string Sexo { get; set; }
+
+    public string Cpf { get; set; }
+
+    public string Rg { get; set; }
+
+    public string OrgExp { get; set; }
+
+    public string Profissao { get; set; }
+
+    public string Religiao { get; set; }
+
+    public string Telefone { get; set; }
+
+    public string Email { get; set; }
+
+    public DateTime DataNasc { get; set; }
+
+    public string NomeMae { get; set; }
+
+    public string NomePai { get; set; }
+
+    public virtual ICollection<CadEndereco> CadEndereco { get; set; } = new List<CadEndereco>();
+
+    public virtual ICollection<Credenciais> Credenciais { get; set; } = new List<Credenciais>();
+
+    public virtual ICollection<FichaDoacao> FichaDoacao { get; set; } = new List<FichaDoacao>();
 }
