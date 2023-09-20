@@ -13,7 +13,7 @@ public partial class CadDataHoraDisp
 
     public DateTime Date { get; set; }
 
-    public bool Disp { get; set; }
+    public int Disp { get; set; }
 
     public virtual CadLocalDoacao IdLocalNavigation { get; set; }
 }

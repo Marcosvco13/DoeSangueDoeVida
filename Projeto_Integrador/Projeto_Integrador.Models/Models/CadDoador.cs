@@ -27,7 +27,7 @@ public partial class CadDoador
 
     public string Email { get; set; }
 
-    public DateTime DataNasc { get; set; }
+    public DateTime? DataNasc { get; set; }
 
     public string NomeMae { get; set; }
 

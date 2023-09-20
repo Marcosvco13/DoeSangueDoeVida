@@ -12,7 +12,6 @@ public partial class DOACAO_SANGUEContext : DbContext
         : base(options)
     {
     }
-
     public DOACAO_SANGUEContext()
     {
     }
@@ -20,7 +19,6 @@ public partial class DOACAO_SANGUEContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
 => optionsBuilder.UseSqlServer("data source=NOTEBOOK-MARCOS\\SQLEXPRESS;Initial Catalog=DOACAO_SANGUE;User Id=sa;Password=2000@edu.sau;TrustserverCertificate=True");
-
     public virtual DbSet<CadDataHoraDisp> CadDataHoraDisp { get; set; }
 
     public virtual DbSet<CadDoacao> CadDoacao { get; set; }
@@ -39,11 +37,11 @@ public partial class DOACAO_SANGUEContext : DbContext
     {
         modelBuilder.Entity<CadDataHoraDisp>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__CAD_DATA__3214EC270365A06B");
+
             entity.ToTable("CAD_DATA_HORA_DISP");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Date)
                 .HasColumnType("datetime")
                 .HasColumnName("DATE");
@@ -58,11 +56,11 @@ public partial class DOACAO_SANGUEContext : DbContext
 
         modelBuilder.Entity<CadDoacao>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__CAD_DOAC__3214EC273C06E288");
+
             entity.ToTable("CAD_DOACAO");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.DataHora)
                 .HasColumnType("datetime")
                 .HasColumnName("DATA_HORA");
@@ -83,21 +81,20 @@ public partial class DOACAO_SANGUEContext : DbContext
 
         modelBuilder.Entity<CadDoador>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__CAD_DOAD__3214EC27425C1D3F");
+
             entity.ToTable("CAD_DOADOR");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Cpf)
                 .IsRequired()
-                .HasMaxLength(12)
+                .HasMaxLength(17)
                 .IsUnicode(false)
                 .HasColumnName("CPF");
             entity.Property(e => e.DataNasc)
                 .HasColumnType("datetime")
                 .HasColumnName("DATA_NASC");
             entity.Property(e => e.Email)
-                .IsRequired()
                 .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("EMAIL");
@@ -107,7 +104,6 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("NOME");
             entity.Property(e => e.NomeMae)
-                .IsRequired()
                 .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("NOME_MAE");
@@ -116,32 +112,26 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("NOME_PAI");
             entity.Property(e => e.OrgExp)
-                .IsRequired()
                 .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("ORG_EXP");
             entity.Property(e => e.Profissao)
-                .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("PROFISSAO");
             entity.Property(e => e.Religiao)
-                .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("RELIGIAO");
             entity.Property(e => e.Rg)
-                .IsRequired()
-                .HasMaxLength(10)
+                .HasMaxLength(15)
                 .IsUnicode(false)
                 .HasColumnName("RG");
             entity.Property(e => e.Sexo)
-                .IsRequired()
                 .HasMaxLength(1)
                 .IsUnicode(false)
                 .HasColumnName("SEXO");
             entity.Property(e => e.Telefone)
-                .IsRequired()
                 .HasMaxLength(20)
                 .IsUnicode(false)
                 .HasColumnName("TELEFONE");
@@ -149,44 +139,39 @@ public partial class DOACAO_SANGUEContext : DbContext
 
         modelBuilder.Entity<CadEndereco>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__CAD_ENDE__3214EC275EDD0BEB");
+
             entity.ToTable("CAD_ENDERECO");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Bairro)
-                .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("BAIRRO");
             entity.Property(e => e.Cep)
                 .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(10)
                 .IsUnicode(false)
                 .HasColumnName("CEP");
             entity.Property(e => e.Cidade)
-                .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("CIDADE");
             entity.Property(e => e.Complemento)
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("COMPLEMENTO");
             entity.Property(e => e.Estado)
-                .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(10)
                 .IsUnicode(false)
                 .HasColumnName("ESTADO");
             entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
             entity.Property(e => e.Logradouro)
-                .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("LOGRADOURO");
             entity.Property(e => e.Numero)
-                .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(10)
                 .IsUnicode(false)
                 .HasColumnName("NUMERO");
 
@@ -198,11 +183,11 @@ public partial class DOACAO_SANGUEContext : DbContext
 
         modelBuilder.Entity<CadLocalDoacao>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__CAD_LOCA__3214EC27AD837585");
+
             entity.ToTable("CAD_LOCAL_DOACAO");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Ativo).HasColumnName("ATIVO");
             entity.Property(e => e.Bairro)
                 .IsRequired()
@@ -211,7 +196,7 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .HasColumnName("BAIRRO");
             entity.Property(e => e.Cep)
                 .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(20)
                 .IsUnicode(false)
                 .HasColumnName("CEP");
             entity.Property(e => e.Cidade)
@@ -226,7 +211,7 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .HasColumnName("COMPLEMENTO");
             entity.Property(e => e.Email)
                 .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("EMAIL");
             entity.Property(e => e.Estado)
@@ -251,27 +236,27 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .HasColumnName("NUMERO");
             entity.Property(e => e.Telefone)
                 .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("TELEFONE");
         });
 
         modelBuilder.Entity<Credenciais>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__CREDENCI__3214EC273C9DDF35");
+
             entity.ToTable("CREDENCIAIS");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
             entity.Property(e => e.Login)
                 .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("LOGIN");
             entity.Property(e => e.Senha)
                 .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("SENHA");
 
@@ -283,22 +268,22 @@ public partial class DOACAO_SANGUEContext : DbContext
 
         modelBuilder.Entity<FichaDoacao>(entity =>
         {
+            entity.HasKey(e => e.Id).HasName("PK__FICHA_DO__3214EC2774D9A97B");
+
             entity.ToTable("FICHA_DOACAO");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Fumante).HasColumnName("FUMANTE");
             entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
             entity.Property(e => e.Peso).HasColumnName("PESO");
             entity.Property(e => e.TempFumante)
                 .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("TEMP_FUMANTE");
             entity.Property(e => e.TipoSangue)
                 .IsRequired()
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("TIPO_SANGUE");
             entity.Property(e => e.UltimaDoacao)

@@ -42,10 +42,10 @@ namespace Projeto_Integrador.Controllers
             {
                 Login = doadorVM.login,
                 Senha = doadorVM.senha,
+                IdUsuario = doadorVM.Codigo,
             };
 
-            doador = await _ServiceDoador.oRepositoryDoador.IncluirAsync(doador);
-            credencial = await _ServiceDoador.oRepositoryCredenciais.IncluirAsync(credencial);
+            await _ServiceDoador.oRepositoryDoador.IncluirAsync(doador, credencial);
 
             return View(doadorVM);
         }

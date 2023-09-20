@@ -16,7 +16,7 @@ namespace Projeto_Integrador.Models.Repositories
         {
             _context.Entry(doador).State = Microsoft.EntityFrameworkCore.EntityState.Added;
             await _context.SaveChangesAsync();
-            doador.Id = credenciais.IdUsuario;
+            credenciais.IdUsuario = doador.Id;
             _context.Entry(credenciais).State = Microsoft.EntityFrameworkCore.EntityState.Added;
             await _context.SaveChangesAsync();
         }
