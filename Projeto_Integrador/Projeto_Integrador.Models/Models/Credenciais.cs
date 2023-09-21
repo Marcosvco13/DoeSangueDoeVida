@@ -15,5 +15,7 @@ public partial class Credenciais
 
     public string Senha { get; set; }
 
+    public byte[] Salt { get; set; }
+
     public virtual CadDoador IdUsuarioNavigation { get; set; }
 }

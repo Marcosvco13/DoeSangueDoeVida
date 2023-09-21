@@ -19,6 +19,7 @@ namespace Projeto_Integrador.ViewModel
         public string Rg { get; set; }
         public string OrgExp { get; set; }
         public string Email { get; set; }
+        public string EmailLogin { get; set; }
         public string Telefone { get; set; }
         public DateTime? DataNascimento { get; set; }
         public string Religiao { get; set; }
@@ -31,6 +32,8 @@ namespace Projeto_Integrador.ViewModel
         public string login { get; set; }
         public string senha { get; set; }
 
+        public byte[] salt { get; set; }
+
         #endregion Credencial
 
         public static DoadorVM SelecionarDoador(int id)
@@ -40,14 +43,15 @@ namespace Projeto_Integrador.ViewModel
             var credencial = db.Credenciais.FirstOrDefault(x => x.IdUsuario == id);
             var doadorVM = new DoadorVM();
             doadorVM.CodCred = credencial.Id;
-            doadorVM.login = credencial.Login;
+
+            doadorVM.EmailLogin = credencial.Login;
             doadorVM.senha = credencial.Senha;
             doadorVM.Cpf = doador.Cpf.Length < 14 ? doador.Cpf : "";
             doadorVM.Rg = doador.Rg;
             doadorVM.OrgExp = doador.OrgExp;
             doadorVM.Codigo = doador.Id;
             doadorVM.DataNascimento = doador.DataNasc;
-            doadorVM.Email = doador.Email;
+            doadorVM.EmailLogin = doador.Email;
             doadorVM.Religiao = doador.Religiao;
             doadorVM.Profissao = doador.Profissao;
             doadorVM.Nome = doador.Nome;
@@ -55,6 +59,7 @@ namespace Projeto_Integrador.ViewModel
             doadorVM.NomePai = doador.NomePai;
             doadorVM.Sexo = doador.Sexo;
             doadorVM.Telefone = doador.Telefone;
+            doadorVM.salt = credencial.Salt;
             return doadorVM;
         }
         public static List<DoadorVM> ListarTodosDoadores()
@@ -80,7 +85,8 @@ namespace Projeto_Integrador.ViewModel
                         Sexo = doador.Sexo,
                         Telefone = doador.Telefone,
                         Religiao = doador.Religiao,
-                        Profissao = doador.Profissao
+                        Profissao = doador.Profissao,
+                        salt = credencial.Salt
                     }).ToList();
         }
     }
