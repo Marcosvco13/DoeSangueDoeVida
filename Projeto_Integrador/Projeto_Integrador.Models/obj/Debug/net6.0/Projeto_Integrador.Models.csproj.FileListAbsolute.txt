@@ -10,3 +10,15 @@ D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Model
 D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\refint\Projeto_Integrador.Models.dll
 D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\Projeto_Integrador.Models.pdb
 D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\ref\Projeto_Integrador.Models.dll
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\bin\Debug\net6.0\Projeto_Integrador.Models.deps.json
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\bin\Debug\net6.0\Projeto_Integrador.Models.dll
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\bin\Debug\net6.0\Projeto_Integrador.Models.pdb
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\Projeto_Integrador.Models.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\Projeto_Integrador.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\Projeto_Integrador.Models.AssemblyInfoInputs.cache
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\Projeto_Integrador.Models.AssemblyInfo.cs
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\Projeto_Integrador.Models.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\Projeto_Integrador.Models.dll
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\refint\Projeto_Integrador.Models.dll
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\Projeto_Integrador.Models.pdb
+C:\Users\danie\OneDrive\Documentos\Faculdade\Faculdade\Projeto Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net6.0\ref\Projeto_Integrador.Models.dll
