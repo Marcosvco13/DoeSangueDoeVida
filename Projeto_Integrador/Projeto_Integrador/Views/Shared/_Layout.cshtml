@@ -37,24 +37,32 @@
                         <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Privacy">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Requisito">Requisitos</a>
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Doador" asp-action="Create">Registrar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
+                        <a class="nav-link text-white-50" href="#">Requisitos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Locais">Locais</a>
+                        <a class="nav-link text-white-50" href="#">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
                     </li>
                 </ul>
             </div>
 
-            @Html.Partial("_LoginPartial")
+            <ul class="navbar-nav">
+                <li>
+                    <a class="text-white-50" asp-area="" asp-controller="Home" asp-action="Register"><img src="~/imgs/person.svg"/> Registrar</a>
+                </li>
+                <li>
+                    <a class="text-white-50" asp-area="" asp-controller="Home" asp-action="Login"><img src="~/imgs/login.svg" /> Entrar</a>
+                </li>
+            </ul>
         </nav>
-
-        
     </header>
 
     <div class="container-fluid">
