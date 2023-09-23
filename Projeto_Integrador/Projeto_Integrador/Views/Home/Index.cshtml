@@ -6,35 +6,55 @@
     <div class="row1">
         <div class="col">
             <strong>Doe Sangue e Mude Uma História.</strong>
-
-            <span>Choose from over 2,000+ courses on topics like user interface design, graphic design, front-end development, and much more...</span>
+            <span>O processo de doar sangue dura, em média, 40 minutos a 1 hora. Você pode salvar vidas em uma simples e rápida expedição!</span>
             <br>
             <div class="buttons">
-                <button class="submitButton" type="submit">Inscreva-se</button>
-                <button class="sobreButton" href='#' role='button'>Mais Sobre</button>
+
+                    <a class="submitButton" asp-area="" asp-controller="Home" asp-action="Register">Inscreva-se</a>
+
+
+                    <a class="sobreButton" asp-area="" asp-controller="Home" asp-action="Sobre">Mais Sobre</a>
+
             </div>
+                
         </div>
         <div class="col">
             <img src="~/imgs/blood-donate.svg" />
         </div>
     </div>
 
+
     <div class="row1">
-        <div class="dados">
-            <div class="col">
-                <strong>3,5 milhões</strong>
-                <span>É o número de brasileiros que necessitam de transfusões de sangue por ano.</span>
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top" src="~/imgs/people.svg" />
+                <div class="card-body">
+                    <strong class="card-title">3,5 milhões</strong>
+                    <p class="card-text">É o número de brasileiros que necessitam de transfusões de sangue por ano.</p>
+                </div>
             </div>
-            <div class="col">
-                <strong>1,4%</strong>
-                <span>É a estimativa de brasileiros que doam sangue.</span>
+            <div class="card">
+                <img src="~/imgs/statistic.svg" />
+                <div class="card-body">
+                    <strong class="card-title">1,4%</strong>
+                    <p class="card-text">É a estimativa de brasileiros que doam sangue.</p>
+                </div>
             </div>
-            <div class="col">
-                <strong>450ml</strong>
-                <span>É a quantidade de sangue coletada em uma doação.</span>
+            <div class="card">
+                <img class="card-img-top" src="~/imgs/blood.svg" />
+                <div class="card-body">
+                    <strong class="card-title">450ml</strong>
+                    <p class="card-text">É a quantidade de sangue coletada em uma doação.</p>
+                </div>
             </div>
         </div>
     </div>
+    
+
+
+
+
+
 
     <div class="row1">
         <div class="col">
@@ -66,7 +86,7 @@
                     <li class="text-white">Apresentar documentos pessoais.</li>
                 </ul>
                 <div class="buttons">
-                    <button class="btnQueroDoar" href='#' role='button'>Quero Doar!</button>
+                    <a class="btnQueroDoar" asp-area="" asp-controller="Home" asp-action="Login">Quero Doar!</a>
                 </div>
             </div>
         </div>

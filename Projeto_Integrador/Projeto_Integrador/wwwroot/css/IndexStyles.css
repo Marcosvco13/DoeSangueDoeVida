@@ -10,6 +10,22 @@
     display: flex;
     align-items: center;
 }
+.col > h1 {
+    color: var(--gray-neutral-900, #111927);
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -1.44px;
+}
+.col > h3 {
+    color: var(--gray-neutral-900, #111927);
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -1.44px;
+}
 
 .col > strong {
     color: var(--gray-neutral-900, #111927);
@@ -36,9 +52,12 @@
     flex-shrink: 0;
 }
 
-.submitButton {
+a.submitButton {
     height: 44px;
     width: 122px;
+    text-decoration: none;
+    line-height: 2.5rem;
+    text-align: center;
     justify-content: center;
     align-items: center;
     border-radius: 16px;
@@ -48,9 +67,12 @@
     color: var(--white-background);
 }
 
-.sobreButton {
+a.sobreButton {
     height: 44px;
     width: 122px;
+    text-decoration: none;
+    line-height: 2.5rem;
+    text-align: center;
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
@@ -58,6 +80,7 @@
     border: 1px solid var(--gray-300, #D0D5DD);
     background: var(--base-white, #FFF);
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: var(--gray-neutral-700, #384250);
 }
 
 .header {
@@ -68,8 +91,8 @@
     padding: 20px;
 }
 
-.dados {
-    background: var(--gray-background);
+.card-group {
+    background: #f0f0f0;
     display: inline-flex;
     align-items: center;
     padding: 0 40px;
@@ -78,7 +101,21 @@
     margin-top: 6rem;
 }
 
-.dados strong {
+.card > img {
+    height: 4.5rem;
+    width: 4.5rem;
+    
+}
+.card {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border: none;
+    background: none;
+    flex-direction:row;
+
+}
+.card-group strong {
     color: var(--gray-neutral-900, #111927);
     font-family: Roboto;
     font-size: 36px;
@@ -87,14 +124,18 @@
     line-height: 44px;
     letter-spacing: -0.72px;
 }
-
-.dados span {
+.card-group span {
     color: var(--gray-neutral-700, #384250);
     font-family: Roboto;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
+}
+
+.card-body {
+    justify-content: center;
+    align-items: center;
 }
 
 .requirements span {
@@ -131,6 +172,9 @@
 .btnQueroDoar {
     height: 44px;
     width: 122px;
+    text-decoration: none;
+    line-height: 2.5rem;
+    text-align: center;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
@@ -138,4 +182,9 @@
     background: var(--1-c-1917, #D90429);
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
     color: white;
+}
+
+.buttons{
+    justify-content: center;
+    display:inline-flex
 }

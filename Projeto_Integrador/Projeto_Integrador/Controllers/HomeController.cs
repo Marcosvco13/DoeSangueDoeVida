@@ -31,6 +31,23 @@ namespace Projeto_Integrador.Controllers
             return View();
         }
 
+        public IActionResult Sobre()
+        {
+            return View();
+        }
+        public IActionResult Local()
+        {
+            return View();
+        }
+        public IActionResult Requisitos()
+        {
+            return View();
+        }
+        public IActionResult Contato()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
