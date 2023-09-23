@@ -37,16 +37,13 @@
                         <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Privacy">Sobre</a>
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white-50" asp-area="" asp-controller="Doador" asp-action="Create">Registrar</a>
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Requisitos">Requisitos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white-50" href="#">Requisitos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white-50" href="#">Contato</a>
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
@@ -54,14 +51,7 @@
                 </ul>
             </div>
 
-            <ul class="navbar-nav">
-                <li>
-                    <a class="text-white-50" asp-area="" asp-controller="Home" asp-action="Register"><img src="~/imgs/person.svg"/> Registrar</a>
-                </li>
-                <li>
-                    <a class="text-white-50" asp-area="" asp-controller="Home" asp-action="Login"><img src="~/imgs/login.svg" /> Entrar</a>
-                </li>
-            </ul>
+            @Html.Partial("_LoginPartial")
         </nav>
     </header>
 
