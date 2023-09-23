@@ -54,17 +54,10 @@
                 </ul>
             </div>
 
-            <ul class="navbar-nav">
-                <li>
-                    <a class="text-white-50" asp-area="" asp-controller="Home" asp-action="Register"><img src="~/imgs/person.svg"/> Registrar</a>
-                </li>
-                <li>
-                    <a class="text-white-50" asp-area="" asp-controller="Home" asp-action="Login"><img src="~/imgs/login.svg" /> Entrar</a>
-                </li>
-            </ul>
+            @Html.Partial("_LoginPartial")
         </nav>
 
-        @Html.Partial("_LoginPartial")
+        
     </header>
 
     <div class="container-fluid">
