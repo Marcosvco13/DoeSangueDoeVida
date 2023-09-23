@@ -42,34 +42,29 @@ namespace Projeto_Integrador.ViewModel
             localVM.cidade = local.Cidade;
             localVM.estado = local.Estado;
             localVM.ativo = local.Ativo; 
-            
+
             return localVM;
         }
 
         public static List<LocalDoacaoVM> ListarTodosLocais()
         {
             var db = new DOACAO_SANGUEContext();
-            var locais = db.CadLocalDoacao.ToList();
-            var localVMs = new List<LocalDoacaoVM>();
-
-            foreach (var local in locais)
-            {
-                var localVM = new LocalDoacaoVM();
-
-                localVM.id = local.Id;
-                localVM.nome = local.Nome;
-                localVM.email = local.Email;
-                localVM.telefone = local.Telefone;
-                localVM.rua = local.Logradouro;
-                localVM.num = local.Numero;
-                localVM.comple = local.Complemento;
-                localVM.cep = local.Cep;
-                localVM.bairro = local.Bairro;
-                localVM.cidade = local.Cidade;
-                localVM.estado = local.Estado;
-                localVM.ativo = local.Ativo;
-            }
-            return localVMs;
+            return (from local in db.CadLocalDoacao
+                    select new LocalDoacaoVM
+                    {
+                        id = local.Id,
+                        nome = local.Nome,
+                        email = local.Email,
+                        telefone = local.Telefone,
+                        rua = local.Logradouro,
+                        num = local.Numero,
+                        bairro = local.Bairro,
+                        cidade = local.Cidade,
+                        estado = local.Estado,
+                        ativo = local.Ativo,
+                        cep = local.Cep,
+                        comple = local.Complemento,
+                    }).ToList();
         }
     }
 }

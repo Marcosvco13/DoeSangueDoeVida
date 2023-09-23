@@ -1,0 +1,83 @@
+﻿@model Projeto_Integrador.ViewModel.LocalDoacaoVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>LocalDoacaoVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="telefone" class="control-label"></label>
+                <input asp-for="telefone" class="form-control" />
+                <span asp-validation-for="telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rua" class="control-label"></label>
+                <input asp-for="rua" class="form-control" />
+                <span asp-validation-for="rua" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="num" class="control-label"></label>
+                <input asp-for="num" class="form-control" />
+                <span asp-validation-for="num" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="comple" class="control-label"></label>
+                <input asp-for="comple" class="form-control" />
+                <span asp-validation-for="comple" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cep" class="control-label"></label>
+                <input asp-for="cep" class="form-control" />
+                <span asp-validation-for="cep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bairro" class="control-label"></label>
+                <input asp-for="bairro" class="form-control" />
+                <span asp-validation-for="bairro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cidade" class="control-label"></label>
+                <input asp-for="cidade" class="form-control" />
+                <span asp-validation-for="cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="estado" class="control-label"></label>
+                <input asp-for="estado" class="form-control" />
+                <span asp-validation-for="estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ativo" class="control-label"></label>
+                <input asp-for="ativo" class="form-control" />
+                <span asp-validation-for="ativo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
