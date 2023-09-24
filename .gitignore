@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Register.cshtml
+/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Register.cshtml
