@@ -29,9 +29,9 @@ namespace Projeto_Integrador.Controllers
         public async Task<IActionResult> Create(DataVM dataVM)
         {
             var data = new CadDataHoraDisp();
-            data.IdLocal = dataVM.IdLocal;
-            data.Disp = dataVM.Disp;
-            data.Date = dataVM.Date;
+            data.IdLocal = dataVM.IDLocal;
+            data.Disp = dataVM.Disponivel;
+            data.Date = dataVM.Data;
 
             await _ServiceDatas.oRepositoryDatas.IncluirAsync(data);
             return View(dataVM);

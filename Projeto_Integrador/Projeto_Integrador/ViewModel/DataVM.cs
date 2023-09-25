@@ -1,12 +1,14 @@
 ﻿using Projeto_Integrador.Models.Models;
+using System.ComponentModel.DataAnnotations;
+using System.Linq.Expressions;
 
 namespace Projeto_Integrador.ViewModel
 {
     public class DataVM
     {
-        public object Data { get; private set; }
-        public object IDLocal { get; private set; }
-        public object Disponivel { get; private set; }
+        public DateTime Data { get; set; }
+        public int IDLocal { get; set; }
+        public int Disponivel { get; set; }
 
         public static DataVM SelecionarData(int id)
         {
@@ -15,9 +17,9 @@ namespace Projeto_Integrador.ViewModel
             var dataVM = new DataVM();
             return new DataVM()
             {
-                dataVM.IDLocal = data.ID_LOCAL,
-                dataVM.Data = data.Data,
-                dataVM.Disponivel = data.Disponivel,
+                dataVM.IDLocal = data.IdLocal,
+                dataVM.Data = data.Date,
+                dataVM.Disponivel = data.Disp,
             };
         }
 
@@ -29,7 +31,7 @@ namespace Projeto_Integrador.ViewModel
             foreach (var item in listaDatasCadastradas)
             {
                 var data = new DataVM();
-                data.Local = db.Local.FirstOrDefault(x => x.TipData == item.ProCodigoData).TipDescricao;
+                data.IDLocal = db.Local.FirstOrDefault(x => x.TipData == item.ProCodigoData).TipDescricao;
                 data.Data = item.Data;
                 data.Disponivel = item.Disponivel;
             }

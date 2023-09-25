@@ -35,6 +35,8 @@ public partial class DOACAO_SANGUEContext : DbContext
     public virtual DbSet<Credenciais> Credenciais { get; set; }
 
     public virtual DbSet<FichaDoacao> FichaDoacao { get; set; }
+    public object Data { get; set; }
+    public object Local { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
