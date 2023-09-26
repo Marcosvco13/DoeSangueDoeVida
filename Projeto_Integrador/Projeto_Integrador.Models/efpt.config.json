@@ -24,19 +24,11 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CAD_DOADOR]",
-         "ObjectType": 0
-      },
-      {
          "Name": "[dbo].[CAD_ENDERECO]",
          "ObjectType": 0
       },
       {
          "Name": "[dbo].[CAD_LOCAL_DOACAO]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[CREDENCIAIS]",
          "ObjectType": 0
       },
       {

@@ -14,7 +14,8 @@ public class Projeto_IntegradorContext : IdentityDbContext<UsuarioModel>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
-=> optionsBuilder.UseSqlServer("data source=DANIEL\\SQLEXPRESS;Initial Catalog=DOACAO_SANGUE;User Id=sa;Password=D@nielPeralba;TrustserverCertificate=True");
+=> optionsBuilder.UseSqlServer("data source=NOTEBOOK-MARCOS\\SQLEXPRESS;Initial Catalog=DOACAO_SANGUE;User Id=sa;Password=2000@edu.sau;TrustserverCertificate=True");
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

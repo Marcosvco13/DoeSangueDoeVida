@@ -11,7 +11,7 @@ public partial class CadDataHoraDisp
 
     public int IdLocal { get; set; }
 
-    public DateTime Date { get; set; }
+    public DateTime DataDisp { get; set; }
 
     public int Disp { get; set; }
 

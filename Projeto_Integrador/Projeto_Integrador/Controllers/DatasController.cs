@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Projeto_Integrador.Models.Models;
 using Projeto_Integrador.Models.Services;
 using Projeto_Integrador.ViewModel;
@@ -18,20 +19,26 @@ namespace Projeto_Integrador.Controllers
             var listarDatas = DataVM.ListarTodasDatas();
             return View(listarDatas);
         }
+        public void CarregaDadosViewBag()
+        {
+            ViewData["IdLocais"] = new SelectList(_ServiceDatas.oRepositoryLocais.SelecionarTodos(), "Id", "Nome");
+        }
 
         [HttpGet]
         public IActionResult Create()
         {
+            CarregaDadosViewBag();
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(DataVM dataVM)
         {
+            CarregaDadosViewBag();
             var data = new CadDataHoraDisp();
             data.IdLocal = dataVM.IDLocal;
             data.Disp = dataVM.Disponivel;
-            data.Date = dataVM.Data;
+            data.DataDisp = dataVM.Data;
 
             await _ServiceDatas.oRepositoryDatas.IncluirAsync(data);
             return View(dataVM);
@@ -40,6 +47,7 @@ namespace Projeto_Integrador.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
+            CarregaDadosViewBag();
             var data = await _ServiceDatas.oRepositoryDatas.SelecionarPkAsync(id);
             return View(data);
         }
@@ -47,10 +55,11 @@ namespace Projeto_Integrador.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(CadDataHoraDisp data)
         {
-            if(ModelState.IsValid)
+            CarregaDadosViewBag();
+            if (ModelState.IsValid)
             {
-                var data = await _ServiceDatas.oRepositoryDatas.AlterarAsync(data);
-                return View(data);
+                var selecData = await _ServiceDatas.oRepositoryDatas.AlterarAsync(data);
+                return View(selecData);
             }
             ViewData["MensagemErro"] = "Ocorreu um erro";
             return View();
@@ -59,7 +68,7 @@ namespace Projeto_Integrador.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete (int id)
         {
-            await _ServiceDatas.oRepositoyDatas.ExcluirAsync(id);
+            await _ServiceDatas.oRepositoryDatas.ExcluirAsync(id);
             return RedirectToAction("Index");
         }
 

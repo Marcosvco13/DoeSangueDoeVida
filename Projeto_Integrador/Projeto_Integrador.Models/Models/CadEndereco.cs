@@ -9,7 +9,7 @@ public partial class CadEndereco
 {
     public int Id { get; set; }
 
-    public int IdUsuario { get; set; }
+    public string IdUser { get; set; }
 
     public string Logradouro { get; set; }
 
@@ -24,6 +24,4 @@ public partial class CadEndereco
     public string Cidade { get; set; }
 
     public string Estado { get; set; }
-
-    public virtual CadDoador IdUsuarioNavigation { get; set; }
 }

@@ -21,35 +21,28 @@ public partial class DOACAO_SANGUEContext : DbContext
 
 => optionsBuilder.UseSqlServer("data source=NOTEBOOK-MARCOS\\SQLEXPRESS;Initial Catalog=DOACAO_SANGUE;User Id=sa;Password=2000@edu.sau;TrustserverCertificate=True");
 
-
     public virtual DbSet<CadDataHoraDisp> CadDataHoraDisp { get; set; }
 
     public virtual DbSet<CadDoacao> CadDoacao { get; set; }
-
-    public virtual DbSet<CadDoador> CadDoador { get; set; }
 
     public virtual DbSet<CadEndereco> CadEndereco { get; set; }
 
     public virtual DbSet<CadLocalDoacao> CadLocalDoacao { get; set; }
 
-    public virtual DbSet<Credenciais> Credenciais { get; set; }
-
     public virtual DbSet<FichaDoacao> FichaDoacao { get; set; }
-    public object Data { get; set; }
-    public object Local { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<CadDataHoraDisp>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__CAD_DATA__3214EC270365A06B");
+            entity.HasKey(e => e.Id).HasName("PK__CAD_DATA__3214EC270A3F9E18");
 
             entity.ToTable("CAD_DATA_HORA_DISP");
 
             entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.Date)
+            entity.Property(e => e.DataDisp)
                 .HasColumnType("datetime")
-                .HasColumnName("DATE");
+                .HasColumnName("DATA_DISP");
             entity.Property(e => e.Disp).HasColumnName("DISP");
             entity.Property(e => e.IdLocal).HasColumnName("ID_LOCAL");
 
@@ -61,7 +54,7 @@ public partial class DOACAO_SANGUEContext : DbContext
 
         modelBuilder.Entity<CadDoacao>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__CAD_DOAC__3214EC273C06E288");
+            entity.HasKey(e => e.Id).HasName("PK__CAD_DOAC__3214EC27087CD3B9");
 
             entity.ToTable("CAD_DOACAO");
 
@@ -84,67 +77,9 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .HasConstraintName("CAD_DOACAO_fk1");
         });
 
-        modelBuilder.Entity<CadDoador>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__CAD_DOAD__3214EC27425C1D3F");
-
-            entity.ToTable("CAD_DOADOR");
-
-            entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.Cpf)
-                .IsRequired()
-                .HasMaxLength(17)
-                .IsUnicode(false)
-                .HasColumnName("CPF");
-            entity.Property(e => e.DataNasc)
-                .HasColumnType("datetime")
-                .HasColumnName("DATA_NASC");
-            entity.Property(e => e.Email)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("EMAIL");
-            entity.Property(e => e.Nome)
-                .IsRequired()
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("NOME");
-            entity.Property(e => e.NomeMae)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("NOME_MAE");
-            entity.Property(e => e.NomePai)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("NOME_PAI");
-            entity.Property(e => e.OrgExp)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("ORG_EXP");
-            entity.Property(e => e.Profissao)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("PROFISSAO");
-            entity.Property(e => e.Religiao)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("RELIGIAO");
-            entity.Property(e => e.Rg)
-                .HasMaxLength(15)
-                .IsUnicode(false)
-                .HasColumnName("RG");
-            entity.Property(e => e.Sexo)
-                .HasMaxLength(1)
-                .IsUnicode(false)
-                .HasColumnName("SEXO");
-            entity.Property(e => e.Telefone)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("TELEFONE");
-        });
-
         modelBuilder.Entity<CadEndereco>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__CAD_ENDE__3214EC275EDD0BEB");
+            entity.HasKey(e => e.Id).HasName("PK__CAD_ENDE__3214EC2786B0E586");
 
             entity.ToTable("CAD_ENDERECO");
 
@@ -167,10 +102,13 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("COMPLEMENTO");
             entity.Property(e => e.Estado)
-                .HasMaxLength(10)
+                .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("ESTADO");
-            entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+            entity.Property(e => e.IdUser)
+                .IsRequired()
+                .HasMaxLength(450)
+                .HasColumnName("ID_User");
             entity.Property(e => e.Logradouro)
                 .HasMaxLength(200)
                 .IsUnicode(false)
@@ -179,16 +117,11 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .HasMaxLength(10)
                 .IsUnicode(false)
                 .HasColumnName("NUMERO");
-
-            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.CadEndereco)
-                .HasForeignKey(d => d.IdUsuario)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("CAD_ENDERECO_fk0");
         });
 
         modelBuilder.Entity<CadLocalDoacao>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__CAD_LOCA__3214EC27AD837585");
+            entity.HasKey(e => e.Id).HasName("PK__CAD_LOCA__3214EC27E27A522C");
 
             entity.ToTable("CAD_LOCAL_DOACAO");
 
@@ -221,7 +154,7 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .HasColumnName("EMAIL");
             entity.Property(e => e.Estado)
                 .IsRequired()
-                .HasMaxLength(200)
+                .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("ESTADO");
             entity.Property(e => e.Logradouro)
@@ -246,41 +179,55 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .HasColumnName("TELEFONE");
         });
 
-        modelBuilder.Entity<Credenciais>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__CREDENCI__3214EC273C9DDF35");
-
-            entity.ToTable("CREDENCIAIS");
-
-            entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
-            entity.Property(e => e.Login)
-                .IsRequired()
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("LOGIN");
-            entity.Property(e => e.Senha)
-                .IsRequired()
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("SENHA");
-
-            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Credenciais)
-                .HasForeignKey(d => d.IdUsuario)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("CREDENCIAIS_fk0");
-        });
-
         modelBuilder.Entity<FichaDoacao>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__FICHA_DO__3214EC2774D9A97B");
+            entity.HasKey(e => e.Id).HasName("PK__FICHA_DO__3214EC277B4D4718");
 
             entity.ToTable("FICHA_DOACAO");
 
             entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.Cpf)
+                .IsRequired()
+                .HasMaxLength(17)
+                .IsUnicode(false)
+                .HasColumnName("CPF");
+            entity.Property(e => e.DataNasc)
+                .HasColumnType("datetime")
+                .HasColumnName("DATA_NASC");
             entity.Property(e => e.Fumante).HasColumnName("FUMANTE");
-            entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+            entity.Property(e => e.IdUser)
+                .IsRequired()
+                .HasMaxLength(450)
+                .HasColumnName("ID_User");
+            entity.Property(e => e.NomeMae)
+                .HasMaxLength(200)
+                .IsUnicode(false)
+                .HasColumnName("NOME_MAE");
+            entity.Property(e => e.NomePai)
+                .HasMaxLength(200)
+                .IsUnicode(false)
+                .HasColumnName("NOME_PAI");
+            entity.Property(e => e.OrgExp)
+                .HasMaxLength(200)
+                .IsUnicode(false)
+                .HasColumnName("ORG_EXP");
             entity.Property(e => e.Peso).HasColumnName("PESO");
+            entity.Property(e => e.Profissao)
+                .HasMaxLength(200)
+                .IsUnicode(false)
+                .HasColumnName("PROFISSAO");
+            entity.Property(e => e.Religiao)
+                .HasMaxLength(200)
+                .IsUnicode(false)
+                .HasColumnName("RELIGIAO");
+            entity.Property(e => e.Rg)
+                .HasMaxLength(15)
+                .IsUnicode(false)
+                .HasColumnName("RG");
+            entity.Property(e => e.Sexo)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("SEXO");
             entity.Property(e => e.TempFumante)
                 .IsRequired()
                 .HasMaxLength(200)
@@ -294,11 +241,6 @@ public partial class DOACAO_SANGUEContext : DbContext
             entity.Property(e => e.UltimaDoacao)
                 .HasColumnType("datetime")
                 .HasColumnName("ULTIMA_DOACAO");
-
-            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.FichaDoacao)
-                .HasForeignKey(d => d.IdUsuario)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FICHA_DOACAO_fk0");
         });
 
         OnModelCreatingPartial(modelBuilder);

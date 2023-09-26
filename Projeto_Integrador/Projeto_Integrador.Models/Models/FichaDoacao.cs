@@ -9,7 +9,7 @@ public partial class FichaDoacao
 {
     public int Id { get; set; }
 
-    public int IdUsuario { get; set; }
+    public string IdUser { get; set; }
 
     public string TipoSangue { get; set; }
 
@@ -19,9 +19,25 @@ public partial class FichaDoacao
 
     public int Fumante { get; set; }
 
+    public string Sexo { get; set; }
+
+    public string Cpf { get; set; }
+
+    public string Rg { get; set; }
+
+    public string OrgExp { get; set; }
+
+    public string Profissao { get; set; }
+
+    public string Religiao { get; set; }
+
     public string TempFumante { get; set; }
 
-    public virtual ICollection<CadDoacao> CadDoacao { get; set; } = new List<CadDoacao>();
+    public DateTime? DataNasc { get; set; }
 
-    public virtual CadDoador IdUsuarioNavigation { get; set; }
+    public string NomeMae { get; set; }
+
+    public string NomePai { get; set; }
+
+    public virtual ICollection<CadDoacao> CadDoacao { get; set; } = new List<CadDoacao>();
 }

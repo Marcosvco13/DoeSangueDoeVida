@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Data\**" />
+    <Content Remove="Views\Data\**" />
+    <EmbeddedResource Remove="Views\Data\**" />
+    <None Remove="Views\Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\imgs\blood-donate.svg" />
     <None Include="wwwroot\imgs\blood-requirements.svg" />
     <None Include="wwwroot\imgs\blood-test.svg" />

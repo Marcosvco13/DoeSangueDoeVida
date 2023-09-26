@@ -6,36 +6,42 @@ namespace Projeto_Integrador.ViewModel
 {
     public class DataVM
     {
+        public int id { get; set; }
         public DateTime Data { get; set; }
         public int IDLocal { get; set; }
         public int Disponivel { get; set; }
+        public string nomeLocal {  get; set; }
 
         public static DataVM SelecionarData(int id)
         {
             var db = new DOACAO_SANGUEContext();
-            var data = db.Data.Find(id);
-            var dataVM = new DataVM();
-            return new DataVM()
-            {
-                dataVM.IDLocal = data.IdLocal,
-                dataVM.Data = data.Date,
-                dataVM.Disponivel = data.Disp,
-            };
+            return (from caddata in db.CadDataHoraDisp
+                    join local in db.CadLocalDoacao on caddata.IdLocal
+                    equals local.Id
+                    select new DataVM
+                    {
+                        id = caddata.Id,
+                        Data = caddata.DataDisp,
+                        IDLocal = caddata.IdLocal,
+                        Disponivel = caddata.Disp,
+                        nomeLocal = local.Nome,
+                    }).FirstOrDefault();
         }
 
         public static List<DataVM> ListarTodasDatas()
         {
             var db = new DOACAO_SANGUEContext();
-            var listaRetorno = new List <DataVM>();
-            var listaDatasCadastradas = db.Data.ToList();
-            foreach (var item in listaDatasCadastradas)
-            {
-                var data = new DataVM();
-                data.IDLocal = db.Local.FirstOrDefault(x => x.TipData == item.ProCodigoData).TipDescricao;
-                data.Data = item.Data;
-                data.Disponivel = item.Disponivel;
-            }
-            return listaRetorno;
+            return (from caddata in  db.CadDataHoraDisp
+                    join local in db.CadLocalDoacao on caddata.IdLocal 
+                    equals local.Id 
+                    select new DataVM
+                    {
+                        id = caddata.Id,
+                        Data = caddata.DataDisp,
+                        IDLocal = caddata.IdLocal,
+                        Disponivel = caddata.Disp,
+                        nomeLocal = local.Nome,
+                    }).ToList();
         }
     }
 }
