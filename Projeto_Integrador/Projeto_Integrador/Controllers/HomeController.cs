@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Projeto_Integrador.Areas.Identity;
 using Projeto_Integrador.Models;
 
 namespace Projeto_Integrador.Controllers
@@ -13,36 +15,43 @@ namespace Projeto_Integrador.Controllers
             _logger = logger;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
         }
 
+        [AllowAnonymous]
         public IActionResult Privacy()
         {
             return View();
         }
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
-
+        [AllowAnonymous]
         public IActionResult Sobre()
         {
             return View();
         }
+        [AllowAnonymous]
         public IActionResult Local()
         {
             return View();
         }
+        [AllowAnonymous]
         public IActionResult Requisitos()
         {
             return View();
         }
+        [AllowAnonymous]
         public IActionResult Contato()
         {
             return View();

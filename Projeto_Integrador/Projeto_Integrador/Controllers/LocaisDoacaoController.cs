@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Projeto_Integrador.Areas.Identity;
 using Projeto_Integrador.Models.Models;
 using Projeto_Integrador.Models.Services;
 using Projeto_Integrador.ViewModel;
@@ -13,6 +15,7 @@ namespace Projeto_Integrador.Controllers
         {
             _ServiceLocais = new ServiceLocais();
         }
+        [Authorize(Roles = Roles.Hemocentro)]
         public IActionResult Index()
         {
             var listarLocais = LocalDoacaoVM.ListarTodosLocais();

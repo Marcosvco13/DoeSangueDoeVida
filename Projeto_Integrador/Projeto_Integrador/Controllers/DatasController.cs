@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Projeto_Integrador.Areas.Identity;
 using Projeto_Integrador.Models.Models;
 using Projeto_Integrador.Models.Services;
 using Projeto_Integrador.ViewModel;
@@ -14,6 +16,7 @@ namespace Projeto_Integrador.Controllers
         {
             _ServiceDatas = new ServiceDatas();
         }
+        [Authorize(Roles = Roles.Hemocentro)]
         public IActionResult Index()
         {
             var listarDatas = DataVM.ListarTodasDatas();
