@@ -1,0 +1,108 @@
+﻿@model Projeto_Integrador.ViewModel.FichaVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>FichaVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idUser" class="control-label"></label>
+                <input asp-for="idUser" class="form-control" />
+                <span asp-validation-for="idUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tipoSangue" class="control-label"></label>
+                <input asp-for="tipoSangue" class="form-control" />
+                <span asp-validation-for="tipoSangue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ultimaDoacao" class="control-label"></label>
+                <input asp-for="ultimaDoacao" class="form-control" />
+                <span asp-validation-for="ultimaDoacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="peso" class="control-label"></label>
+                <input asp-for="peso" class="form-control" />
+                <span asp-validation-for="peso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fumante" class="control-label"></label>
+                <input asp-for="fumante" class="form-control" />
+                <span asp-validation-for="fumante" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sexo" class="control-label"></label>
+                <input asp-for="sexo" class="form-control" />
+                <span asp-validation-for="sexo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cpf" class="control-label"></label>
+                <input asp-for="cpf" class="form-control" />
+                <span asp-validation-for="cpf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rg" class="control-label"></label>
+                <input asp-for="rg" class="form-control" />
+                <span asp-validation-for="rg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="orgExp" class="control-label"></label>
+                <input asp-for="orgExp" class="form-control" />
+                <span asp-validation-for="orgExp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="profissao" class="control-label"></label>
+                <input asp-for="profissao" class="form-control" />
+                <span asp-validation-for="profissao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="religiao" class="control-label"></label>
+                <input asp-for="religiao" class="form-control" />
+                <span asp-validation-for="religiao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tempFumante" class="control-label"></label>
+                <input asp-for="tempFumante" class="form-control" />
+                <span asp-validation-for="tempFumante" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dataNasc" class="control-label"></label>
+                <input asp-for="dataNasc" class="form-control" />
+                <span asp-validation-for="dataNasc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nomeMae" class="control-label"></label>
+                <input asp-for="nomeMae" class="form-control" />
+                <span asp-validation-for="nomeMae" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nomePai" class="control-label"></label>
+                <input asp-for="nomePai" class="form-control" />
+                <span asp-validation-for="nomePai" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
