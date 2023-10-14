@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Projeto_Integrador.ViewModel.FichaVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipoSangue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ultimaDoacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fumante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.orgExp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.profissao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.religiao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tempFumante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataNasc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nomeMae)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nomePai)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipoSangue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ultimaDoacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fumante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.orgExp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.profissao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.religiao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tempFumante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataNasc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeMae)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomePai)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
