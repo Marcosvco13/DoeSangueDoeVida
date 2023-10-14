@@ -16,7 +16,7 @@ namespace Projeto_Integrador.Controllers
         {
             _ServiceDatas = new ServiceDatas();
         }
-        [Authorize(Roles = Roles.Hemocentro)]
+        //[Authorize(Roles = Roles.Hemocentro)]
         public IActionResult Index()
         {
             var listarDatas = DataVM.ListarTodasDatas();

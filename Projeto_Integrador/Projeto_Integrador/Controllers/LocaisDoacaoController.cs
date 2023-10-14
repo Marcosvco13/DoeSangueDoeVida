@@ -15,7 +15,7 @@ namespace Projeto_Integrador.Controllers
         {
             _ServiceLocais = new ServiceLocais();
         }
-        [Authorize(Roles = Roles.Hemocentro)]
+        //[Authorize(Roles = Roles.Hemocentro)]
         public IActionResult Index()
         {
             var listarLocais = LocalDoacaoVM.ListarTodosLocais();
