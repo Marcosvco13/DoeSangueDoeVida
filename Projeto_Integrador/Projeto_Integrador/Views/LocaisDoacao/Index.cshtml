@@ -92,7 +92,7 @@
             </td>
             <td>
                 <button class="btn btn-success details" data-id="@item.id"><i class="glyphicon glyphicon-file">Detalhes</i></button>
-                @Html.ActionLink("Edit", "Edit", new { id=item.id } ) |
+                <button class="btn btn-primary edit" data-id="@item.id"><i class="glyphicon glyphicon-edit">Editar</i></button>
                 @Html.ActionLink("Delete", "Delete", new { id=item.id })
             </td>
         </tr>
@@ -107,8 +107,17 @@
         $(function () {
             $(".details").click(function () {
                 var id = $(this).attr("data-id");
+                $("#modal").modal();
                 alert(id);
                 $("#modal").load("Details?id=" + id, function () {
+                    
+                })
+            });
+
+            $(".edit").click(function () {
+                var id = $(this).attr("data-id");
+                alert(id);
+                $("#modal").load("Edit?id=" + id, function () {
                     $("#modal").modal();
                 })
             });
