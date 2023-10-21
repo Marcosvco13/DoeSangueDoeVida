@@ -42,7 +42,7 @@ namespace Projeto_Integrador.Controllers
             local.Estado = localDoacaoVM.estado;
             local.Cep = localDoacaoVM.cep;
             local.Complemento = localDoacaoVM.comple;
-            local.Ativo = localDoacaoVM.ativo;
+            local.Ativo = (char)localDoacaoVM.ativo;
 
             await _ServiceLocais.oRepositoryLocais.IncluirAsync(local);
 
