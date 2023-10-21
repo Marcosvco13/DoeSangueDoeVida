@@ -91,11 +91,31 @@
                 @Html.DisplayFor(modelItem => item.ativo)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.id }) |
+                <button class="btn btn-success details" data-id="@item.id"><i class="glyphicon glyphicon-file">Detalhes</i></button>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id } ) |
                 @Html.ActionLink("Delete", "Delete", new { id=item.id })
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
+
+<div id="modal" class="modal fade" role="dialog" />
+
+@section scripts{
+    <script>
+        $(function () {
+            $(".details").click(function () {
+                var id = $(this).attr("data-id");
+                alert(id);
+                $("#modal").load("Details?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+
+        })
+    </script>
+}
+
+
+

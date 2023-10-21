@@ -10,7 +10,7 @@ namespace Projeto_Integrador.Controllers
     public class LocaisDoacaoController : Controller
     {
         private ServiceLocais _ServiceLocais;
-
+        
         public LocaisDoacaoController()
         {
             _ServiceLocais = new ServiceLocais();
