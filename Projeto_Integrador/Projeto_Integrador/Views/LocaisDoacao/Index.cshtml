@@ -7,7 +7,7 @@
 <h1>Hemocentros</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <button class="btn btn-success create"><i class="glyphicon glyphicon-file">Criar</i></button>
 </p>
 <table class="table">
     <thead>
@@ -93,7 +93,7 @@
             <td>
                 <button class="btn btn-success details" data-value="@item.id"><i class="glyphicon glyphicon-file">Detalhes</i></button>
                 <button class="btn btn-primary edit" data-value="@item.id"><i class="glyphicon glyphicon-edit">Editar</i></button>
-                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+                <button class="btn btn-danger delete" data-value="@item.id"><i class="glyphicon glyphicon-edit">Excluir</i></button>
             </td>
         </tr>
         }
@@ -123,6 +123,20 @@
             $(".edit").click(function () {
                 var id = $(this).data("value");
                 $("#conteudoModal").load("/LocaisDoacao/Edit?id=" + id, function () {
+                    $("#myModal").modal('show');
+                })
+            });
+
+            $(".delete").click(function () {
+                var id = $(this).data("value");
+                $("#conteudoModal").load("/LocaisDoacao/Delete?id=" + id, function () {
+                    $("#myModal").modal('show');
+                })
+            });
+
+            $(".create").click(function () {
+                var id = $(this).data("value");
+                $("#conteudoModal").load("/LocaisDoacao/Create", function () {
                     $("#myModal").modal('show');
                 })
             });
