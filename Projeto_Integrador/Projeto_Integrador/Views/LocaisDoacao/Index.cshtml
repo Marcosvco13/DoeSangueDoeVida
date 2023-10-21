@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Hemocentros</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -91,7 +91,7 @@
                 @Html.DisplayFor(modelItem => item.ativo)
             </td>
             <td>
-                <button class="btn btn-success details" data-id="@item.id"><i class="glyphicon glyphicon-file">Detalhes</i></button>
+                <button class="btn btn-success details" data-value="@item.id"><i class="glyphicon glyphicon-file">Detalhes</i></button>
                 <button class="btn btn-primary edit" data-id="@item.id"><i class="glyphicon glyphicon-edit">Editar</i></button>
                 @Html.ActionLink("Delete", "Delete", new { id=item.id })
             </td>
@@ -100,25 +100,33 @@
     </tbody>
 </table>
 
-<div id="modal" class="modal fade" role="dialog" />
+<div class="modal fade bd-example-modal-lg" tabindex="-1" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="conteudoModal"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section scripts{
-    <script>
-        $(function () {
+    <script type="text/javascript">
+        $(document).ready(function () {
             $(".details").click(function () {
-                var id = $(this).attr("data-id");
-                $("#modal").modal();
-                alert(id);
-                $("#modal").load("Details?id=" + id, function () {
-                    
+                var id = $(this).data("value");
+                $("#conteudoModal").load("/LocaisDoacao/Details?id=" + id, function () {
+                    $('#myModal').modal("show");
                 })
             });
 
+
+
             $(".edit").click(function () {
                 var id = $(this).attr("data-id");
-                alert(id);
-                $("#modal").load("Edit?id=" + id, function () {
-                    $("#modal").modal();
+                //alert(id);
+                $("#modal").on("Edit?id=" + id, function () {
+                    $("#modal").trigger('focus');
                 })
             });
 
