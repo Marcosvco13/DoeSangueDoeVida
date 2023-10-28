@@ -24,6 +24,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -38,3 +39,4 @@ app.MapControllerRoute(
 
 app.MapRazorPages();
 app.Run();
+
