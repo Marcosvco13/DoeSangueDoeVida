@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p8ILDfwiF95ZGtwAcuAXR7J8ddsRPgwtvvkjjqYxLGwNPjq54DE7saSTUd0fE98ToKL0jy9FqPhKrrcbzihZ+g==",
+  "dgSpecHash": "G7m+dDB4YexNjdzP29E20vGf6uWDkSFna8E2aCgn0rj33QlQ+zkcGH4bleXf6yXqizfCu35BfItz8WnUpRHgCg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danie\\OneDrive\\Documentos\\Faculdade\\Faculdade\\Projeto Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\Projeto_Integrador.csproj",
+  "projectFilePath": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\Projeto_Integrador.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danie\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\danie\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

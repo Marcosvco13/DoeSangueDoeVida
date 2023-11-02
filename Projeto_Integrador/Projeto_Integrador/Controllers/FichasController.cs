@@ -46,7 +46,7 @@ namespace Projeto_Integrador.Controllers
             ficha.NomePai = fichaVM.nomePai;
 
             await _ServiceFichas.oRepositoryFichas.IncluirAsync(ficha);
-            return View(fichaVM);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -62,10 +62,10 @@ namespace Projeto_Integrador.Controllers
             if(ModelState.IsValid)
             {
                 var ficha = await _ServiceFichas.oRepositoryFichas.AlterarAsync(fichaDoacao);
-                return View(ficha);
+                return RedirectToAction("Index");
             }
             ViewData["MensagemErro"] = "Ocorreu um erro";
-            return View();
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

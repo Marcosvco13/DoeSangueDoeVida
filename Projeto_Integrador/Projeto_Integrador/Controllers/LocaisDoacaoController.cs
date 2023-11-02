@@ -46,7 +46,7 @@ namespace Projeto_Integrador.Controllers
 
             await _ServiceLocais.oRepositoryLocais.IncluirAsync(local);
 
-            return View(localDoacaoVM);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -62,10 +62,10 @@ namespace Projeto_Integrador.Controllers
             if (ModelState.IsValid)
             {
                 var local = await _ServiceLocais.oRepositoryLocais.AlterarAsync(localDoacao);
-                return View(local);
+                return RedirectToAction("Index");
             }
             ViewData["MensagemErro"] = "Ocorreu um erro";
-            return View();
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
