@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp;
 using Projeto_Integrador.Models.Models;
 using Projeto_Integrador.Models.Services;
@@ -6,6 +7,7 @@ using Projeto_Integrador.ViewModel;
 
 namespace Projeto_Integrador.Controllers
 {
+    [Authorize]
     public class EnderecosController : Controller
     {
         private ServiceEnderecos _ServiceEnderecos;

@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Projeto_Integrador.Models.Models;
 using Projeto_Integrador.Models.Services;
 using Projeto_Integrador.ViewModel;
 
 namespace Projeto_Integrador.Controllers
 {
+    [Authorize]
     public class FichasController : Controller
     {
         private ServiceFichas _ServiceFichas;
