@@ -39,60 +39,41 @@
                 <ul class="navbar-nav">
 
                     
-
-                    @if(SignInManager.IsSignedIn(User))
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Requisitos">Requisitos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
+                    </li>
+                    @if (User.IsInRole("Admin"))
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
                         </li>
+                    }
+                    @if (User.IsInRole("Hemocentro"))
+                    {
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Requisitos">Requisitos</a>
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
-                        </li>
+                    }
+                    else if (SignInManager.IsSignedIn(User))
+                    {
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Agendar</a>
-                        </li>
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Cad Datas</a>
-                            </li>
-                        } 
-                        @if (User.IsInRole("Hemocentro"))
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Cad Datas</a>
-                            </li>
-                        } 
-                    }
-                    else
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Requisitos">Requisitos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
-                        </li>
+                        </li>                   
                     }
 
-                    @if (SignInManager.IsSignedIn(User))
-                    {
-                        Console.WriteLine("O usuário está na role Admin.");
-                    }
+
 
                     
                 </ul>
