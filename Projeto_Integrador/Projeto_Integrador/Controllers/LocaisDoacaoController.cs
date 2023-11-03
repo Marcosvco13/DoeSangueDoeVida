@@ -7,6 +7,7 @@ using Projeto_Integrador.ViewModel;
 
 namespace Projeto_Integrador.Controllers
 {
+    [Authorize(Roles="Admin")]
     public class LocaisDoacaoController : Controller
     {
         private ServiceLocais _ServiceLocais;
@@ -15,7 +16,6 @@ namespace Projeto_Integrador.Controllers
         {
             _ServiceLocais = new ServiceLocais();
         }
-        //[Authorize(Roles = Roles.Hemocentro)]
         public IActionResult Index()
         {
             var listarLocais = LocalDoacaoVM.ListarTodosLocais();

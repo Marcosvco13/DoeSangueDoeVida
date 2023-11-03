@@ -1,6 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity;
+@using Projeto_Integrador.Areas.Identity.Data
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    @inject SignInManager<UsuarioModel> SignInManager
+
     <meta charset="utf-8" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,6 +37,8 @@
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
+
+                    
                     <li class="nav-item">
                         <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                     </li>
@@ -45,12 +51,31 @@
                     <li class="nav-item">
                         <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Cad Datas</a>
-                    </li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
+                        </li>
+                    }
+                    @if (User.IsInRole("Hemocentro"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
+                        </li>
+                    }
+                    else if (SignInManager.IsSignedIn(User))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Agendar</a>
+                        </li>                   
+                    }
+
+
+
+                    
                 </ul>
             </div>
 

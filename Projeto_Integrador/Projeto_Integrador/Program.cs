@@ -9,6 +9,7 @@ builder.Services.AddDbContext<Projeto_IntegradorContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddDefaultIdentity<UsuarioModel>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<Projeto_IntegradorContext>();
 
 // Add services to the container.
@@ -24,12 +25,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication();;
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
@@ -38,3 +40,4 @@ app.MapControllerRoute(
 
 app.MapRazorPages();
 app.Run();
+
