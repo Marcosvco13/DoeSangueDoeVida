@@ -526,3 +526,4 @@ C:\Users\danie\Documents\Faculdade\Projento Integrador\Projeto_Integrador_2\Proj
 C:\Users\danie\Documents\Faculdade\Projento Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador\obj\Debug\net7.0\Projeto_Integrador.pdb
 C:\Users\danie\Documents\Faculdade\Projento Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador\obj\Debug\net7.0\Projeto_Integrador.genruntimeconfig.cache
 C:\Users\danie\Documents\Faculdade\Projento Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador\obj\Debug\net7.0\ref\Projeto_Integrador.dll
+C:\Users\danie\Documents\Faculdade\Projento Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador\bin\Debug\net7.0\efpt.config.json

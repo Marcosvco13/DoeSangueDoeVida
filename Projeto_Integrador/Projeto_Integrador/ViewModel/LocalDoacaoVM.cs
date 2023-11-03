@@ -21,7 +21,7 @@ namespace Projeto_Integrador.ViewModel
         public string bairro { get; set; }
         public string cidade { get; set; }
         public string estado { get; set; }
-        public char ativo { get; set; }
+        public int ativo { get; set; }
         #endregion
 
         public static LocalDoacaoVM SelecionarLocal(int id)

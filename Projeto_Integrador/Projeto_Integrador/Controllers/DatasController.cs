@@ -45,7 +45,7 @@ namespace Projeto_Integrador.Controllers
             data.DataDisp = dataVM.Data;
 
             await _ServiceDatas.oRepositoryDatas.IncluirAsync(data);
-            return View(dataVM);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -63,10 +63,10 @@ namespace Projeto_Integrador.Controllers
             if (ModelState.IsValid)
             {
                 var selecData = await _ServiceDatas.oRepositoryDatas.AlterarAsync(data);
-                return View(selecData);
+                return RedirectToAction("Index");
             }
             ViewData["MensagemErro"] = "Ocorreu um erro";
-            return View();
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

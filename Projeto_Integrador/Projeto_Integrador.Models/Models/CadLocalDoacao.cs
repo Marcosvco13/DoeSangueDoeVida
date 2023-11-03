@@ -29,7 +29,7 @@ public partial class CadLocalDoacao
 
     public string Estado { get; set; }
 
-    public char Ativo { get; set; }
+    public int Ativo { get; set; }
 
     public virtual ICollection<CadDataHoraDisp> CadDataHoraDisp { get; set; } = new List<CadDataHoraDisp>();
 

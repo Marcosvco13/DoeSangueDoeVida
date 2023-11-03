@@ -43,7 +43,7 @@ namespace Projeto_Integrador.Controllers
             endereco.Estado = enderecoVM.estado;
 
             await _ServiceEnderecos.oRepositoryEnderecos.IncluirAsync(endereco);
-            return View(endereco);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -59,10 +59,10 @@ namespace Projeto_Integrador.Controllers
             if(ModelState.IsValid)
             {
                 var endereco = await _ServiceEnderecos.oRepositoryEnderecos.AlterarAsync(cadEndereco);
-                return View(endereco);
+                return RedirectToAction("Index");
             }
             ViewData["MensagemErro"] = "Ocorreu um erro";
-            return View();
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
