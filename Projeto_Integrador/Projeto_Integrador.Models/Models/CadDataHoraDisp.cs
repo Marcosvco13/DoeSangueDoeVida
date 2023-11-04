@@ -14,6 +14,4 @@ public partial class CadDataHoraDisp
     public DateTime DataDisp { get; set; }
 
     public int Disp { get; set; }
-
-    public virtual CadLocalDoacao IdLocalNavigation { get; set; }
 }

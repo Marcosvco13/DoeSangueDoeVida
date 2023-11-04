@@ -24,19 +24,19 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CAD_ENDERECO]",
-         "ObjectType": 0
-      },
-      {
          "Name": "[dbo].[CAD_LOCAL_DOACAO]",
          "ObjectType": 0
       },
       {
          "Name": "[dbo].[FICHA_DOACAO]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[STATUS_DOACAO]",
+         "ObjectType": 0
       }
    ],
-   "UiHint": "notebook-marcos\\sqlexpress.DOACAO_SANGUE.dbo",
+   "UiHint": "desktop-jqadb68\\sqlexpress.DOACAO_SANGUE.dbo",
    "UncountableWords": null,
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
@@ -49,6 +49,7 @@
    "UseLegacyPluralizer": false,
    "UseManyToManyEntity": false,
    "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
    "UseNoObjectFilter": false,
    "UseNodaTime": false,
    "UseNullableReferences": false,

@@ -7,17 +7,15 @@ namespace Projeto_Integrador.Models.Models;
 
 public partial class FichaDoacao
 {
-    public int Id { get; set; }
-
     public string IdUser { get; set; }
 
     public string TipoSangue { get; set; }
 
-    public DateTime UltimaDoacao { get; set; }
+    public DateTime? UltimaDoacao { get; set; }
 
-    public int Peso { get; set; }
+    public decimal? Peso { get; set; }
 
-    public int Fumante { get; set; }
+    public int? Fumante { get; set; }
 
     public string Sexo { get; set; }
 
@@ -39,5 +37,21 @@ public partial class FichaDoacao
 
     public string NomePai { get; set; }
 
-    public virtual ICollection<CadDoacao> CadDoacao { get; set; } = new List<CadDoacao>();
+    public string Logradouro { get; set; }
+
+    public string Numero { get; set; }
+
+    public string Complemento { get; set; }
+
+    public string Cep { get; set; }
+
+    public string Bairro { get; set; }
+
+    public string Cidade { get; set; }
+
+    public string Estado { get; set; }
+
+    public string Nome { get; set; }
+
+    public string Telefone { get; set; }
 }

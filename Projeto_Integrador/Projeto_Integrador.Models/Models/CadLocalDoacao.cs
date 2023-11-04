@@ -30,8 +30,4 @@ public partial class CadLocalDoacao
     public string Estado { get; set; }
 
     public int Ativo { get; set; }
-
-    public virtual ICollection<CadDataHoraDisp> CadDataHoraDisp { get; set; } = new List<CadDataHoraDisp>();
-
-    public virtual ICollection<CadDoacao> CadDoacao { get; set; } = new List<CadDoacao>();
 }
