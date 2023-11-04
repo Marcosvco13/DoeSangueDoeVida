@@ -34,3 +34,15 @@ D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Model
 D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\refint\Projeto_Integrador.Models.dll
 D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\Projeto_Integrador.Models.pdb
 D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\ref\Projeto_Integrador.Models.dll
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\bin\Debug\net7.0\Projeto_Integrador.Models.deps.json
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\bin\Debug\net7.0\Projeto_Integrador.Models.dll
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\bin\Debug\net7.0\Projeto_Integrador.Models.pdb
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\Projeto_Integrador.Models.csproj.AssemblyReference.cache
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\Projeto_Integrador.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\Projeto_Integrador.Models.AssemblyInfoInputs.cache
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\Projeto_Integrador.Models.AssemblyInfo.cs
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\Projeto_Integrador.Models.csproj.CoreCompileInputs.cache
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\Projeto_Integrador.Models.dll
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\refint\Projeto_Integrador.Models.dll
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\Projeto_Integrador.Models.pdb
+D:\Faculdade\C#\Trab_Av1\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador.Models\obj\Debug\net7.0\ref\Projeto_Integrador.Models.dll

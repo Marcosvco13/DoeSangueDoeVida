@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O/B2rHBzOLvxdmizCyWFR/AndYkP3kJOt2sY9PQoCYvRywmZhFwN9b8SBBJ1WTAUfj9Py0C7EGu5OUHxp4nq1Q==",
+  "dgSpecHash": "sIy5nXaPC/qRx3hkTntkWbT8ljMuQVRS7b6StzlfMatUcwfVrO16kv/dZqawZ6GneVfwtUCF/HziImUTczNTgw==",
   "success": true,
-  "projectFilePath": "D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj",
+  "projectFilePath": "D:\\Faculdade\\C#\\Trab_Av1\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marco\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

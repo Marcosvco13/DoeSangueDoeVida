@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj": {}
+    "D:\\Faculdade\\C#\\Trab_Av1\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj": {}
   },
   "projects": {
-    "D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj": {
+    "D:\\Faculdade\\C#\\Trab_Av1\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj",
+        "projectUniqueName": "D:\\Faculdade\\C#\\Trab_Av1\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj",
         "projectName": "Projeto_Integrador.Models",
-        "projectPath": "D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj",
+        "projectPath": "D:\\Faculdade\\C#\\Trab_Av1\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\Projeto_Integrador.Models.csproj",
         "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-        "outputPath": "D:\\Faculdade\\C#\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\obj\\",
+        "outputPath": "D:\\Faculdade\\C#\\Trab_Av1\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
