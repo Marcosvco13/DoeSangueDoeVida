@@ -9,185 +9,165 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Projeto_Integrador
 build_property.RootNamespace = Projeto_Integrador
-build_property.ProjectDir = C:\Users\danie\Documents\Faculdade\Projento Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador\
+build_property.ProjectDir = D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\danie\Documents\Faculdade\Projento Integrador\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador
+build_property.MSBuildProjectDirectory = D:\Faculdade\C#\Projeto_Integrador_2\Projeto_Integrador\Projeto_Integrador
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Create.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Delete.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Details.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Edit.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Index.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Datas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Enderecos/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Enderecos/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Enderecos/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Enderecos/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Enderecos/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Create.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Delete.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Details.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Edit.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Index.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Fichas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Contato.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Contato.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YXRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Index.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Login.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Privacy.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Register.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Requisitos.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Requisitos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXF1aXNpdG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Sobre.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Home/Sobre.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb2JyZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Create.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWlzRG9hY2FvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Delete.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWlzRG9hY2FvXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Details.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWlzRG9hY2FvXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Edit.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWlzRG9hY2FvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Index.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/LocaisDoacao/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWlzRG9hY2FvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Shared/Error.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Shared/_LoginPartial.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/_ViewImports.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/_ViewStart.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danie/Documents/Faculdade/Projento Integrador/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Shared/_Layout.cshtml]
+[D:/Faculdade/C\#/Projeto_Integrador_2/Projeto_Integrador/Projeto_Integrador/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7uqppypkyp

@@ -8,12 +8,11 @@ namespace Projeto_Integrador.ViewModel
         }
 
         #region FichaDoacao
-        public int id { get; set; }
         public string idUser { get; set; }
         public string tipoSangue { get; set; }
-        public DateTime ultimaDoacao { get; set; }
-        public int peso { get; set; }
-        public int fumante { get; set; }
+        public DateTime? ultimaDoacao { get; set; }
+        public decimal? peso { get; set; }
+        public int? fumante { get; set; }
         public string sexo { get; set; }
         public string cpf { get; set; }
         public string rg { get; set; }
@@ -33,7 +32,6 @@ namespace Projeto_Integrador.ViewModel
             var ficha = db.FichaDoacao.Find(id);
             var fichaVM = new FichaVM();
 
-            fichaVM.id = ficha.Id;
             fichaVM.idUser = ficha.IdUser;
             fichaVM.tipoSangue = ficha.TipoSangue;
             fichaVM.ultimaDoacao = ficha.UltimaDoacao;
@@ -59,7 +57,6 @@ namespace Projeto_Integrador.ViewModel
             return(from ficha in db.FichaDoacao
                    select new FichaVM
                    {
-                       id = ficha.Id,
                        idUser = ficha.IdUser,
                        tipoSangue = ficha.TipoSangue,
                        ultimaDoacao = ficha.UltimaDoacao,
