@@ -52,20 +52,5 @@ namespace Projeto_Integrador.ViewModel
                 NomeLocal = db.CadLocalDoacao.Find(doacao.IdLocal)!.Nome,
             };
         }
-
-        public static DoacaoVM SelecDoacao(int id)
-        {
-            var db = new DOACAO_SANGUEContext();
-            var doacao = db.CadDoacao.FirstOrDefault(x => x.Id == id);
-
-            return new DoacaoVM()
-            {
-                IdDoa = doacao.Id,
-                NomeDoador = db.FichaDoacao.Find(doacao.IdFichaUsuario)!.Cpf,
-                DataDisp = db.CadDataHoraDisp.Find(doacao.IdData)!.DataDisp,
-                status = db.StatusDoacao.Find(doacao.IdStatus)!.Descricao,
-                NomeLocal = db.CadLocalDoacao.Find(doacao.IdLocal)!.Nome,
-            };
-        }
     }
 }

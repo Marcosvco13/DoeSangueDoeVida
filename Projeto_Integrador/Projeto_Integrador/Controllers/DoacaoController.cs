@@ -19,7 +19,7 @@ namespace Projeto_Integrador.Controllers
         public void CarregaDadosViewBag()
         {
             ViewData["IdLocal"] = new SelectList(_ServiceDoacao.oRepositoryLocais.SelecionarTodos(), "Id", "Nome");
-            ViewData["IdData"] = new SelectList(_ServiceDoacao.oRepositoryDatas.SelecionarTodos(), "Id", "DataDisp");
+            ViewData["IdData"] = new SelectList(_ServiceDoacao.oRepositoryDatas.SelecionarTodos(), "Id", "DataDisp", "Disp", "IdLocal");
             ViewData["IdStatus"] = new SelectList(_ServiceDoacao.oRepositoryStatus.SelecionarTodos(), "Id", "Descricao");
         }
 
@@ -41,6 +41,12 @@ namespace Projeto_Integrador.Controllers
             if (ModelState.IsValid)
             {
                 doacao = await _ServiceDoacao.oRepositoryDoaco.IncluirAsync(doacao);
+                var data = await _ServiceDoacao.oRepositoryDatas.SelecionarPkAsync(doacao.IdData);
+                if (data != null)
+                {
+                    data.Disp = 2;
+                    await _ServiceDoacao.oRepositoryDatas.AlterarAsync(data);
+                }
                 return View(doacao);
             }
             else
@@ -68,9 +74,16 @@ namespace Projeto_Integrador.Controllers
             return View(doacao);
         }
 
-        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
+            var db = new DOACAO_SANGUEContext();
+            var doacao = db.CadDoacao.FirstOrDefault(x => x.Id == id);
+            var data = await _ServiceDoacao.oRepositoryDatas.SelecionarPkAsync(doacao.IdData);
+            if (data != null)
+            {
+                data.Disp = 1;
+                await _ServiceDoacao.oRepositoryDatas.AlterarAsync(data);
+            }
             await _ServiceDoacao.oRepositoryDoaco.ExcluirAsync(id);
             return RedirectToAction("Index");
         }
