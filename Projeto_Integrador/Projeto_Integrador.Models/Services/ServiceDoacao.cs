@@ -8,6 +8,7 @@ namespace Projeto_Integrador.Models.Services
         public RepositoryLocais oRepositoryLocais { get; set; }
         public RepositoryFichas oRepositoryFichas { get; set; }
         public RepositoryStatus oRepositoryStatus { get; set; }
+        public RepositoryDatas oRepositoryDatas { get; set; }
 
         public ServiceDoacao()
         {
@@ -15,6 +16,7 @@ namespace Projeto_Integrador.Models.Services
             oRepositoryFichas = new RepositoryFichas();
             oRepositoryLocais = new RepositoryLocais();
             oRepositoryStatus = new RepositoryStatus();
+            oRepositoryDatas = new RepositoryDatas();
         }
     }
 }

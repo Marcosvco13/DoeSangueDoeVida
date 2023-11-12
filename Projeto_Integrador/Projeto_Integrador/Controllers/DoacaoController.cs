@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Projeto_Integrador.Models.Models;
 using Projeto_Integrador.Models.Services;
 using Projeto_Integrador.ViewModel;
 
@@ -15,6 +16,12 @@ namespace Projeto_Integrador.Controllers
         {
             _ServiceDoacao = new ServiceDoacao();
         }
+        public void CarregaDadosViewBag()
+        {
+            ViewData["IdLocal"] = new SelectList(_ServiceDoacao.oRepositoryLocais.SelecionarTodos(), "Id", "Nome");
+            ViewData["IdData"] = new SelectList(_ServiceDoacao.oRepositoryDatas.SelecionarTodos(), "Id", "DataDisp");
+            ViewData["IdStatus"] = new SelectList(_ServiceDoacao.oRepositoryStatus.SelecionarTodos(), "Id", "Descricao");
+        }
 
         public IActionResult Index()
         {
@@ -22,20 +29,46 @@ namespace Projeto_Integrador.Controllers
             return View(DoacaoVM.ListarDoacao(userid));
         }
 
-        public IActionResult Create(int id)
+        public IActionResult Create()
         {
             CarregaDadosViewBag();
             return View();
         }
 
-
-        public void CarregaDadosViewBag()
+        [HttpPost]
+        public async Task<IActionResult> Create(CadDoacao doacao)
         {
-            ViewData["IdLocal"] = new SelectList(_ServiceDoacao.oRepositoryLocais.SelecionarTodos(), "Id", "Nome");
-            ViewData["Status"] = new SelectList(_ServiceDoacao.oRepositoryStatus.SelecionarTodos(), "Id", "Descricao");
-            //ViewBag.listalocal = _ServiceDoacao.oRepositoryLocais.SelecionarTodos();
+            if (ModelState.IsValid)
+            {
+                doacao = await _ServiceDoacao.oRepositoryDoaco.IncluirAsync(doacao);
+                return View(doacao);
+            }
+            else
+            {
+                return View(doacao);
+            }
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var doacao = await _ServiceDoacao.oRepositoryDoaco.SelecionarPkAsync(id);
+            CarregaDadosViewBag();
+            return View(doacao);
+        }
+
+        public async Task<IActionResult> Edit(CadDoacao doacao)
+        {
+            if (ModelState.IsValid)
+            {
+                doacao = await _ServiceDoacao.oRepositoryDoaco.AlterarAsync(doacao);
+                CarregaDadosViewBag();
+                return View(doacao);
+            }
+            return View(doacao);
+        }
+
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             await _ServiceDoacao.oRepositoryDoaco.ExcluirAsync(id);

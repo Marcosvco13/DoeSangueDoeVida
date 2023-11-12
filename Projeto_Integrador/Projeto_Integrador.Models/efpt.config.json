@@ -36,7 +36,7 @@
          "ObjectType": 0
       }
    ],
-   "UiHint": "desktop-jqadb68\\sqlexpress.DOACAO_SANGUE.dbo",
+   "UiHint": "notebook-marcos\\sqlexpress.DOACAO_SANGUE.dbo",
    "UncountableWords": null,
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,

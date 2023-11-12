@@ -14,4 +14,6 @@ public partial class CadDoacao
     public int IdData { get; set; }
 
     public int IdStatus { get; set; }
+
+    public int IdLocal { get; set; }
 }

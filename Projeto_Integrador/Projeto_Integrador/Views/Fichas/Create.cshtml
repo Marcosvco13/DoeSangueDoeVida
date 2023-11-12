@@ -21,7 +21,7 @@
             <div class="form-group">
                 <label asp-for="idUser" class="control-label">Nome usuário</label>
                 <select class="form-select" asp-for="idUser" asp-items="@ViewBag.IdUser">
-                    <option selected value="" title="Manage">@UserManager.GetUserName(User)</option>
+                    <option selected value="@UserManager.GetUserId(User)" title="Manage">@UserManager.GetUserName(User)</option>
                 </select>
             </div>
 

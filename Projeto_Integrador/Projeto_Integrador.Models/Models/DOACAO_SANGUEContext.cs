@@ -12,7 +12,6 @@ public partial class DOACAO_SANGUEContext : DbContext
         : base(options)
     {
     }
-
     public DOACAO_SANGUEContext()
     {
     }
@@ -59,6 +58,7 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .IsRequired()
                 .HasMaxLength(450)
                 .HasColumnName("ID_FICHA_USUARIO");
+            entity.Property(e => e.IdLocal).HasColumnName("ID_LOCAL");
             entity.Property(e => e.IdStatus).HasColumnName("ID_STATUS");
         });
 
