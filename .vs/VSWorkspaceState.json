@@ -3,8 +3,12 @@
     "",
     "\\Projeto_Integrador",
     "\\Projeto_Integrador\\Projeto_Integrador",
-    "\\Projeto_Integrador\\Projeto_Integrador\\Controllers"
+    "\\Projeto_Integrador\\Projeto_Integrador.Models",
+    "\\Projeto_Integrador\\Projeto_Integrador.Models\\Models",
+    "\\Projeto_Integrador\\Projeto_Integrador\\Controllers",
+    "\\Projeto_Integrador\\Projeto_Integrador\\Views",
+    "\\Projeto_Integrador\\Projeto_Integrador\\Views\\Doacao"
   ],
-  "SelectedNode": "\\Projeto_Integrador\\Projeto_Integrador\\Controllers\\DoacaoController.cs",
+  "SelectedNode": "\\Projeto_Integrador\\Projeto_Integrador\\Views\\Doacao\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

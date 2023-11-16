@@ -18,8 +18,10 @@ namespace Projeto_Integrador.Controllers
         }
         public void CarregaDadosViewBag()
         {
+            var db = new DOACAO_SANGUEContext();
             ViewData["IdLocal"] = new SelectList(_ServiceDoacao.oRepositoryLocais.SelecionarTodos(), "Id", "Nome");
-            ViewData["IdData"] = new SelectList(_ServiceDoacao.oRepositoryDatas.SelecionarTodos(), "Id", "DataDisp", "Disp", "IdLocal");
+            var datas = db.CadDataHoraDisp.Where(d => d.Disp != 2).ToList();
+            ViewData["IdData"] = new SelectList(datas, "Id", "DataDisp");
             ViewData["IdStatus"] = new SelectList(_ServiceDoacao.oRepositoryStatus.SelecionarTodos(), "Id", "Descricao");
         }
 
