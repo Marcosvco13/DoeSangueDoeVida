@@ -1,0 +1,19 @@
+﻿body {
+    background-color: #f1f1f1;
+}
+
+.create {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #007bff;
+    font-style;
+    margin-top: 1rem;
+}

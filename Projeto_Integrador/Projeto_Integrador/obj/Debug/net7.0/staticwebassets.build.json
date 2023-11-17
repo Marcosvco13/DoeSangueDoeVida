@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LHlNRKeIMh6LUEyEGyqM+rX1votzXb04m4I1KKjJxWw=",
+  "Hash": "XktQPTArNFZQ5OoQE62kDjZySUbh0pRzvpWg9VICmY4=",
   "Source": "Projeto_Integrador",
   "BasePath": "_content/Projeto_Integrador",
   "Mode": "Default",
@@ -1188,6 +1188,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\SobreStyles.css"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\css\\TelasCRUD.css",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "css/TelasCRUD.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\TelasCRUD.css"
     },
     {
       "Identity": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\favicon.ico",
