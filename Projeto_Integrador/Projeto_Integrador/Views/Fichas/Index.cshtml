@@ -1,28 +1,22 @@
 ﻿@model IEnumerable<Projeto_Integrador.ViewModel.FichaVM>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Sua Ficha";
 }
 
-<h1>Index</h1>
+<h1>Ficha do doador</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar uma ficha</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.tipoSangue)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ultimaDoacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.peso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.fumante)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.sexo)
@@ -31,28 +25,7 @@
                 @Html.DisplayNameFor(model => model.cpf)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.rg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.orgExp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.profissao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.religiao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.tempFumante)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.dataNasc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nomeMae)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nomePai)
             </th>
             <th></th>
         </tr>
@@ -61,16 +34,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.tipoSangue)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ultimaDoacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.peso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.fumante)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.sexo)
@@ -79,33 +46,11 @@
                 @Html.DisplayFor(modelItem => item.cpf)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.rg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.orgExp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.profissao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.religiao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.tempFumante)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.dataNasc)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.nomeMae)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nomePai)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Editar", "Edit", new { id=item.idUser }) |
+                @Html.ActionLink("Veja Mais", "Details", new { id=item.idUser }) |
             </td>
         </tr>
 }

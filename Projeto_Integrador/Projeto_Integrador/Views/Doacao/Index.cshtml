@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Controle de Doações</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Cadastre uma Doação</a>
 </p>
 <table class="table">
     <thead>
@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.NomeLocal)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.IdDoa  }) |
-                @Html.ActionLink("Details", "Detail", new { id=item.IdDoa }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.IdDoa })
+                @Html.ActionLink("Editar", "Edit", new {  id=item.IdDoa  }) |
+                @Html.ActionLink("Detalhes", "Detail", new { id=item.IdDoa }) |
+                @Html.ActionLink("Deletar", "Delete", new { id=item.IdDoa })
             </td>
         </tr>
 }

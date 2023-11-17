@@ -24,14 +24,14 @@ namespace Projeto_Integrador.ViewModel
                 var retorno = new List<DoacaoVM>();
                 foreach (var doacao in doacoes)
                 {
-                    var doa = new DoacaoVM
-                    {
-                        IdDoa = doacao.Id,
-                        NomeDoador = db.FichaDoacao.Find(doacao.IdFichaUsuario)!.Cpf,
-                        DataDisp = db.CadDataHoraDisp.Find(doacao.IdData)!.DataDisp,
-                        status = db.StatusDoacao.Find(doacao.IdStatus)!.Descricao,
-                        NomeLocal = db.CadLocalDoacao.Find(doacao.IdLocal)!.Nome,
-                    };
+                    var doa = new DoacaoVM();
+
+                    doa.IdDoa = doacao.Id;
+                    doa.NomeDoador = db.FichaDoacao.Find(doacao.IdFichaUsuario)!.Nome;
+                    doa.DataDisp = db.CadDataHoraDisp.Find(doacao.IdData)!.DataDisp;
+                    doa.status = db.StatusDoacao.Find(doacao.IdStatus)!.Descricao;
+                    doa.NomeLocal = db.CadLocalDoacao.Find(doacao.IdLocal)!.Nome;
+                    
                     retorno.Add(doa);
                 }
                 return retorno;
@@ -46,7 +46,7 @@ namespace Projeto_Integrador.ViewModel
             return new DoacaoVM()
             {
                 IdDoa = doacao.Id,
-                NomeDoador = db.FichaDoacao.Find(doacao.IdFichaUsuario)!.Cpf,
+                NomeDoador = db.FichaDoacao.Find(doacao.IdFichaUsuario)!.Nome,
                 DataDisp = db.CadDataHoraDisp.Find(doacao.IdData)!.DataDisp,
                 status = db.StatusDoacao.Find(doacao.IdStatus)!.Descricao,
                 NomeLocal = db.CadLocalDoacao.Find(doacao.IdLocal)!.Nome,

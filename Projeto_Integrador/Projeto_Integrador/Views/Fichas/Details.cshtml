@@ -4,19 +4,11 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detalhes da Ficha</h1>
 
 <div>
-    <h4>FichaVM</h4>
     <hr />
     <dl class="row">
-
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.idUser)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.idUser)
-        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.tipoSangue)
         </dt>
@@ -34,12 +26,6 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.peso)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.fumante)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.fumante)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.sexo)
@@ -78,6 +64,12 @@
             @Html.DisplayFor(model => model.religiao)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fumante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fumante)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.tempFumante)
         </dt>
         <dd class = "col-sm-10">
@@ -101,9 +93,63 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.nomePai)
         </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.logradouro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.logradouro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.complemento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.complemento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cep)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cep)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bairro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bairro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idUser }) |
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idUser }) |
+    <a asp-action="Index">Voltar</a>
 </div>

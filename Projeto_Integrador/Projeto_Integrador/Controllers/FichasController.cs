@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging.Console;
 using Projeto_Integrador.Models.Models;
 using Projeto_Integrador.Models.Services;
 using Projeto_Integrador.ViewModel;
@@ -17,8 +19,8 @@ namespace Projeto_Integrador.Controllers
         }
         public IActionResult Index()
         {
-            var listarFicha = FichaVM.ListarTodasFichas();
-            return View(listarFicha);
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return View(FichaVM.ListarFicha(userid));
         }
 
         [HttpGet]
@@ -28,33 +30,35 @@ namespace Projeto_Integrador.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create (FichaVM fichaVM)
+        public async Task<IActionResult> Create (FichaDoacao fichadoacao)
         {
-            var ficha = new FichaDoacao();
-            ficha.IdUser = fichaVM.idUser;
-            ficha.TipoSangue = fichaVM.tipoSangue;
-            ficha.UltimaDoacao = fichaVM.ultimaDoacao;
-            ficha.Peso = fichaVM.peso;
-            ficha.Fumante = fichaVM.fumante;
-            ficha.Sexo = fichaVM.sexo;
-            ficha.Cpf = fichaVM.cpf;
-            ficha.Rg = fichaVM.rg;
-            ficha.OrgExp = fichaVM.orgExp;
-            ficha.Profissao = fichaVM.profissao;
-            ficha.Religiao = fichaVM.religiao;
-            ficha.TempFumante = fichaVM.tempFumante;
-            ficha.DataNasc = fichaVM.dataNasc;
-            ficha.NomeMae = fichaVM.nomeMae;
-            ficha.NomePai = fichaVM.nomePai;
-
-            await _ServiceFichas.oRepositoryFichas.IncluirAsync(ficha);
-            return RedirectToAction("Index");
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var db = new DOACAO_SANGUEContext();
+            var fichaExists = db.FichaDoacao.Any(x => x.IdUser == userid);
+            if (ModelState.IsValid)
+            {
+                if (!fichaExists)
+                {
+                    fichadoacao = await _ServiceFichas.oRepositoryFichas.IncluirAsync(fichadoacao);
+                    return View(fichadoacao);
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Erro: Já existe uma ficha cadastrada. Caso queira fazer alguma alteração, favor ir para aba de edição da ficha.");
+                }
+                return View(fichadoacao);
+            }
+            else
+            {
+                return View(fichadoacao);
+            }
         }
 
         [HttpGet]
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Edit()
         {
-            var ficha = await _ServiceFichas.oRepositoryFichas.SelecionarPkAsync(id);
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var ficha = await _ServiceFichas.oRepositoryFichas.SelecionarPkAsync(userid);
             return View(ficha);
         }
 
@@ -70,16 +74,10 @@ namespace Projeto_Integrador.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Details()
         {
-            await _ServiceFichas.oRepositoryFichas.ExcluirAsync(id);
-            return RedirectToAction("Index");
-        }
-        public IActionResult Details(int id)
-        {
-            var ficha = FichaVM.SelecionarFicha(id);
-            return View(ficha);
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            return View(FichaVM.SelecionarFicha(userid));
         }
     }
 }

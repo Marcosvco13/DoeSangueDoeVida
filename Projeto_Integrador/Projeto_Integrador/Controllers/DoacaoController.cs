@@ -40,21 +40,29 @@ namespace Projeto_Integrador.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CadDoacao doacao)
         {
+            var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var db = new DOACAO_SANGUEContext();
+
+            var fichaExists = db.FichaDoacao.Any(x => x.IdUser == userid);
+
             if (ModelState.IsValid)
             {
-                doacao = await _ServiceDoacao.oRepositoryDoaco.IncluirAsync(doacao);
-                var data = await _ServiceDoacao.oRepositoryDatas.SelecionarPkAsync(doacao.IdData);
-                if (data != null)
+                if (fichaExists)
                 {
+                    doacao = await _ServiceDoacao.oRepositoryDoaco.IncluirAsync(doacao);
+                    var data = await _ServiceDoacao.oRepositoryDatas.SelecionarPkAsync(doacao.IdData);
                     data.Disp = 2;
                     await _ServiceDoacao.oRepositoryDatas.AlterarAsync(data);
+
+                    return View(doacao);
                 }
-                return View(doacao);
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Erro: Você não tem uma ficha cadastrada no sistema, favor realizar o cadastro da ficha para poder agendar uma doação.");
+                }
             }
-            else
-            {
-                return View(doacao);
-            }
+
+            return View(doacao);
         }
 
         [HttpGet]
