@@ -18,7 +18,7 @@ public partial class DOACAO_SANGUEContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
-=> optionsBuilder.UseSqlServer("data source=NOTEBOOK-MARCOS\\SQLEXPRESS;Initial Catalog=DOACAO_SANGUE;User Id=sa;Password=2000@edu.sau;TrustserverCertificate=True");
+=> optionsBuilder.UseSqlServer("data source=.\\SQLEXPRESS;Initial Catalog=DOACAO_SANGUE;User Id=sa;Password=22102001da;TrustserverCertificate=True");
 
     public virtual DbSet<CadDataHoraDisp> CadDataHoraDisp { get; set; }
 
