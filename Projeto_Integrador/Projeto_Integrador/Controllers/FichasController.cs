@@ -9,7 +9,7 @@ using Projeto_Integrador.ViewModel;
 
 namespace Projeto_Integrador.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class FichasController : Controller
     {
         private ServiceFichas _ServiceFichas;

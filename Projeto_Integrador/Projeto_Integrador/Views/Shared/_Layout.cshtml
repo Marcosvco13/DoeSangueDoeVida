@@ -20,6 +20,8 @@
     <link href="~/css/headerstyles.css" rel="stylesheet" />
     <link href="~/css/registerstyles.css" rel="stylesheet" />
     <link href="~/css/loginstyles.css" rel="stylesheet" />
+    <link href="~/css/telascrud.css" rel="stylesheet" />
+
 </head>
 <body>
     <header>
@@ -51,30 +53,30 @@
                     <li class="nav-item">
                         <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
                     </li>
-                    @if (User.IsInRole("Admin"))
-                    {
+                    @*@if (User.IsInRole("Admin"))
+                    {*@
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
                         </li>
-                    }
-                    @if (User.IsInRole("Hemocentro"))
-                    {
+                    @*}*@
+                    @*@if (User.IsInRole("Hemocentro"))
+                    {*@
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
                         </li>
-                    }
-                    else if (SignInManager.IsSignedIn(User))
-                    {
+                    @*}*@
+                    @*else if (SignInManager.IsSignedIn(User))
+                    {*@
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Doacao" asp-action="Index">Agendar Doação</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Fichas" asp-action="Index">Ficha</a>
                         </li>
-                    }
+                    @*}*@
 
 
 

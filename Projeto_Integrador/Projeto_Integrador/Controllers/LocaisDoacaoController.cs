@@ -7,7 +7,7 @@ using Projeto_Integrador.ViewModel;
 
 namespace Projeto_Integrador.Controllers
 {
-    [Authorize(Roles="Admin")]
+    //[Authorize(Roles="Admin")]
     public class LocaisDoacaoController : Controller
     {
         private ServiceLocais _ServiceLocais;
