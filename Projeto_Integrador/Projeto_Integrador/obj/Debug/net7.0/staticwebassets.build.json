@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OIlFAZ/z1FhlwpZDBkPWVENi0Kmp12h/vda6k2VZnwk=",
+  "Hash": "Ep+gNaLCn0vMZyMjGVxVQWR5VJ+Lm8Tx2Tpomz6buDU=",
   "Source": "Projeto_Integrador",
   "BasePath": "_content/Projeto_Integrador",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\ContatoStyles.css"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\css\\DatasCards.css",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "css/DatasCards.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\DatasCards.css"
     },
     {
       "Identity": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\css\\HeaderStyles.css",

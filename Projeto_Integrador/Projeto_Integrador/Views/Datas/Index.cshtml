@@ -7,96 +7,58 @@
 
 <body>
     <div class="container-fluid">
-
-
-        <div class="row shadow-sm bg-light m-md-5">
-            <div class="row bg-light mt-0 d-flex align-items-center">
-                <div class="col">
-                    <h2 class="text-muted">Datas Disponíveis</h2>
-                </div>
-
-                <div class="col-auto me-xxl-4">
-                    <button class="create btn-sm d-flex align-items-center gap-1">
-                        <img src="~/imgs/plus-lg.svg" style="width: 1rem; height: 1rem; filter: invert(1);" />
-                        Cadastrar Nova Data
-                    </button>
-                </div>
-                <hr class="col-12 mt-0" />
+        <div class="row bg-light mt-0 d-flex align-items-center shadow-sm">
+            <div class="col">
+                <h2 class="text-muted">Datas Disponíveis</h2>
             </div>
 
-            <table class="table mt-3 mb-5 table-striped">
-                <thead>
-                    <tr>
-                        <th class="text-center align-middle text-capitalize text-light bg-dark">
-                            @Html.DisplayNameFor(model => model.id)
-                        </th>
-                        <th class="text-center align-middle text-capitalize text-light bg-dark">
-                            @Html.DisplayNameFor(model => model.Data)
-                        </th>
-                        <th class="text-center align-middle text-capitalize text-light bg-dark">
-                            @Html.DisplayNameFor(model => model.Disponivel)
-                        </th>
-                        <th class="text-center align-middle text-capitalize text-light bg-dark">
-                            @Html.DisplayNameFor(model => model.nomeLocal)
-                        </th>
-                        <th class="text-center align-middle text-capitalize text-light bg-dark"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td class="text-center align-middle ">
-                                @Html.DisplayFor(modelItem => item.id)
-                            </td>
-                            <td class="text-center align-middle ">
-                                @Html.DisplayFor(modelItem => item.Data)
-                            </td>
-                            <td class="text-center align-middle ">
-                                @Html.DisplayFor(modelItem => item.Disponivel)
-                            </td>
-                            <td class="text-center align-middle ">
-                                @Html.DisplayFor(modelItem => item.nomeLocal)
-                            </td>
+            <div class="col-auto me-xxl-4">
+                <button class="create btn-sm d-flex align-items-center gap-1">
+                    <img src="~/imgs/plus-lg.svg" style="width: 1rem; height: 1rem; filter: invert(1);" />
+                    Cadastrar Nova Data
+                </button>
+            </div>
+            <hr class="col-12 mt-0" />
+        </div>
 
-                            <td class="text-center align-middle ">
-                                <div class="dropdown">
-                                    <button class="btn rounded-circle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #f0f0f0; border: none;">
-                                        ...
+        <div class="row m-md-5">
+
+            <div class="row row-cols-1 row-cols-md-4 g-3  mt-0">
+
+                @foreach (var item in Model)
+                {
+                    <div class="col mb-3">
+                        <div class="card shadow-sm bg-light w-100">
+                            <div class="card-body">
+                                <p class="card-title">ID: @item.id</p>
+                                <h5 class="card-text heading mb-0 mt-3"> @item.nomeLocal</h5>
+                                <p class="card-text mb-0">Data: @item.Data</p>
+                                <p class="card-text">Disponível: <span class="badge badge-success rounded-pill d-inline" style="background: #cff6dd; color: #1fa750">@item.Disponivel</span> </p>
+
+                                <hr class="col-12 mt-0 mb-2" />
+
+                                <div class="d-flex justify-content-between ">
+                                    <button class="btn details " data-value="@item.id">
+                                        <img src="~/imgs/book-half.svg" style="max-width: 18px; max-height: 18px;" />
+                                        Detalhes
                                     </button>
-                                    <ul class="dropdown-menu" style="position: absolute !important; width: 150px; border: none;">
-                                        <li>
-                                            <div class="d-flex align-items-center">
-                                                <button class="btn details dropdown-item" data-value="@item.id">
-                                                    <img src="~/imgs/book-half.svg" />
-                                                    Detalhes
-                                                </button>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex align-items-center">
-                                                <button class="btn edit dropdown-item" data-value="@item.id">
-                                                    <img src="~/imgs/pencil-square.svg" />
-                                                    Editar
-                                                </button>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex align-items-center">
-                                                <a href="@Url.Action("Delete", new { id = item.id })" class="btn dropdown-item">
-                                                    <img src="~/imgs/trash-fill.svg" />
-                                                    Delete
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-
+                                    <button class="btn edit " data-value="@item.id">
+                                        <img src="~/imgs/pencil-square.svg" style="max-width: 18px; max-height: 18px;" />
+                                        Editar
+                                    </button>
+                                    <a href="@Url.Action("Delete", new { id = item.id })" class="btn Delete">
+                                        <img src="~/imgs/trash-fill.svg" style="max-width: 18px; max-height: 18px;" />
+                                        Excluir
+                                    </a>
                                 </div>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+
+
         </div>
 
     </div>
