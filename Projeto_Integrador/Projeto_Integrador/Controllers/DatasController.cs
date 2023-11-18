@@ -53,7 +53,7 @@ namespace Projeto_Integrador.Controllers
         {
             CarregaDadosViewBag();
             var data = await _ServiceDatas.oRepositoryDatas.SelecionarPkAsync(id);
-            return View(data);
+            return RedirectToAction("Index");
         }
 
         [HttpPost]

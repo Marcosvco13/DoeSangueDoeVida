@@ -5,89 +5,107 @@
     Layout = null;
 }
 
-<h1>Edit</h1>
-<div class="modal-dialog">
-    <div class="modal-content">
+<div class="modal-header d-flex justify-content-between align-items-center bg-light">
+    <h5 class="modal-title">Editar</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
         @using (Html.BeginForm())
         {
-            <div class="row">
-                <div class="col-md-4">
-                    <form asp-action="Edit">
+            <form asp-action="Edit" class="container mt-4 ">
+
+                <div class="row m-0">
+                    <div class="row-md-6">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
                         <div class="form-group">
                             <label asp-for="Id" class="control-label"></label>
-                            <input asp-for="Id" class="form-control" />
+                            <input asp-for="Id" class="form-control mb-2" />
                             <span asp-validation-for="Id" class="text-danger"></span>
                         </div>
+
                         <div class="form-group">
                             <label asp-for="Nome" class="control-label"></label>
-                            <input asp-for="Nome" class="form-control" />
+                            <input asp-for="Nome" class="form-control mb-2" />
                             <span asp-validation-for="Nome" class="text-danger"></span>
                         </div>
+
                         <div class="form-group">
                             <label asp-for="Email" class="control-label"></label>
-                            <input asp-for="Email" class="form-control" />
+                            <input asp-for="Email" class="form-control mb-2" />
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
+                    </div>
+
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label asp-for="Telefone" class="control-label"></label>
-                            <input asp-for="Telefone" class="form-control" />
+                            <input asp-for="Telefone" class="form-control mb-2" />
                             <span asp-validation-for="Telefone" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Logradouro" class="control-label"></label>
-                            <input asp-for="Logradouro" class="form-control" />
+                            <input asp-for="Logradouro" class="form-control mb-2" />
                             <span asp-validation-for="Logradouro" class="text-danger"></span>
                         </div>
+                    </div>
+
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label asp-for="Numero" class="control-label"></label>
-                            <input asp-for="Numero" class="form-control" />
+                            <input asp-for="Numero" class="form-control mb-2" />
                             <span asp-validation-for="Numero" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Complemento" class="control-label"></label>
-                            <input asp-for="Complemento" class="form-control" />
+                            <input asp-for="Complemento" class="form-control mb-2" />
                             <span asp-validation-for="Complemento" class="text-danger"></span>
                         </div>
+                    </div>
+                    <div class="row-md-6">
                         <div class="form-group">
                             <label asp-for="Cep" class="control-label"></label>
-                            <input asp-for="Cep" class="form-control" />
+                            <input asp-for="Cep" class="form-control mb-2" />
                             <span asp-validation-for="Cep" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Bairro" class="control-label"></label>
-                            <input asp-for="Bairro" class="form-control" />
+                            <input asp-for="Bairro" class="form-control mb-2" />
                             <span asp-validation-for="Bairro" class="text-danger"></span>
                         </div>
-                        <div class="form-group">
-                            <label asp-for="Cidade" class="control-label"></label>
-                            <input asp-for="Cidade" class="form-control" />
-                            <span asp-validation-for="Cidade" class="text-danger"></span>
-                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Cidade" class="control-label"></label>
+                        <input asp-for="Cidade" class="form-control mb-2" />
+                        <span asp-validation-for="Cidade" class="text-danger"></span>
+                    </div>
+                    <div class="row-md-6">
                         <div class="form-group">
                             <label asp-for="Estado" class="control-label"></label>
-                            <input asp-for="Estado" class="form-control" />
+                            <input asp-for="Estado" class="form-control mb-2" />
                             <span asp-validation-for="Estado" class="text-danger"></span>
                         </div>
+                    </div>
+                    <div class="row-md-6">
                         <div class="form-group">
                             <label asp-for="Ativo" class="control-label"></label>
-                            <input asp-for="Ativo" class="form-control" />
+                            <input asp-for="Ativo" class="form-control mb-3" />
                             <span asp-validation-for="Ativo" class="text-danger"></span>
                         </div>
-                        <div class="form-group">
-                            <input type="submit" value="Save" class="btn btn-primary" />
-                        </div>
-                    </form>
-                </div>
-            </div>           
-        }
-    </div>
-</div>
+                    </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+                    <div class="modal-footer bg-light">
+                        <div class="ms-auto">
+                            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </div>
+            </form>
+        }
+
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
