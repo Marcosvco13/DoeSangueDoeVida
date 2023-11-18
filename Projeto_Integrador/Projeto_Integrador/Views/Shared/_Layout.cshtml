@@ -27,11 +27,10 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
-            <div class="logoContent">
+            <div class="logoContent d-flex justify-content-center align-items-center">
                 <img src="~/imgs/logo-clinica.svg" />
-                <a class="navbar-brand text-white" href="#">Doe Sangue</a>
+                <span class="h1 fw-bold mb-0 ms-lg-3 text-light">DSDV</span>
             </div>
-            
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,8 +38,6 @@
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-
-                    
                     <li class="nav-item">
                         <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                     </li>
@@ -53,31 +50,27 @@
                     <li class="nav-item">
                         <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
                     </li>
-                    @if (User.IsInRole("Admin"))
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
-                        </li>
-                    }
-                    @if (User.IsInRole("Hemocentro"))
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
-                        </li>
-                    }
+                    @* @if (User.IsInRole("Admin"))
+                    {*@
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
+                    </li>
+                    @* }*@
+                    @* @if (User.IsInRole("Hemocentro"))
+                    {*@
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
+                    </li>
+                    @* }
                     else if (SignInManager.IsSignedIn(User))
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-controller="Doacao" asp-action="Index">Agendar Doação</a>
-                        </li>                   
-                    }
-
-
-
-                    
+                    {*@
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" asp-area="" asp-controller="Doacao" asp-action="Index">Agendar Doação</a>
+                    </li>
+                    @*}*@
                 </ul>
             </div>
 
