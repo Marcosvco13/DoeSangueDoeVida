@@ -49,11 +49,11 @@ namespace Projeto_Integrador.Controllers
                     data.Disp = 2;
                     await _ServiceDoacao.oRepositoryDatas.AlterarAsync(data);
                 }
-                return View(doacao);
+                return RedirectToAction("Index");
             }
             else
             {
-                return View(doacao);
+                return RedirectToAction("Index");
             }
         }
 
@@ -62,7 +62,7 @@ namespace Projeto_Integrador.Controllers
         {
             var doacao = await _ServiceDoacao.oRepositoryDoaco.SelecionarPkAsync(id);
             CarregaDadosViewBag();
-            return View(doacao);
+            return RedirectToAction("Index"); ;
         }
 
         public async Task<IActionResult> Edit(CadDoacao doacao)
@@ -71,9 +71,9 @@ namespace Projeto_Integrador.Controllers
             {
                 doacao = await _ServiceDoacao.oRepositoryDoaco.AlterarAsync(doacao);
                 CarregaDadosViewBag();
-                return View(doacao);
+                return RedirectToAction("Index");
             }
-            return View(doacao);
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Delete(int id)

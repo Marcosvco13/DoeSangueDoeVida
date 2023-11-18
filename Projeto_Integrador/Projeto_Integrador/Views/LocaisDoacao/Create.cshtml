@@ -31,6 +31,7 @@
                 <span asp-validation-for="email" class="text-danger"></span>
             </div>
         </div>
+
         <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="telefone" class="control-label">Telefone</label>
@@ -57,27 +58,28 @@
                 <span asp-validation-for="cep" class="text-danger"></span>
             </div>
         </div>
+
         <div class="row-md-6">
             <div class="form-group">
                 <label asp-for="comple" class="control-label">Complemento</label>
                 <input asp-for="comple" class="form-control mb-2" />
                 <span asp-validation-for="comple" class="text-danger"></span>
             </div>
-        </div>
-        <div class="row-md-6">
             <div class="form-group">
                 <label asp-for="bairro" class="control-label">Bairro</label>
                 <input asp-for="bairro" class="form-control mb-2" />
                 <span asp-validation-for="bairro" class="text-danger"></span>
             </div>
         </div>
+
         <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="cidade" class="control-label">Cidade</label>
                 <input asp-for="cidade" class="form-control mb-2" />
                 <span asp-validation-for="cidade" class="text-danger"></span>
             </div>
-
+        </div>
+        <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="estado" class="control-label">Estado</label>
                 <input asp-for="estado" class="form-control mb-2" />
@@ -87,7 +89,7 @@
 
         <div class="form-group">
             <label asp-for="ativo" class="control-label">Ativo</label>
-            <input asp-for="ativo" class="form-control mb-3" />
+            <input asp-for="ativo" class="form-control mb-4" />
             <span asp-validation-for="ativo" class="text-danger"></span>
         </div>
 
