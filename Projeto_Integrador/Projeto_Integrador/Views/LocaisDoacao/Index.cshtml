@@ -101,8 +101,15 @@
                             <td class="text-center align-middle ">
                                 @Html.DisplayFor(modelItem => item.estado)
                             </td>
-                            <td class="text-center align-middle ">
-                                @Html.DisplayFor(modelItem => item.ativo)
+                            <td>
+                                @if (item.ativo == 1)
+                                {
+                                    <text>Sim</text>
+                                }
+                                else
+                                {
+                                    <text>Não</text>
+                                }
                             </td>
 
                             <td>

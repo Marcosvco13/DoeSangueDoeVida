@@ -33,7 +33,19 @@
                                 <p class="card-title">ID: @item.id</p>
                                 <h5 class="card-text heading mb-0 mt-3"> @item.nomeLocal</h5>
                                 <p class="card-text mb-0">Data: @item.Data</p>
-                                <p class="card-text">Disponível: <span class="badge badge-success rounded-pill d-inline" style="background: #cff6dd; color: #1fa750">@item.Disponivel</span> </p>
+                                <p class="card-text">Disponível: 
+                                    
+                                        <td>
+                                            @if (item.Disponivel == 1)
+                                            {
+                                                <span class="badge badge-success rounded-pill d-inline" style="background: #cff6dd; color: #1fa750">Sim</span>
+                                            }
+                                            else
+                                            {
+                                            <span class="badge badge-success rounded-pill d-inline" style="background: #fdf5dd; color: #cfa00c">Não</span>
+                                            }
+                                        </td>
+                                </p>
 
                                 <hr class="col-12 mt-0 mb-2" />
 
