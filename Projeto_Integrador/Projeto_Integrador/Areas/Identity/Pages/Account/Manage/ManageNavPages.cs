@@ -123,7 +123,6 @@ namespace  Projeto_Integrador.Areas.Identity.Pages.Account.Manage
 
 
      
-        public static string Endereco => "Endereco";
         public static string Ficha => "Ficha";
     }
 }
