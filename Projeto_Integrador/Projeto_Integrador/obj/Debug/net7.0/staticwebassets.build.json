@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G971rp4MQngcvMDZxmG9ZN7MApSyoKFhoN6t+e63bVo=",
+  "Hash": "OIlFAZ/z1FhlwpZDBkPWVENi0Kmp12h/vda6k2VZnwk=",
   "Source": "Projeto_Integrador",
   "BasePath": "_content/Projeto_Integrador",
   "Mode": "Default",
@@ -1528,6 +1528,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\plus-lg.svg"
+    },
+    {
+      "Identity": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\social.svg",
+      "SourceId": "Projeto_Integrador",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\",
+      "BasePath": "_content/Projeto_Integrador",
+      "RelativePath": "imgs/social.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\social.svg"
     },
     {
       "Identity": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\statistic.svg",
