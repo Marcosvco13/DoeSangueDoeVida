@@ -11,7 +11,7 @@ namespace Projeto_Integrador.ViewModel
         public string? status { get; set; }
         [Display(Name = "Nome")]
         public string? NomeDoador { get; set; }
-        [Display(Name = "Data da Doação")]
+        [Display(Name = "Data e Hora da Doação")]
         public DateTime? DataDisp { get; set; }
         [Display(Name = "Local")]
         public string? NomeLocal { get; set; }

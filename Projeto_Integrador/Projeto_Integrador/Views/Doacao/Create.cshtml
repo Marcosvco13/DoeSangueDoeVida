@@ -16,12 +16,14 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <label asp-for="IdLocal" class="control-label">Local da Doação</label>
                 <select class="form-select" asp-for="IdLocal" asp-items="@ViewBag.IdLocal">
                     <option selected value="">Selecione um Local</option>
                 </select>
             </div>
 
             <div class="form-group">
+                <label asp-for="IdData" class="control-label">Data e Hora Disponível</label>
                 <select class="form-select" asp-for="IdData" asp-items="@ViewBag.IdData">
                     <option selected value="">Selecione uma data</option>
                 </select>

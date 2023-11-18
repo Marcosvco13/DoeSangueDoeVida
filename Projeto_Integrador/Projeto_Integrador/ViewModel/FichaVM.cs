@@ -16,6 +16,8 @@ namespace Projeto_Integrador.ViewModel
         [Display(Name = "Tipo Sanguíneo")]
         public string tipoSangue { get; set; }
         [Display(Name = "Última Doação")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? ultimaDoacao { get; set; }
         [Display(Name = "Peso")]
         public decimal? peso { get; set; }
@@ -36,6 +38,8 @@ namespace Projeto_Integrador.ViewModel
         [Display(Name = "Quanto tempo?")]
         public int? tempFumante { get; set; }
         [Display(Name = "Data de Nascimento")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? dataNasc { get; set; }
         [Display(Name = "Nome da Mãe")]
         public string nomeMae { get; set; }
