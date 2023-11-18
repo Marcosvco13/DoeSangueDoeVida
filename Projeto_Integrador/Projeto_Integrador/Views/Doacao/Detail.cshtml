@@ -2,47 +2,49 @@
 
 @{
     ViewData["Title"] = "Detail";
+    Layout = null;
 }
 
-<h1>Detail</h1>
+<div class="modal-header d-flex justify-content-between align-items-center">
+    <h5 class="modal-title">Detalhes</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
 
-<div>
-    <h4>DoacaoVM</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+
+<div class="container mt-4">
+    <dl class="row m-0 ">
+        <dt class="col-sm-2 mb-3 align-middle">
             @Html.DisplayNameFor(model => model.IdDoa)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10 align-middle">
             @Html.DisplayFor(model => model.IdDoa)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2 mb-3 align-middle">
             @Html.DisplayNameFor(model => model.status)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10 align-middle">
             @Html.DisplayFor(model => model.status)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2 mb-3 align-middle">
             @Html.DisplayNameFor(model => model.NomeDoador)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10 align-middle">
             @Html.DisplayFor(model => model.NomeDoador)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2 mb-3 align-middle">
             @Html.DisplayNameFor(model => model.DataDisp)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10 align-middle">
             @Html.DisplayFor(model => model.DataDisp)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2 mb-3 align-middle">
             @Html.DisplayNameFor(model => model.NomeLocal)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10 align-middle">
             @Html.DisplayFor(model => model.NomeLocal)
         </dd>
     </dl>
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+
+
