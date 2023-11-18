@@ -2,80 +2,70 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container">
-    <div class="row1">
-        <div class="col">
+<div class="container ">
+    <div class="row mt-5">
+        <div class="col mt-5">
             <strong>Doe Sangue e Mude Uma História.</strong>
             <span>O processo de doar sangue dura, em média, 40 minutos a 1 hora. Você pode salvar vidas em uma simples e rápida expedição!</span>
             <br>
             <div class="buttons">
-
-                    <a class="submitButton" asp-area="" asp-controller="Home" asp-action="Register">Inscreva-se</a>
-
-
-                    <a class="sobreButton" asp-area="" asp-controller="Home" asp-action="Sobre">Mais Sobre</a>
-
+                <a class="submitButton" asp-area="" asp-controller="Home" asp-action="Register">Inscreva-se</a>
+                <a class="sobreButton" asp-area="" asp-controller="Home" asp-action="Sobre">Mais Sobre</a>
             </div>
-                
+
         </div>
-        <div class="col">
+        <div class="col mt-5">
             <img src="~/imgs/blood-donate.svg" />
         </div>
     </div>
 
-    
-    <div class="row1">
-        <div class="card-group">
+    <div class="row">
+        <div class="card-group" style="background: #2B2D42">
             <div class="card">
-                <img class="card-img-top" src="~/imgs/people.svg" />
+                <img class="card-img-top" src="~/imgs/people.svg" style="filter: brightness(0) invert(1);" />
                 <div class="card-body">
-                    <strong class="card-title">3,5 milhões</strong>
-                    <p class="card-text">É o número de brasileiros que necessitam de transfusões de sangue por ano.</p>
+                    <strong class="card-title text-light">3,5 milhões</strong>
+                    <p class="card-text text-light">É o número de brasileiros que necessitam de transfusões de sangue por ano.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="~/imgs/statistic.svg" />
+                <img src="~/imgs/statistic.svg" style="filter: brightness(0) invert(1);" />
                 <div class="card-body">
-                    <strong class="card-title">1,4%</strong>
-                    <p class="card-text">É a estimativa de brasileiros que doam sangue.</p>
+                    <strong class="card-title text-light">1,4%</strong>
+                    <p class="card-text text-light">É a estimativa de brasileiros que doam sangue.</p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="~/imgs/blood.svg" />
+                <img class="card-img-top" src="~/imgs/blood.svg" style="filter: brightness(0) invert(1);" />
                 <div class="card-body">
-                    <strong class="card-title">450ml</strong>
-                    <p class="card-text">É a quantidade de sangue coletada em uma doação.</p>
+                    <strong class="card-title text-light">450ml</strong>
+                    <p class="card-text text-light">É a quantidade de sangue coletada em uma doação.</p>
                 </div>
             </div>
         </div>
     </div>
-    
 
 
-
-
-
-
-    <div class="row1">
+    <div class="row">
         <div class="col">
             <img src="~/imgs/blood-test.svg" />
         </div>
         <div class="col">
             <strong>Coleta Segura</strong>
-            <br/>
+            <br />
             <span>Em nossa rede, todo sangue coletado é testado e só é liberado para uso após ter a segurança comprovada. Além da sorologia. 100% da coleta passa por um teste desenvolvido pelo Instituto de Tecnologia em Imunobiológicos (Bio-Manguinhos), que reduz a chamada janela imunológica para HIV, hepatites C e B - tempo em que o vírus já está presente no doador e ainda não foi possível detectá-los.</span>
         </div>
     </div>
 
 
 
-    <div class="row1">
+    <div class="row">
         <div class="requirements">
             <div clas="col">
-                <img src="~/imgs/blood-requirements.svg" />
+                <img src="~/imgs/blood-requirements.svg" class=" mt-4 mb-4" />
             </div>
 
-            <div class="col">
+            <div class="col mt-0">
                 <strong>Confira os requisitos para ser um doador!</strong>
                 <ul>
                     <li class="text-white">Estar em boas condições de saúde.</li>
