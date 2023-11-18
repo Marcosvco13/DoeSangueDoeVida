@@ -34,6 +34,10 @@
       {
          "Name": "[dbo].[STATUS_DOACAO]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tb_estados]",
+         "ObjectType": 0
       }
    ],
    "UiHint": "notebook-marcos\\sqlexpress.DOACAO_SANGUE.dbo",
@@ -42,6 +46,7 @@
    "UseDatabaseNames": false,
    "UseDateOnlyTimeOnly": false,
    "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
    "UseFluentApiOnly": true,
    "UseHandleBars": false,
    "UseHierarchyId": false,

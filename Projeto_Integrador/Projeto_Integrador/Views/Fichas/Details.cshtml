@@ -9,95 +9,88 @@
 <div>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.tipoSangue)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.nome)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.tipoSangue)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nome)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ultimaDoacao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ultimaDoacao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.peso)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.peso)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.sexo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.sexo)
-        </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.cpf)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.cpf)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.rg)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.rg)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.orgExp)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.orgExp)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.profissao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.profissao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.religiao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.religiao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.fumante)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.fumante)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.tempFumante)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.tempFumante)
-        </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.dataNasc)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.dataNasc)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.sexo)
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                string sexoTexto = "";
+                switch (Model.sexo)
+                {
+                    case 0:
+                        sexoTexto = "Masculino";
+                        break;
+                    case 1:
+                        sexoTexto = "Feminino";
+                        break;
+                    default:
+                        sexoTexto = "Outros";
+                        break;
+                }
+                <text>@sexoTexto</text>
+            }
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.nomeMae)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.nomeMae)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.nomePai)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.nomePai)
         </dd>
+
+
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.logradouro)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.logradouro)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.cep)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.cep)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.numero)
@@ -110,12 +103,6 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.complemento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.cep)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.cep)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.bairro)
@@ -135,18 +122,69 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.estado)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.nome)
+
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ultimaDoacao)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.nome)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ultimaDoacao)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.telefone)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tipoSangue)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.telefone)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tipoSangue)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.peso)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.peso)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.profissao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.profissao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.religiao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.religiao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.fumante)
+        </dt>
+        <dd class="col-sm-10">
+            <text>@(Model.fumante == 0 ? "Sim" : "Não")</text>
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tempFumante)
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                string tempText = "";
+                switch (Model.tempFumante)
+                {
+                    case 0:
+                        tempText = "Menos de um ano";
+                        break;
+                    case 1:
+                        tempText = "De um a cinco anos";
+                        break;
+                    case 3:
+                        tempText = "De cinco a dez anos";
+                        break;
+                    default:
+                        tempText = "Mais de dez anos";
+                        break;
+                }
+                <text>@tempText</text>
+            }
+        </dd>
+
     </dl>
 </div>
 <div>

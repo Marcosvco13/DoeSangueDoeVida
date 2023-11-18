@@ -30,6 +30,8 @@ public partial class DOACAO_SANGUEContext : DbContext
 
     public virtual DbSet<StatusDoacao> StatusDoacao { get; set; }
 
+    public virtual DbSet<TbEstados> TbEstados { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<CadDataHoraDisp>(entity =>
@@ -154,11 +156,8 @@ public partial class DOACAO_SANGUEContext : DbContext
             entity.Property(e => e.DataNasc)
                 .HasColumnType("datetime")
                 .HasColumnName("DATA_NASC");
-            entity.Property(e => e.Estado)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("ESTADO");
             entity.Property(e => e.Fumante).HasColumnName("FUMANTE");
+            entity.Property(e => e.IdEstado).HasColumnName("ID_ESTADO");
             entity.Property(e => e.Logradouro)
                 .HasMaxLength(200)
                 .IsUnicode(false)
@@ -198,18 +197,12 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .HasMaxLength(15)
                 .IsUnicode(false)
                 .HasColumnName("RG");
-            entity.Property(e => e.Sexo)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("SEXO");
+            entity.Property(e => e.Sexo).HasColumnName("SEXO");
             entity.Property(e => e.Telefone)
                 .HasMaxLength(30)
                 .IsUnicode(false)
                 .HasColumnName("TELEFONE");
-            entity.Property(e => e.TempFumante)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("TEMP_FUMANTE");
+            entity.Property(e => e.TempFumante).HasColumnName("TEMP_FUMANTE");
             entity.Property(e => e.TipoSangue)
                 .HasMaxLength(200)
                 .IsUnicode(false)
@@ -229,6 +222,17 @@ public partial class DOACAO_SANGUEContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("DESCRICAO");
+        });
+
+        modelBuilder.Entity<TbEstados>(entity =>
+        {
+            entity.ToTable("tb_estados");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.NmEstado)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("NM_ESTADO");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -39,9 +39,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.tipoSangue)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.sexo)
-            </td>
+                <td>
+                    @{
+                        var sexo = item.sexo == 0 ? "Masculino" : item.sexo == 1 ? "Feminino" : "Outro";
+                    }
+                    <text>@sexo</text>
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.cpf)
             </td>

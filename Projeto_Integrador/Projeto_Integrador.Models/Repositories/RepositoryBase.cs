@@ -120,5 +120,17 @@ namespace Projeto_Integrador.Models.Repositories
             var obj = await _context.Set<T>().ToListAsync();
             return obj;
         }
+
+        public async Task DesabilitarTriggerFicha()
+        {
+            var sql = "DISABLE TRIGGER NomeDaTrigger ON FICHA_DOACAO";
+            await _context.Database.ExecuteSqlRawAsync(sql);
+        }
+
+        public async Task HabilitarTriggerFicha()
+        {
+            var sql = "ENABLE TRIGGER NomeDaTrigger ON FICHA_DOACAO";
+            await _context.Database.ExecuteSqlRawAsync(sql);
+        }
     }
 }

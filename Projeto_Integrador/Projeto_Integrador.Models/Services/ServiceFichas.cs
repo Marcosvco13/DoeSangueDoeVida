@@ -10,10 +10,12 @@ namespace Projeto_Integrador.Models.Services
     public class ServiceFichas
     {
         public RepositoryFichas oRepositoryFichas { get; set; }
+        public RepositoryEstados oRepositoryEstados { get; set; }
 
         public ServiceFichas()
         {
             oRepositoryFichas = new RepositoryFichas();
+            oRepositoryEstados = new RepositoryEstados();
         }
     }
 }

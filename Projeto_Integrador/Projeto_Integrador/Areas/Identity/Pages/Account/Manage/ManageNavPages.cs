@@ -120,10 +120,7 @@ namespace  Projeto_Integrador.Areas.Identity.Pages.Account.Manage
                 ?? System.IO.Path.GetFileNameWithoutExtension(viewContext.ActionDescriptor.DisplayName);
             return string.Equals(activePage, page, StringComparison.OrdinalIgnoreCase) ? "active" : null;
         }
-
-
-     
-        public static string Endereco => "Endereco";
         public static string Ficha => "Ficha";
+
     }
 }

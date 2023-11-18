@@ -19,18 +19,21 @@
             </div>
 
             <div class="form-group">
+                <label asp-for="IdLocal" class="control-label">Local Doação</label>
                 <select class="form-select" asp-for="IdLocal" asp-items="@ViewBag.IdLocal">
                     <option selected value="">Selecione um Local</option>
                 </select>
             </div>
 
             <div class="form-group">
+                <label asp-for="IdData" class="control-label">Datas Disponíveis</label>
                 <select class="form-select" asp-for="IdData" asp-items="@ViewBag.IdData">
                     <option selected value="">Selecione uma data</option>
                 </select>
             </div>
 
             <div class="form-group">
+                <label asp-for="IdStatus" class="control-label">Status da Doação</label>
                 <select class="form-select" asp-for="IdStatus" asp-items="@ViewBag.IdStatus">
                     <option selected value="">Modifique o Status</option>
                 </select>

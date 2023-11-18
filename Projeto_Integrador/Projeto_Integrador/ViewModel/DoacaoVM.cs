@@ -1,14 +1,19 @@
-﻿using Projeto_Integrador.Models.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using Projeto_Integrador.Models.Models;
 
 namespace Projeto_Integrador.ViewModel
 {
     public class DoacaoVM
     {
-
+        [Display(Name = "Código Doação")]
         public int IdDoa { get; set; }
+        [Display(Name = "Status")]
         public string? status { get; set; }
+        [Display(Name = "Nome")]
         public string? NomeDoador { get; set; }
+        [Display(Name = "Data da Doação")]
         public DateTime? DataDisp { get; set; }
+        [Display(Name = "Local")]
         public string? NomeLocal { get; set; }
 
         public DoacaoVM()

@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging.Console;
 using Projeto_Integrador.Models.Models;
 using Projeto_Integrador.Models.Services;
@@ -17,6 +18,11 @@ namespace Projeto_Integrador.Controllers
         {
             _ServiceFichas = new ServiceFichas();
         }
+
+        public void CarregaDadosViewBag()
+        {
+            ViewData["IdEstado"] = new SelectList(_ServiceFichas.oRepositoryEstados.SelecionarTodos(), "Id", "NmEstado");
+        }
         public IActionResult Index()
         {
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -26,6 +32,7 @@ namespace Projeto_Integrador.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            CarregaDadosViewBag();
             return View();
         }
 
@@ -57,6 +64,7 @@ namespace Projeto_Integrador.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit()
         {
+            CarregaDadosViewBag();
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var ficha = await _ServiceFichas.oRepositoryFichas.SelecionarPkAsync(userid);
             return View(ficha);

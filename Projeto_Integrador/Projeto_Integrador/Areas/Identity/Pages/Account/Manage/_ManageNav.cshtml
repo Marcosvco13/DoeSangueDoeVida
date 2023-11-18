@@ -3,7 +3,6 @@
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }
 
-<strong>HELLO WORLD!-----------------------------------------------------------------------------</strong>
 
 <ul class="nav nav-pills flex-column">
     <li class="nav-item"><a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Perfil</a></li>
@@ -15,12 +14,7 @@
     }
     <li class="nav-item"><a class="nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">Autenticação de dois fatores</a></li>
     <li class="nav-item"><a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personal data</a></li>
-    <li class="nav-item">
-        <a class="nav-link" asp-area="" asp-controller="Enderecos" asp-action="Index">Meu Endereco</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" asp-area="" asp-controller="Fichas" asp-action="Index">Minha Ficha</a>
-    </li>
+    <li class="nav-item"><a class="nav-link" asp-area="" asp-controller="Fichas" asp-action="Index">Minha Ficha</a></li>
 </ul>
 
 
