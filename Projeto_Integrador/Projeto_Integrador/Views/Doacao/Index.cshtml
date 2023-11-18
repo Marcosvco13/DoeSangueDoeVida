@@ -8,7 +8,7 @@
     <div class="container-fluid">
 
 
-        <div class="row shadow-sm bg-light m-md-5">
+        <div class="row  m-md-5">
             <div class="row bg-light mt-0 d-flex align-items-center">
                 <div class="col">
                     <h2 class="text-muted">Agendamento de Doações</h2>
@@ -23,13 +23,13 @@
                 <hr class="col-12 mt-0" />
             </div>
 
-            <table class="table mt-3 mb-5 table-striped">
+            <table class="table mt-3 mb-5 ">
                 <thead>
-                    <tr>
-                        <th class="text-center align-middle text-capitalize text-light bg-dark">
+                    <tr style="height: 3rem">
+                        <th class="text-center align-middle text-capitalize text-light bg-dark ">
                             @Html.DisplayNameFor(model => model.IdDoa)
                         </th>
-                        <th class="text-center align-middle text-capitalize text-light bg-dark">
+                        <th class="text-center align-middle text-capitalize text-light bg-dark ">
                             @Html.DisplayNameFor(model => model.status)
                         </th>
                         <th class="text-center align-middle text-capitalize text-light bg-dark">
@@ -41,30 +41,36 @@
                         <th class="text-center align-middle text-capitalize text-light bg-dark">
                             @Html.DisplayNameFor(model => model.NomeLocal)
                         </th>
-                        <th class="text-center align-middle text-capitalize text-light bg-dark"></th>
+                        <th class="text-center align-middle text-capitalize text-light bg-dark "></th>
                     </tr>
+
+                  
+
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        <tr>
-                            <td class="text-center align-middle ">
+                        <tr style="height: 5rem" class="bg-light text-center align-middle border-0 rounded">
+
+                            <td class="text-center align-middle border-0 rounded">
                                 @Html.DisplayFor(modelItem => item.IdDoa)
                             </td>
-                            <td class="text-center align-middle ">
-                                @Html.DisplayFor(modelItem => item.status)
+                            <td class="text-center align-middle border-0 rounded">
+                                <span class="badge badge-warning rounded-pill d-inline" style="background: #fbf0da; color: #73510d">
+                                    @Html.DisplayFor(modelItem => item.status)
+                                </span>
                             </td>
-                            <td class="text-center align-middle ">
+                            <td class="text-center align-middle rounded mt-2 mb-2 border-0">
                                 @Html.DisplayFor(modelItem => item.NomeDoador)
                             </td>
-                            <td class="text-center align-middle ">
+                            <td class="text-center align-middle border-0 rounded">
                                 @Html.DisplayFor(modelItem => item.DataDisp)
                             </td>
-                            <td class="text-center align-middle ">
+                            <td class="text-center align-middle border-0 rounded">
                                 @Html.DisplayFor(modelItem => item.NomeLocal)
                             </td>
 
-                            <td class="text-center align-middle ">
+                            <td class="text-center align-middle border-0">
                                 <div class="dropdown">
                                     <button class="btn rounded-circle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #f0f0f0; border: none;">
                                         ...
@@ -99,6 +105,9 @@
                                 </div>
                             </td>
                         </tr>
+                        <tr class="spacer">
+                            <td colspan="100"></td>
+                        </tr>
                     }
                 </tbody>
             </table>
@@ -106,6 +115,8 @@
 
     </div>
 </body>
+
+
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" id="myModal">
     <div class="modal-dialog" role="document">
