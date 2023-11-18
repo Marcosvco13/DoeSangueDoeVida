@@ -31,9 +31,9 @@
                         <div class="card shadow-sm bg-light w-100">
                             <div class="card-body">
                                 <p class="card-title">ID: @item.id</p>
-                                <h5 class="card-text heading mb-0 mt-3"> @item.nomeLocal</h5>
-                                <p class="card-text mb-0">Data: @item.Data</p>
-                                <p class="card-text">Disponível: 
+                                <h5 class="card-text heading mb-1 mt-3"> @item.nomeLocal</h5>
+                                <h6 class="card-text mb-1">Data: @item.Data</h6>
+                                <h6 class="card-text mb-4">Disponível: 
                                     
                                         <td>
                                             @if (item.Disponivel == 1)
@@ -45,7 +45,7 @@
                                             <span class="badge badge-success rounded-pill d-inline" style="background: #fdf5dd; color: #cfa00c">Não</span>
                                             }
                                         </td>
-                                </p>
+                                </h6>
 
                                 <hr class="col-12 mt-0 mb-2" />
 

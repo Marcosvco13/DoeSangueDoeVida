@@ -4,58 +4,243 @@
     ViewData["Title"] = "Sua Ficha";
 }
 
-<h1>Ficha do doador</h1>
+<h1>Minha Ficha</h1>
 
 <p>
     <a asp-action="Create">Criar uma ficha</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.tipoSangue)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.sexo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.cpf)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.dataNasc)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.tipoSangue)
-            </td>
-                <td>
-                    @{
-                        var sexo = item.sexo == 0 ? "Masculino" : item.sexo == 1 ? "Feminino" : "Outro";
-                    }
-                    <text>@sexo</text>
-                </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.cpf)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.dataNasc)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id=item.idUser }) |
-                @Html.ActionLink("Veja Mais", "Details", new { id=item.idUser }) |
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9">
+            @foreach (var item in Model)
+            {
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Nome</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.nome
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Tipo Sanguíneo</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.tipoSangue
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">CPF</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.cpf
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Data de Nascimento</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.dataNasc
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Sexo</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @{
+                                    var sexo = item.sexo == 0 ? "Masculino" : item.sexo == 1 ? "Feminino" : "Outro";
+                                }
+                                <text>@sexo</text>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">RG</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.rg
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Orgão Expedidor</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.orgExp
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Telefone</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.telefone
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Nome da Mãe</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.nomeMae
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Nome do Pai</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.nomePai
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Logradouro</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.logradouro
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">CEP</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.cep
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Número</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.numero
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Complemento</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.complemento
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Bairro</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.bairro
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Cidade</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.cidade
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Estado</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.estado
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Última Doação</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.ultimaDoacao
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Peso</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.peso
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Profissão</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.profissao
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Religião</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.religiao
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Fumante</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.fumante
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Tempo de Fumante</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @item.tempFumante
+                            </div>
+                        </div>
+                        <hr>
+
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                @Html.ActionLink("Editar", "Edit", new { id = item.idUser }) |
+                                @Html.ActionLink("Veja Mais", "Details", new { id = item.idUser })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
