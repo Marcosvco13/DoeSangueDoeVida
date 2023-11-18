@@ -1,8 +1,12 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using Projeto_Integrador.Areas.Identity.Data
+
 @model Projeto_Integrador.Models.Models.FichaDoacao
+
 @inject UserManager<UsuarioModel> UserManager
+
 @Html.ValidationSummary()
+
 @{
     ViewData["Title"] = "Create";
 }
@@ -163,7 +167,7 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Criar Ficha" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -172,9 +176,11 @@
 <div>
     <a asp-action="Index">Voltar</a>
 </div>
+
 <div class="validation-summary-errors">
     @Html.ValidationSummary()
 </div>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
