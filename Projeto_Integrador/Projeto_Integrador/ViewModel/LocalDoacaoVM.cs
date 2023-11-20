@@ -33,7 +33,7 @@ namespace Projeto_Integrador.ViewModel
         public string cidade { get; set; }
         [Display(Name = "Estado")]
         public string estado { get; set; }
-        [Display(Name = "Local Ativo?")]
+        [Display(Name = "Ativo?")]
         public int ativo { get; set; }
         #endregion
 
