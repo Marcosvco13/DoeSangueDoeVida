@@ -4,190 +4,302 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Detalhes da Ficha</h1>
+<div class="container border mt-4 p-4">
+    <div class="row mb-4">
+        <h2 class="text-center">TERMO DE CONSENTIMENTO LIVRE E ESCLARECIMENTO</h2>
+        <h5 class="text-center">SOBRE DOAÇÃO DE SANGUE OU HEMOCOMPONENTES</h5>
+        <h6 class="text-center">(Portaria de Consolidação do Ministério da Saúde n05, DE 28 de setembro de 2017)</h6>
+    </div>
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.nome)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.nome)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.cpf)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.cpf)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.rg)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.rg)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.orgExp)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.orgExp)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.dataNasc)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.dataNasc)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.telefone)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.telefone)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.sexo)
-        </dt>
-        <dd class="col-sm-10">
-            @{
-                string sexoTexto = "";
-                switch (Model.sexo)
-                {
-                    case 0:
-                        sexoTexto = "Masculino";
-                        break;
-                    case 1:
-                        sexoTexto = "Feminino";
-                        break;
-                    default:
-                        sexoTexto = "Outros";
-                        break;
-                }
-                <text>@sexoTexto</text>
-            }
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.nomeMae)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.nomeMae)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.nomePai)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.nomePai)
-        </dd>
+    <div class="row mb-3 justify-content-center">
+        <div class="col-10 text-center">
+            <p>
+                Eu, abaixo assinado, [Nome Completo], portador(a) do RG n° [Número do RG], CPF [Número do CPF],
+                DECLARO ESTAR CIENTE E CONCORDAR com os termos e as condições para a doação voluntária de sangue.
+            </p>
+            <p>
+                Declaro que sou voluntário(a) e que estou ciente das informações e dos cuidados necessários antes, durante
+                e após a doação, bem como dos critérios estabelecidos para a seleção e triagem de doadores, comprometendo-me
+                a fornecer informações verdadeiras e a seguir as orientações fornecidas pela equipe de saúde.
+            </p>
+            <p>
+                Autorizo a coleta de uma unidade de sangue (450 ml) para uso em procedimentos transfusionais ou em pesquisas
+                médicas, assegurando que tal doação é realizada de forma espontânea, não remunerada e sem qualquer forma
+                de pressão ou coerção.
+            </p>
+            <p>
+                Entendo que após a doação, meu sangue passará por testes laboratoriais para identificar possíveis doenças
+                infecciosas, e concordo que, caso os resultados sejam reativos, serei informado(a) e orientado(a) quanto
+                aos encaminhamentos necessários.
+            </p>
+
+            <br />
+
+            <div class="row mt-4">
+                <div class="text-center mx-auto mt-5">
+                    <p>____________________________________ <br /> Assinatura do Doador</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.logradouro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.logradouro)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.cep)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.cep)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.numero)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.numero)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.complemento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.complemento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.bairro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.bairro)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.cidade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.cidade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.estado)
-        </dd>
+
+    
+
+    <div class="container-lg d-flex justify-content-center ">
+        <div class="row w-100 mt-0">
+            <div class="col">
+                <table class="table table-bordered mb-5" style="border-color: black;">
+                    <tbody>
+                        <tr style="text-align: center;">
+                            <td colspan="3" class="bg-dark text-white">DADOS DA COLETA</td>
+                        </tr>
+                        <tr>
+                            <td>Local da Punção: (  ) Direito (  ) Esquerdo</td>
+                            <td colspan="2">Horário de Início da Coleta: ____:____</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Horário de Término Coleta: ____:____</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3">Intercorrências:</td>
+                        </tr>
+
+                        <tr>
+                            <td>EXAMES LABORATORIAIS</td>
+                            <td>Data: __/__/____</td>
+                            <td>N° Doação:</td>
+                        </tr>
+                        <tr>
+                            <td>HIV I e II</td>
+                            <td>CMIA</td>
+                            <td>NAT</td>
+                        </tr>
+                        <tr>
+                            <td>HCV</td>
+                            <td>CMIA</td>
+                            <td>NAT</td>
+                        </tr>
+                        <tr>
+                            <td>HBV</td>
+                            <td>HbsAg</td>
+                            <td>Anti-HBc</td>
+                        </tr>
+                        <tr>
+                            <td>NAT</td>
+                            <td>Chagas (CMIA)</td>
+                            <td>Sífilis (CMIA)</td>
+                        </tr>
+                        <tr>
+                            <td>PAI</td>
+                            <td>Teste de Solubilidade</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">OBS:</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ultimaDoacao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ultimaDoacao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.tipoSangue)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.tipoSangue)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.peso)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.peso)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.profissao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.profissao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.religiao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.religiao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.fumante)
-        </dt>
-        <dd class="col-sm-10">
-            <text>@(Model.fumante == 0 ? "Sim" : "Não")</text>
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.tempFumante)
-        </dt>
-        <dd class="col-sm-10">
-            @{
-                string tempText = "";
-                switch (Model.tempFumante)
-                {
-                    case 0:
-                        tempText = "Menos de um ano";
-                        break;
-                    case 1:
-                        tempText = "De um a cinco anos";
-                        break;
-                    case 3:
-                        tempText = "De cinco a dez anos";
-                        break;
-                    default:
-                        tempText = "Mais de dez anos";
-                        break;
-                }
-                <text>@tempText</text>
-            }
-        </dd>
 
-    </dl>
+
+
 </div>
-<div>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.idUser }) |
-    <a asp-action="Index">Voltar</a>
+
+
+
+
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.nome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.nome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.cpf)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.cpf)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.rg)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.rg)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.orgExp)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.orgExp)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.dataNasc)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.dataNasc)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.telefone)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.telefone)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.sexo)
+            </dt>
+            <dd class="col-sm-10">
+                @{
+                    string sexoTexto = "";
+                    switch (Model.sexo)
+                    {
+                        case 0:
+                            sexoTexto = "Masculino";
+                            break;
+                        case 1:
+                            sexoTexto = "Feminino";
+                            break;
+                        default:
+                            sexoTexto = "Outros";
+                            break;
+                    }
+                    <text>@sexoTexto</text>
+                }
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.nomeMae)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.nomeMae)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.nomePai)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.nomePai)
+            </dd>
+
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.logradouro)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.logradouro)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.cep)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.cep)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.numero)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.numero)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.complemento)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.complemento)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.bairro)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.bairro)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.cidade)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.cidade)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.estado)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.estado)
+            </dd>
+
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ultimaDoacao)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ultimaDoacao)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.tipoSangue)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.tipoSangue)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.peso)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.peso)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.profissao)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.profissao)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.religiao)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.religiao)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.fumante)
+            </dt>
+            <dd class="col-sm-10">
+                <text>@(Model.fumante == 0 ? "Sim" : "Não")</text>
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.tempFumante)
+            </dt>
+            <dd class="col-sm-10">
+                @{
+                    string tempText = "";
+                    switch (Model.tempFumante)
+                    {
+                        case 0:
+                            tempText = "Menos de um ano";
+                            break;
+                        case 1:
+                            tempText = "De um a cinco anos";
+                            break;
+                        case 3:
+                            tempText = "De cinco a dez anos";
+                            break;
+                        default:
+                            tempText = "Mais de dez anos";
+                            break;
+                    }
+                    <text>@tempText</text>
+                }
+            </dd>
+
+        </dl>
+    </div>
+    <div>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.idUser }) |
+        <a asp-action="Index">Voltar</a>
+    </div>
+
 </div>

@@ -4,58 +4,140 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<body>
+    <div class="container-fluid">
+        <div class="row shadow-sm bg-light m-md-5">
+            <div class="row bg-light mt-0 d-flex align-items-center">
+                <div class="col">
+                    <h2 class="text-muted">Gerenciamento de Doações</h2>
+                </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.IdDoa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeDoador)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataDisp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeLocal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StatusDescricao)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdDoa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomeDoador)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataDisp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomeLocal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StatusDescricao)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.IdDoa}) |
-                @Html.ActionLink("Detail", "Detail", new { id=item.IdDoa}) |
-            </td>
-        </tr>
+                <hr class="col-12 mt-0" />
+            </div>
+
+            <table class="table mt-3 mb-5 table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center align-middle text-capitalize text-light bg-dark">
+                            @Html.DisplayNameFor(model => model.IdDoa)
+                        </th>
+                        <th class="text-center align-middle text-capitalize text-light bg-dark">
+                            @Html.DisplayNameFor(model => model.status)
+                        </th>
+                        <th class="text-center align-middle text-capitalize text-light bg-dark">
+                            @Html.DisplayNameFor(model => model.NomeDoador)
+                        </th>
+                        <th class="text-center align-middle text-capitalize text-light bg-dark">
+                            @Html.DisplayNameFor(model => model.DataDisp)
+                        </th>
+                        <th class="text-center align-middle text-capitalize text-light bg-dark">
+                            @Html.DisplayNameFor(model => model.NomeLocal)
+                        </th>
+                        <th class="text-center align-middle text-capitalize text-light bg-dark">
+                            @Html.DisplayNameFor(model => model.StatusDescricao)
+                        </th>
+                        <th class="text-center align-middle text-capitalize text-light bg-dark"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="text-center align-middle ">
+                                @Html.DisplayFor(modelItem => item.IdDoa)
+                            </td>
+                            <td class="text-center align-middle ">
+                                @Html.DisplayFor(modelItem => item.status)
+                            </td>
+                            <td class="text-center align-middle ">
+                                @Html.DisplayFor(modelItem => item.NomeDoador)
+                            </td>
+                            <td class="text-center align-middle ">
+                                @Html.DisplayFor(modelItem => item.DataDisp)
+                            </td>
+                            <td class="text-center align-middle ">
+                                @Html.DisplayFor(modelItem => item.NomeLocal)
+                            </td>
+                            <td class="text-center align-middle ">
+                                @Html.DisplayFor(modelItem => item.StatusDescricao)
+                            </td>
+
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn rounded-circle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #f0f0f0; border: none;">
+                                        ...
+                                    </button>
+                                    <ul class="dropdown-menu" style="position: absolute !important; width: 150px; border: none;">
+                                        <li>
+                                            <div class="d-flex align-items-center">
+                                                <button class="btn details dropdown-item" data-value="@item.IdDoa">
+                                                    <img src="~/imgs/book-half.svg" />
+                                                    Detalhes
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center">
+                                                <button class="btn edit dropdown-item" data-value="@item.IdDoa">
+                                                    <img src="~/imgs/pencil-square.svg" />
+                                                    Editar
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center">
+                                                <a href="@Url.Action("Delete", new { id = item.IdDoa })" class="btn dropdown-item">
+                                                    <img src="~/imgs/trash-fill.svg" />
+                                                    Cancelar
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-capitalize">
+            <div class="modal-body">
+                <div id="conteudoModal"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".details").click(function () {
+                var id = $(this).data("value");
+                $("#conteudoModal").load("/Fichas/Details?id=" + id, function () {
+                    $('#myModal').modal("show");
+                })
+            });
+
+            $(".edit").click(function () {
+                var id = $(this).data("value");
+                $("#conteudoModal").load("/GenDoacoes/Edit?id=" + id, function () {
+                    $("#myModal").modal('show');
+                })
+            });
+
+            $(".create").click(function () {
+                var id = $(this).data("value");
+                $("#conteudoModal").load("/GenDoacoes/Create", function () {
+                    $("#myModal").modal('show');
+                })
+            });
+
+        })
+    </script>
 }
-    </tbody>
-</table>
