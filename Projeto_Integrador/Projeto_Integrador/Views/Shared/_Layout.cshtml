@@ -58,6 +58,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Termo">Termo de Doação</a>
+                        </li>
                     @*}
                     @if (User.IsInRole("Hemocentro"))
                     {*@
@@ -65,9 +68,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
                         </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white-50" asp-area="" asp-controller="GenDoacoes" asp-action="Index">Gerenciar Doações</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="GenDoacoes" asp-action="Index">Gerenciar Doações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Termo">Termo de Doação</a>
+                        </li>
                     @*}
                     else if (SignInManager.IsSignedIn(User))
                     {*@

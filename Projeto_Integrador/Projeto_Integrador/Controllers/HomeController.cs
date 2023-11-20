@@ -56,6 +56,10 @@ namespace Projeto_Integrador.Controllers
         {
             return View();
         }
+        public IActionResult Termo()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

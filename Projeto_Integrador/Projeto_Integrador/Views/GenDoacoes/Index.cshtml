@@ -11,6 +11,18 @@
                 <div class="col">
                     <h2 class="text-muted">Gerenciamento de Doações</h2>
                 </div>
+                <div class="col-auto me-xxl-4">
+                    <button class="create btn-sm d-flex align-items-center gap-1" id="termoDoacao">
+                        <img src="~/imgs/plus-lg.svg" style="width: 1rem; height: 1rem; filter: invert(1);" />
+                        Termo de Doação
+                    </button>
+
+                    <script>
+                        document.getElementById("termoDoacao").addEventListener("click", function () {
+                            window.location.href = "/Termo/Termo";
+                        });
+                    </script>
+                </div>
 
                 <hr class="col-12 mt-0" />
             </div>
