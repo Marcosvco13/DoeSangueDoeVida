@@ -1,99 +1,171 @@
-﻿@model IEnumerable<Projeto_Integrador.ViewModel.FichaVM>
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<Projeto_Integrador.ViewModel.FichaVM>
+
+@using Microsoft.AspNetCore.Identity
+@using Projeto_Integrador.Areas.Identity.Data
+
+@inject SignInManager<UsuarioModel> SignInManager
+@inject UserManager<UsuarioModel> UserManager
 
 @{
     ViewData["Title"] = "Sua Ficha";
 }
-
-<body>
-    <div class="container-fluid">
-        <div class="row shadow-sm bg-light m-md-5">
-            <div class="row bg-light mt-0 d-flex align-items-center">
-                <div class="col">
-                    <h2 class="text-muted">Minha Ficha</h2>
-                </div>
-
-                <div class="col-auto me-xxl-4">
-                    <button class="create btn-sm d-flex align-items-center gap-1">
-                        <img src="~/imgs/plus-lg.svg" style="width: 1rem; height: 1rem; filter: invert(1);" />
-                        Cadastrar Ficha
-                    </button>
-                </div>
-                <div class="col-auto me-xxl-4">
-                    <button class="edit btn-sm d-flex align-items-center gap-1">
-                        <img src="~/imgs/plus-lg.svg" style="width: 1rem; height: 1rem; filter: invert(1);" />
-                        Editar Ficha
-                    </button>
-                </div>
-
-                <hr class="col-12 mt-0" />
-            </div>
-
-            <table class="table mt-3 mb-5 table-striped">
-                @foreach (var item in Model)
-                {
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Nome</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    @item.nome
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Tipo Sanguíneo</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    @item.tipoSangue
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">CPF</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    @item.cpf
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Data de Nascimento</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    @item.dataNasc
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Sexo</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    @{
-                                        var sexo = item.sexo == 0 ? "Masculino" : item.sexo == 1 ? "Feminino" : "Outro";
-                                    }
-                                    <text>@sexo</text>
-                                </div>
-                            </div>
-                            <hr>
-
-
-
-                            
-                        </div>
-                    </div>
-                }
-            </table>
-        </div>
+<div class="row bg-light mt-0 d-flex align-items-center">
+    <div class="col">
+        <h2 class="text-muted">Minha Ficha</h2>
     </div>
-</body>
 
+    <div class="col-auto me-xxl-4">
+        <button class="create btn-sm d-flex align-items-center gap-1">
+            <img src="~/imgs/plus-lg.svg" style="width: 1rem; height: 1rem; filter: invert(1);" />
+            Cadastrar Ficha
+        </button>
+    </div>
+    
 
+    <hr class="col-12 mt-0" />
+</div>
+<div class="container rounded mt-5 mb-5">
+    
+
+@foreach (var item in Model)
+{
+    <div class="row mt-0">
+        <div class="col-md-3 border-right start-100 mb-5">
+            <div class="d-flex flex-column align-items-center text-center ">
+                <img class="rounded-circle mt-0 mb-2" width="100px" src="/imgs/logo-clinica.svg"><span class="font-weight-bold">@item.nome</span>
+            <span class="text-black-50">@UserManager.GetUserName(User)</span>
+            <span> </span>
+        </div>
+        </div>
+
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <label class="labels">Nome</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.nome)" value="" disabled>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="labels">CPF</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.cpf)" value="" disabled>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels">RG</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.rg)" value="" disabled>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label class="labels">Órgão Expedidor</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.orgExp)" value="" disabled>
+                    </div>
+                        <div class="col-md-6">
+                        <label class="labels">Data de Nascimento</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.dataNasc)" value="" disabled>
+                    </div>
+                </div>
+                    <div class="col-md-12">
+                        <label class="labels">Telefone</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.telefone)" value="" disabled>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Nome da Mãe</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.nomeMae)" value="" disabled>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Nome do Pai</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.nomeMae)" value="" disabled>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Sexo</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.sexo)" value="" disabled>
+                    </div>
+                        <div class="col-md-12">
+                            <label class="labels">Logradouro</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.logradouro)" value="" disabled>
+                        </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                            <label class="labels">CEP</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.cep)" value="" disabled>
+                        </div>
+                    <div class="col-md-6">
+                            <label class="labels">Número</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.numero)" value="" disabled>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                            <label class="labels">Bairro</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.bairro)" value="" disabled>
+                        </div>
+                    <div class="col-md-6">
+                            <label class="labels">Cidade</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.cidade)" value="" disabled>
+                        </div>
+                </div>
+                        <div class="col-md-12">
+                            <label class="labels">Complemento</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.complemento)" value="" disabled>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="labels">Estado</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.estado)" value="" disabled>
+                        </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                            <label class="labels">Última Doação</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.ultimaDoacao)" value="" disabled>
+                        </div>
+                    <div class="col-md-6">
+                            <label class="labels">Tipo Sanguíneo</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.tipoSangue)" value="" disabled>
+                        </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                            <label class="labels">Peso</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.peso)" value="" disabled>
+                        </div>
+                    <div class="col-md-6">
+                            <label class="labels">Profissão</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.profissao)" value="" disabled>
+                        </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                            <label class="labels">Religião</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.religiao)" value="" disabled>
+                        </div>
+                    <div class="col-md-6">
+                            <label class="labels">Fumante</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.fumante)" value="" disabled>
+                        </div>
+                </div>
+                        <div class="col-md-12">
+                            <label class="labels">Tempo de Fumante</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.tempFumante)" value="" disabled>
+                        </div>
+                </div>
+                
+                    <div class="col-auto me-xxl-4">
+                        <button class="edit btn-sm d-flex align-items-center gap-1">
+                            <img src="~/imgs/plus-lg.svg" style="width: 1rem; height: 1rem; filter: invert(1);" />
+                            Editar Ficha
+                        </button>
+                    </div>
+            </div>
+        </div>
+        
+}
+</div>
+</div>
+</div>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" id="myModal">
     <div class="modal-dialog" role="document">
@@ -124,7 +196,3 @@
         })
     </script>
 }
-
-
-
-
