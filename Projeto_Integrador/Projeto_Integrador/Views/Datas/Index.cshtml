@@ -27,23 +27,22 @@
                 @foreach (var item in Model)
                 {
                     <div class="col mb-3">
-                        <div class="card shadow-sm bg-light w-100">
+                        <div class="card shadow-sm bg-light w-100 border-start border-5 border-dark" >
                             <div class="card-body">
-                                <p class="card-title">ID: @item.id</p>
                                 <h5 class="card-text heading mb-1 mt-3"> @item.nomeLocal</h5>
                                 <h6 class="card-text mb-1">Data: @item.Data</h6>
-                                <h6 class="card-text mb-4">Disponível: 
-                                    
-                                        <td>
-                                            @if (item.Disponivel == 1)
-                                            {
-                                                <span class="badge badge-success rounded-pill d-inline" style="background: #cff6dd; color: #1fa750">Sim</span>
-                                            }
-                                            else
-                                            {
+                                <h6 class="card-text mb-4">
+                                    Disponível:
+                                    <td>
+                                        @if (item.Disponivel == 1)
+                                        {
+                                            <span class="badge badge-success rounded-pill d-inline" style="background: #cff6dd; color: #1fa750">Sim</span>
+                                        }
+                                        else
+                                        {
                                             <span class="badge badge-success rounded-pill d-inline" style="background: #fdf5dd; color: #cfa00c">Não</span>
-                                            }
-                                        </td>
+                                        }
+                                    </td>
                                 </h6>
 
                                 <hr class="col-12 mt-0 mb-2" />
@@ -64,6 +63,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 }
             </div>
