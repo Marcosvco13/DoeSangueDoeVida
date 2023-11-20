@@ -5,7 +5,7 @@
     Layout = null;
 }
 
-<div class="modal-header d-flex justify-content-between align-items-center">
+<div class="modal-header d-flex justify-content-between align-items-center bg-light">
     <h5 class="modal-title">Cadastrar Data Disponível</h5>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
@@ -33,13 +33,13 @@
 
             <div class="form-group">
                 <label asp-for="Disponivel" class="control-label"></label>
-                <select asp-for="Disponivel" asp-items="Html.GetEnumSelectList<RespostaSimNao>()" class="form-control">
+                <select asp-for="Disponivel" asp-items="Html.GetEnumSelectList<RespostaSimNao>()" class="form-control mb-5">
                     <option value="">Selecione...</option>
                 </select>
                 <span asp-validation-for="Disponivel" class="text-danger"></span>
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer bg-light">
                 <div class="ms-auto">
                     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
                     <input type="submit" value="Create" class="btn btn-primary" />
