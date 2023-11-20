@@ -97,6 +97,18 @@
       "PackagePath": "staticwebassets\\imgs\\logo-clinica.svg"
     },
     {
+      "Id": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\logogoverno.png",
+      "PackagePath": "staticwebassets\\imgs\\logogoverno.png"
+    },
+    {
+      "Id": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\logorio.png",
+      "PackagePath": "staticwebassets\\imgs\\logorio.png"
+    },
+    {
+      "Id": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\logosus.png",
+      "PackagePath": "staticwebassets\\imgs\\logosus.png"
+    },
+    {
       "Id": "C:\\Users\\danie\\Documents\\Faculdade\\Projento Integrador\\Projeto_Integrador_2\\Projeto_Integrador_2\\Projeto_Integrador\\Projeto_Integrador\\wwwroot\\imgs\\pencil-square.svg",
       "PackagePath": "staticwebassets\\imgs\\pencil-square.svg"
     },

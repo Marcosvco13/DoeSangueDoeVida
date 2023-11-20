@@ -119,9 +119,7 @@
         $(document).ready(function () {
             $(".details").click(function () {
                 var id = $(this).data("value");
-                $("#conteudoModal").load("/Fichas/Details?id=" + id, function () {
-                    $('#myModal').modal("show");
-                })
+                window.location.href = "/Fichas/Details?id=" + id;
             });
 
             $(".edit").click(function () {
