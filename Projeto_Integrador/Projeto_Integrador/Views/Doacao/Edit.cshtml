@@ -5,61 +5,56 @@
     Layout = null;
 }
 
-<div class="modal-header d-flex justify-content-between align-items-center">
+<div class="modal-header d-flex justify-content-between align-items-center bg-light">
     <h5 class="modal-title">Editar</h5>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 
 
-<div class="modal-dialog">
-    <div class="modal-content">
-        @using (Html.BeginForm())
-        {
-            <form asp-action="Edit">
+@using (Html.BeginForm())
+{
+    <form asp-action="Edit" class="container mt-4 ">
 
-                <div class="row m-0">
-                    <div class="row-md-6">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-group">
-                            <label asp-for="Id" class="control-label"></label>
-                            <input asp-for="Id" class="form-control" />
-                            <span asp-validation-for="Id" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-select" asp-for="IdLocal" asp-items="@ViewBag.IdLocal">
-                                <option selected value="">Selecione um Local</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-select" asp-for="IdData" asp-items="@ViewBag.IdData">
-                                <option selected value="">Selecione uma data</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-select" asp-for="IdStatus" asp-items="@ViewBag.IdStatus">
-                                <option selected value="">Modifique o Status</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <input asp-for="IdFichaUsuario" class="form-control" hidden />
-                            <span asp-validation-for="IdFichaUsuario" class="text-danger"></span>
-                        </div>
-                    </div>
+        <div class="row m-0">
+            <div class="row-md-6">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+                <div class="form-group">
+                    <label asp-for="Id" class="control-label mt-3"></label>
+                    <input asp-for="Id" class="form-control mb-2" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
 
+                <div class="form-group">
+                    <select class="form-select mb-2" asp-for="IdLocal" asp-items="@ViewBag.IdLocal">
+                        <option selected value="">Selecione um Local</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select mb-2" asp-for="IdData" asp-items="@ViewBag.IdData">
+                        <option selected value="">Selecione uma data</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-select mb-2" asp-for="IdStatus" asp-items="@ViewBag.IdStatus">
+                        <option selected value="">Modifique o Status</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input asp-for="IdFichaUsuario" class="form-control mb-5" hidden />
+                    <span asp-validation-for="IdFichaUsuario" class="text-danger"></span>
+                </div>
+            </div>
 
-                    <div class="modal-footer">
-                        <div class="ms-auto">
-                            <a asp-action="Index">Back to List</a>
-                            <input type="submit" value="Save" class="btn btn-primary" />
-                        </div>
-                    </div>
+            <div class="modal-footer bg-light">
+                <div class="ms-auto">
+                    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </div>
 
-            </form>
-        }
-    </div>
-</div>
-
+    </form>
+}
 
 
 @section Scripts {
