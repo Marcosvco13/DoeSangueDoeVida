@@ -1,12 +1,15 @@
 ﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Projeto_Integrador.Areas.Identity;
 using Projeto_Integrador.Models.Models;
 using Projeto_Integrador.Models.Services;
 using Projeto_Integrador.ViewModel;
 
 namespace Projeto_Integrador.Controllers
 {
+    [Authorize(Roles = "Admin, Hemocentro")]
     public class GenDoacoesController : Controller
     {
         private ServiceGenDoacoes _ServiceGenDoacoes;

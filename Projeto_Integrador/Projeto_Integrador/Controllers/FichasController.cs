@@ -9,7 +9,7 @@ using Projeto_Integrador.ViewModel;
 
 namespace Projeto_Integrador.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class FichasController : Controller
     {
         private ServiceFichas _ServiceFichas;
@@ -47,17 +47,17 @@ namespace Projeto_Integrador.Controllers
                 if (!fichaExists)
                 {
                     fichadoacao = await _ServiceFichas.oRepositoryFichas.IncluirAsync(fichadoacao);
-                    return RedirectToAction("Index");
+                    return View(fichadoacao);
                 }
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Erro: Já existe uma ficha cadastrada. Caso queira fazer alguma alteração, favor ir para aba de edição da ficha.");
                 }
-                return RedirectToAction("Index");
+                return View(fichadoacao);
             }
             else
             {
-                return RedirectToAction("Index");
+                return View(fichadoacao);
             }
         }
 

@@ -8,7 +8,7 @@ using Projeto_Integrador.ViewModel;
 
 namespace Projeto_Integrador.Controllers
 {
-    //[Authorize(Roles = "Admin, Hemocentro")]
+    [Authorize(Roles = "Admin, Hemocentro")]
     public class DatasController : Controller
     {
         private ServiceDatas _ServiceDatas;

@@ -38,16 +38,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Disp" class="control-label">Disponivel?</label>
-                    <input asp-for="Disp" class="form-control mb-4" />
-                    <span asp-validation-for="Disp" class="text-danger"></span>
-                </div>
+                <label asp-for="Disp" class="control-label">Disponivel?</label>
+                <select asp-for="Disp" asp-items="Html.GetEnumSelectList<RespostaSimNao>()" class="form-control mb-5">
+                    <option value="">Selecione...</option>
+                </select>
+                <span asp-validation-for="Disp" class="text-danger"></span>
+            </div>
 
 
                 <div class="modal-footer bg-light">
                     <div class="ms-auto">
                         <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-                        <input type="submit" value="Create" class="btn btn-primary" />
+                        <input type="submit" value="Editar" class="btn btn-primary" />
                     </div>
                 </div>
             </div>
