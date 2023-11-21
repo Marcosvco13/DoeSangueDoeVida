@@ -19,26 +19,27 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                 <div class="form-group">
-                    <label asp-for="Id" class="control-label"></label>
-                    <input asp-for="Id" class="form-control mb-2" />
+                    <label asp-for="Id" class="control-label" hidden></label>
+                    <input asp-for="Id" class="form-control mb-2" hidden/>
                     <span asp-validation-for="Id" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
+                    <label asp-for="IdLocal" class="control-label mt-3">Local</label>
                     <select class="form-select mb-2" asp-for="IdLocal" asp-items="@ViewBag.IdLocais">
                         <option selected value="">Selecione um Cliente</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="DataDisp" class="control-label"></label>
+                    <label asp-for="DataDisp" class="control-label">Data</label>
                     <input asp-for="DataDisp" class="form-control mb-2" />
                     <span asp-validation-for="DataDisp" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Disp" class="control-label"></label>
-                    <input asp-for="Disp" class="form-control mb-2" />
+                    <label asp-for="Disp" class="control-label">Disponivel?</label>
+                    <input asp-for="Disp" class="form-control mb-4" />
                     <span asp-validation-for="Disp" class="text-danger"></span>
                 </div>
 
