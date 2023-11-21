@@ -20,26 +20,29 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                 <div class="form-group">
-                    <label asp-for="Id" class="control-label mt-3"></label>
-                    <input asp-for="Id" class="form-control mb-2" />
+                    <input asp-for="Id" class="form-control mb-2" hidden/>
                     <span asp-validation-for="Id" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
+                    <label asp-for="IdLocal" class="control-label mt-1">Local</label>
                     <select class="form-select mb-2" asp-for="IdLocal" asp-items="@ViewBag.IdLocal">
                         <option selected value="">Selecione um Local</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <select class="form-select mb-2" asp-for="IdData" asp-items="@ViewBag.IdData">
+                    <label asp-for="IdData" class="control-label mt-1">Data</label>
+                    <select class="form-select mb-4" asp-for="IdData" asp-items="@ViewBag.IdData">
                         <option selected value="">Selecione uma data</option>
                     </select>
                 </div>
+
                 <div class="form-group">
-                    <select class="form-select mb-2" asp-for="IdStatus" asp-items="@ViewBag.IdStatus">
+                    <select class="form-select mb-2" asp-for="IdStatus" asp-items="@ViewBag.IdStatus" hidden>
                         <option selected value="">Modifique o Status</option>
                     </select>
                 </div>
+
                 <div class="form-group">
                     <input asp-for="IdFichaUsuario" class="form-control mb-5" hidden />
                     <span asp-validation-for="IdFichaUsuario" class="text-danger"></span>

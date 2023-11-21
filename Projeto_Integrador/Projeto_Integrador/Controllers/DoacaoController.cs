@@ -54,7 +54,7 @@ namespace Projeto_Integrador.Controllers
                     data.Disp = 2;
                     await _ServiceDoacao.oRepositoryDatas.AlterarAsync(data);
 
-                    return View(doacao);
+                    return RedirectToAction("Index");
                 }
                 else
                 {
@@ -62,7 +62,7 @@ namespace Projeto_Integrador.Controllers
                 }
             }
 
-            return View(doacao);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -79,9 +79,9 @@ namespace Projeto_Integrador.Controllers
             {
                 doacao = await _ServiceDoacao.oRepositoryDoaco.AlterarAsync(doacao);
                 CarregaDadosViewBag();
-                return View(doacao);
+                return RedirectToAction("Index");
             }
-            return View(doacao);
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Delete(int id)
