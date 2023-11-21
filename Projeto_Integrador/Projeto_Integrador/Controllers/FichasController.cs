@@ -33,7 +33,7 @@ namespace Projeto_Integrador.Controllers
         public IActionResult Create()
         {
             CarregaDadosViewBag();
-            return RedirectToAction("Index");
+            return View();
         }
 
         [HttpPost]
@@ -47,17 +47,17 @@ namespace Projeto_Integrador.Controllers
                 if (!fichaExists)
                 {
                     fichadoacao = await _ServiceFichas.oRepositoryFichas.IncluirAsync(fichadoacao);
-                    return View(fichadoacao);
+                    return RedirectToAction("Index");
                 }
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Erro: Já existe uma ficha cadastrada. Caso queira fazer alguma alteração, favor ir para aba de edição da ficha.");
                 }
-                return View(fichadoacao);
+                return RedirectToAction("Index");
             }
             else
             {
-                return View(fichadoacao);
+                return RedirectToAction("Index");
             }
         }
 
