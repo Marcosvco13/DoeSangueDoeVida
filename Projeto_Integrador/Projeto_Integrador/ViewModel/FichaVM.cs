@@ -116,6 +116,25 @@ namespace Projeto_Integrador.ViewModel
                     doador.dataNasc = ficha.DataNasc;
                     doador.sexo = ficha.Sexo;
                     doador.tipoSangue = ficha.TipoSangue;
+                    doador.bairro = ficha.Bairro;
+                    doador.profissao = ficha.Profissao;
+                    doador.rg = ficha.Rg;
+                    doador.logradouro = ficha.Logradouro;
+                    doador.fumante = ficha.Fumante;
+                    doador.estado = db.TbEstados.Find(ficha.IdEstado)!.NmEstado;
+                    doador.cep = ficha.Cep;
+                    doador.cidade = ficha.Cidade;
+                    doador.complemento = ficha.Complemento;
+                    doador.dataNasc = ficha.DataNasc;
+                    doador.nomeMae = ficha.NomeMae;
+                    doador.nomePai = ficha.NomePai;
+                    doador.orgExp = ficha.OrgExp;
+                    doador.numero = ficha.Numero;
+                    doador.religiao = ficha.Religiao;
+                    doador.tempFumante = ficha.TempFumante;
+                    doador.telefone = ficha.Telefone;
+                    doador.peso = ficha.Peso;
+                    doador.ultimaDoacao = ficha.UltimaDoacao;
 
                     retorno.Add(doador);
                 }

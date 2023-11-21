@@ -46,110 +46,117 @@
                 <div class="row mt-3">
                     <div class="col-md-12">
                         <label class="labels">Nome</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.nome)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.nome)" value="" disabled>
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-md-6">
                         <label class="labels">CPF</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.cpf)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.cpf)" value="" disabled>
                     </div>
                     <div class="col-md-6">
                         <label class="labels">RG</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.rg)" value="" disabled>
+                            <input type="text" class="form-control" value="@Html.DisplayFor(modelItem => item.rg)" disabled>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6">
                         <label class="labels">Órgão Expedidor</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.orgExp)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.orgExp)" value="" disabled>
                     </div>
                         <div class="col-md-6">
                         <label class="labels">Data de Nascimento</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.dataNasc)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.dataNasc)" value="" disabled>
                     </div>
                 </div>
                     <div class="col-md-12">
                         <label class="labels">Telefone</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.telefone)" value="" disabled>
+                        <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.telefone)" value="" disabled>
                     </div>
                     <div class="col-md-12">
                         <label class="labels">Nome da Mãe</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.nomeMae)" value="" disabled>
+                        <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.nomeMae)" value="" disabled>
                     </div>
                     <div class="col-md-12">
                         <label class="labels">Nome do Pai</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.nomeMae)" value="" disabled>
+                        <input type="text" class="form-control" placeholder="@Html.DisplayFor(momodelItemdel => item.nomePai)" value="" disabled>
                     </div>
                     <div class="col-md-12">
                         <label class="labels">Sexo</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.sexo)" value="" disabled>
+                        @{
+                            var sexo = item.sexo == 0 ? "Masculino" : item.sexo == 1 ? "Feminino" : "Outros";
+                        }
+                        <input type="text" class="form-control" placeholder="@sexo" value="" disabled>
                     </div>
                         <div class="col-md-12">
                             <label class="labels">Logradouro</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.logradouro)" value="" disabled>
+                        <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.logradouro)" value="" disabled>
                         </div>
                 <div class="row mt-3">
                     <div class="col-md-6">
                             <label class="labels">CEP</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.cep)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.cep)" value="" disabled>
                         </div>
                     <div class="col-md-6">
                             <label class="labels">Número</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.numero)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.numero)" value="" disabled>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6">
                             <label class="labels">Bairro</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.bairro)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.bairro)" value="" disabled>
                         </div>
                     <div class="col-md-6">
                             <label class="labels">Cidade</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.cidade)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.cidade)" value="" disabled>
                         </div>
                 </div>
                         <div class="col-md-12">
                             <label class="labels">Complemento</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.complemento)" value="" disabled>
+                        <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.complemento)" value="" disabled>
                         </div>
                         <div class="col-md-12">
                             <label class="labels">Estado</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.estado)" value="" disabled>
+                        <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.estado)" value="" disabled>
                         </div>
                 <div class="row mt-3">
                     <div class="col-md-6">
                             <label class="labels">Última Doação</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.ultimaDoacao)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.ultimaDoacao)" value="" disabled>
                         </div>
                     <div class="col-md-6">
                             <label class="labels">Tipo Sanguíneo</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.tipoSangue)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.tipoSangue)" value="" disabled>
                         </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6">
                             <label class="labels">Peso</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.peso)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.peso)" value="" disabled>
                         </div>
                     <div class="col-md-6">
                             <label class="labels">Profissão</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.profissao)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.profissao)" value="" disabled>
                         </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6">
                             <label class="labels">Religião</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.religiao)" value="" disabled>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.religiao)" value="" disabled>
                         </div>
                     <div class="col-md-6">
                             <label class="labels">Fumante</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.fumante)" value="" disabled>
+                            @{var fumante = item.fumante == 0 ? "Sim" : "Não";}
+                            <input type="text" class="form-control" placeholder="@fumante" value="" disabled>
                         </div>
                 </div>
                         <div class="col-md-12">
                             <label class="labels">Tempo de Fumante</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(model => item.tempFumante)" value="" disabled>
+                        @{
+                            var tempFumante = item.tempFumante == 0 ? "Menos de um ano" : item.tempFumante == 1 ? "De um a cinco anos" : item.tempFumante == 2 ? "De cinco a dez anos" : "Mais de dez anos";
+                        }
+                            <input type="text" class="form-control" placeholder="@tempFumante" value="" disabled>
                         </div>
                 </div>
                 
