@@ -56,7 +56,7 @@
                                         <img src="~/imgs/pencil-square.svg" style="max-width: 18px; max-height: 18px;" />
                                         Editar
                                     </button>
-                                    <a href="@Url.Action("Delete", new { id = item.id })" class="btn Delete">
+                                    <a href="#" class="btn Delete" onclick="confirmarExclusao('@Url.Action("Delete", new { id = item.id })')">
                                         <img src="~/imgs/trash-fill.svg" style="max-width: 18px; max-height: 18px;" />
                                         Excluir
                                     </a>
@@ -70,6 +70,16 @@
         </div>
     </div>
 </body>
+
+<script>
+    function confirmarExclusao(url) {
+        if (confirm("Tem certeza que deseja excluir?")) {
+            window.location.href = url;
+        } else {
+            // Não faz nada, cancela a ação de exclusão
+        }
+    }
+</script>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" id="myModal">
     <div class="modal-dialog" role="document">
