@@ -73,6 +73,13 @@
                             <td class="text-center align-middle ">
                                 @Html.DisplayFor(modelItem => item.status)
                             </td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn details btn-sm d-flex align-items-center gap-1 mt-3" data-value="@item.IdDoa" style="background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 5px;">
+                                        Emitir Ficha
+                                    </button>
+                                </div>
+                            </td>
 
                             <td>
                                 <div class="dropdown">
@@ -84,7 +91,7 @@
                                             <div class="d-flex align-items-center">
                                                 <button class="btn details dropdown-item" data-value="@item.IdDoa">
                                                     <img src="~/imgs/book-half.svg" />
-                                                    Detalhes
+                                                    Emitir Ficha
                                                 </button>
                                             </div>
                                         </li>
