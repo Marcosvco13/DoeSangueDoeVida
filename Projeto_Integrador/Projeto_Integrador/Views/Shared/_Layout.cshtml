@@ -50,8 +50,8 @@
                     <li class="nav-item">
                         <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
                     </li>
-                    @*@if (User.IsInRole("Admin"))
-                    {*@
+                    @if (User.IsInRole("Admin"))
+                    {
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="LocaisDoacao" asp-action="Index">Locais</a>
                         </li>
@@ -59,11 +59,14 @@
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-white-50" asp-area="" asp-controller="GenDoacoes" asp-action="Index">Gerenciar Doações</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Termo">Termo de Doação</a>
                         </li>
-                    @*}
+                    }
                     @if (User.IsInRole("Hemocentro"))
-                    {*@
+                    {
                         
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Datas" asp-action="Index">Datas</a>
@@ -74,16 +77,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Home" asp-action="Termo">Termo de Doação</a>
                         </li>
-                    @*}
+                    }
                     else if (SignInManager.IsSignedIn(User))
-                    {*@
+                    {
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Doacao" asp-action="Index">Agendar Doação</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-controller="Fichas" asp-action="Index">Minha Ficha</a>
                         </li>
-                    @*}*@
+                    }
                 </ul>
             </div>
 
