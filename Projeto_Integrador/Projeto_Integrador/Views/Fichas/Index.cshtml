@@ -26,49 +26,49 @@
     <hr class="col-12 mt-0" />
 </div>
 <div class="container rounded mt-5 mb-5">
-    
+
 
 @foreach (var item in Model)
 {
-    <div class="row mt-0">
-        <div class="col-md-3 border-right start-100 mb-5">
-            <div class="d-flex flex-column align-items-center text-center ">
-                <img class="rounded-circle mt-0 mb-2" width="100px" src="/imgs/logo-clinica.svg"><span class="font-weight-bold">@item.nome</span>
-            <span class="text-black-50">@UserManager.GetUserName(User)</span>
-            <span> </span>
-        </div>
-        </div>
+<div class="row mt-0 ">
+            <div class=" mb-0 mt-4">
+                <div class="d-flex flex-column align-items-center text-center mb-0">
+                    <img class="rounded-circle mt-0 mb-2" width="100px" src="/imgs/logo-clinica.svg">
+                    <span class="font-weight-bold">@item.nome</span>
+                    <span class="text-black-50">@UserManager.GetUserName(User)</span>
+                </div>
+            </div>
 
-        <div class="col-md-5 border-right">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12">
-                        <label class="labels">Nome</label>
+            <div class="col-md-7 border-right ">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3 ">
+                    </div>
+                    <div class="row mt-0">
+                        <div class="col-md-12">
+                            <label class="labels">Nome</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.nome)" value="" disabled>
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-6">
-                        <label class="labels">CPF</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.cpf)" value="" disabled>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="labels">RG</label>
-                            <input type="text" class="form-control" value="@Html.DisplayFor(modelItem => item.rg)" disabled>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                        <label class="labels">Órgão Expedidor</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.orgExp)" value="" disabled>
-                    </div>
+                    <div class="row mt-2">
                         <div class="col-md-6">
-                        <label class="labels">Data de Nascimento</label>
-                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.dataNasc)" value="" disabled>
+                            <label class="labels">CPF</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.cpf)" value="" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="labels">RG</label>
+                            <input type="text" class="form-control" value="@Html.DisplayFor(modelItem => item.rg)" disabled>
+                        </div>
                     </div>
-                </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label class="labels">Órgão Expedidor</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.orgExp)" value="" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="labels">Data de Nascimento</label>
+                            <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.dataNasc)" value="" disabled>
+                        </div>
+                    </div>
                     <div class="col-md-12">
                         <label class="labels">Telefone</label>
                         <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.telefone)" value="" disabled>
@@ -88,91 +88,92 @@
                         }
                         <input type="text" class="form-control" placeholder="@sexo" value="" disabled>
                     </div>
-                        <div class="col-md-12">
-                            <label class="labels">Logradouro</label>
+                    <div class="col-md-12">
+                        <label class="labels">Logradouro</label>
                         <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.logradouro)" value="" disabled>
-                        </div>
-                <div class="row mt-3">
-                    <div class="col-md-6">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
                             <label class="labels">CEP</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.cep)" value="" disabled>
                         </div>
-                    <div class="col-md-6">
+                        <div class="col-md-6">
                             <label class="labels">Número</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.numero)" value="" disabled>
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6">
+                    <div class="row mt-3">
+                        <div class="col-md-6">
                             <label class="labels">Bairro</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.bairro)" value="" disabled>
                         </div>
-                    <div class="col-md-6">
+                        <div class="col-md-6">
                             <label class="labels">Cidade</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.cidade)" value="" disabled>
                         </div>
-                </div>
-                        <div class="col-md-12">
-                            <label class="labels">Complemento</label>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Complemento</label>
                         <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.complemento)" value="" disabled>
-                        </div>
-                        <div class="col-md-12">
-                            <label class="labels">Estado</label>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Estado</label>
                         <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.estado)" value="" disabled>
-                        </div>
-                <div class="row mt-3">
-                    <div class="col-md-6">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
                             <label class="labels">Última Doação</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.ultimaDoacao)" value="" disabled>
                         </div>
-                    <div class="col-md-6">
+                        <div class="col-md-6">
                             <label class="labels">Tipo Sanguíneo</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.tipoSangue)" value="" disabled>
                         </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
                             <label class="labels">Peso</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.peso)" value="" disabled>
                         </div>
-                    <div class="col-md-6">
+                        <div class="col-md-6">
                             <label class="labels">Profissão</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.profissao)" value="" disabled>
                         </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6">
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
                             <label class="labels">Religião</label>
                             <input type="text" class="form-control" placeholder="@Html.DisplayFor(modelItem => item.religiao)" value="" disabled>
                         </div>
-                    <div class="col-md-6">
+                        <div class="col-md-6">
                             <label class="labels">Fumante</label>
-                            @{var fumante = item.fumante == 0 ? "Sim" : "Não";}
+                            @{
+                                var fumante = item.fumante == 0 ? "Sim" : "Não";
+                            }
                             <input type="text" class="form-control" placeholder="@fumante" value="" disabled>
                         </div>
-                </div>
-                        <div class="col-md-12">
-                            <label class="labels">Tempo de Fumante</label>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Tempo de Fumante</label>
                         @{
                             var tempFumante = item.tempFumante == 0 ? "Menos de um ano" : item.tempFumante == 1 ? "De um a cinco anos" : item.tempFumante == 2 ? "De cinco a dez anos" : "Mais de dez anos";
                         }
-                            <input type="text" class="form-control" placeholder="@tempFumante" value="" disabled>
-                        </div>
-                </div>
-                
+                        <input type="text" class="form-control" placeholder="@tempFumante" value="" disabled>
+                    </div>
+
                     <div class="col-auto me-xxl-4">
-                        <button class="edit btn-sm d-flex align-items-center gap-1">
+                        <button class="edit btn-sm d-flex align-items-center gap-1 mt-3" style="background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 5px;">
                             <img src="~/imgs/plus-lg.svg" style="width: 1rem; height: 1rem; filter: invert(1);" />
                             Editar Ficha
                         </button>
                     </div>
+                </div>
             </div>
-        </div>
+</div>
+            
         
 }
-</div>
-</div>
-</div>
+
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" id="myModal">
     <div class="modal-dialog" role="document">
