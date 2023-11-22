@@ -11,18 +11,7 @@
                 <div class="col">
                     <h2 class="text-muted">Gerenciamento de Doações</h2>
                 </div>
-                <div class="col-auto me-xxl-4">
-                    <button class="create btn-sm d-flex align-items-center gap-1" id="termoDoacao">
-                        <img src="~/imgs/plus-lg.svg" style="width: 1rem; height: 1rem; filter: invert(1);" />
-                        Termo de Doação
-                    </button>
 
-                    <script>
-                        document.getElementById("termoDoacao").addEventListener("click", function () {
-                            window.location.href = "/Termo/Termo";
-                        });
-                    </script>
-                </div>
 
                 <hr class="col-12 mt-0" />
             </div>
@@ -73,47 +62,19 @@
                             <td class="text-center align-middle ">
                                 @Html.DisplayFor(modelItem => item.status)
                             </td>
-                            <td>
-                                <div class="d-flex align-items-center">
+                            <td style="text-align: center;">
+                                <div class="d-flex align-items-center" style="margin: 10px 0;">
                                     <button class="btn details btn-sm d-flex align-items-center gap-1 mt-3" data-value="@item.IdDoa" style="background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 5px;">
                                         Emitir Ficha
                                     </button>
                                 </div>
-                            </td>
-
-                            <td>
-                                <div class="dropdown">
-                                    <button class="btn rounded-circle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #f0f0f0; border: none;">
-                                        ...
+                                <div class="d-flex align-items-center" style="margin: 10px 0;">
+                                    <button class="btn edit btn-sm d-flex align-items-center gap-1 mt-3" data-value="@item.IdDoa" style="background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 5px;">
+                                        Editar
                                     </button>
-                                    <ul class="dropdown-menu" style="position: absolute !important; width: 150px; border: none;">
-                                        <li>
-                                            <div class="d-flex align-items-center">
-                                                <button class="btn details dropdown-item" data-value="@item.IdDoa">
-                                                    <img src="~/imgs/book-half.svg" />
-                                                    Emitir Ficha
-                                                </button>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex align-items-center">
-                                                <button class="btn edit dropdown-item" data-value="@item.IdDoa">
-                                                    <img src="~/imgs/pencil-square.svg" />
-                                                    Editar
-                                                </button>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex align-items-center">
-                                                <a href="#" class="btn Delete dropdown-item" onclick="confirmarExclusao('@Url.Action("Delete", new { id=item.IdDoa })')">
-                                                    <img src="~/imgs/trash-fill.svg" />
-                                                    Cancelar
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
                                 </div>
                             </td>
+
                         </tr>
                     }
                 </tbody>

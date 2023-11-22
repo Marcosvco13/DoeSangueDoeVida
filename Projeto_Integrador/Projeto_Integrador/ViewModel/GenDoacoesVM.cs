@@ -15,6 +15,10 @@ namespace Projeto_Integrador.ViewModel
         public string NomeDoador { get; set; }
         public DateTime? DataDisp { get; set; }
         public string NomeLocal { get; set; }
+        public int IdStatus { get; set; }
+        public int IdData { get; set; }
+        public string IdFichaUsuario { get; set; }
+        public int IdLocal { get; set; }
 
         public static GenDoacoesVM SelecionarDoacao(int idDoa)
         {
@@ -27,6 +31,25 @@ namespace Projeto_Integrador.ViewModel
             genDoacaoVM.DataDisp = db.CadDataHoraDisp.Find(genDoacao.IdData)!.DataDisp;
             genDoacaoVM.status = db.StatusDoacao.Find(genDoacao.IdStatus)!.Descricao;
             genDoacaoVM.NomeLocal = db.CadLocalDoacao.Find(genDoacao.IdLocal)!.Nome;
+
+            return genDoacaoVM;
+        }
+
+        public static GenDoacoesVM SelecionarEdita(int idDoa)
+        {
+            var db = new DOACAO_SANGUEContext();
+            var genDoacao = db.CadDoacao.Find(idDoa);
+            var genDoacaoVM = new GenDoacoesVM();
+
+            genDoacaoVM.IdDoa = genDoacao.Id;
+            genDoacaoVM.NomeDoador = db.FichaDoacao.Find(genDoacao.IdFichaUsuario)!.Nome;
+            genDoacaoVM.DataDisp = db.CadDataHoraDisp.Find(genDoacao.IdData)!.DataDisp;
+            genDoacaoVM.status = db.StatusDoacao.Find(genDoacao.IdStatus)!.Descricao;
+            genDoacaoVM.NomeLocal = db.CadLocalDoacao.Find(genDoacao.IdLocal)!.Nome;
+            genDoacaoVM.IdData = genDoacao.IdData;
+            genDoacaoVM.IdLocal = genDoacao.IdLocal;
+            genDoacaoVM.IdStatus = genDoacao.IdStatus;
+            genDoacaoVM.IdFichaUsuario = genDoacao.IdFichaUsuario;
 
             return genDoacaoVM;
         }

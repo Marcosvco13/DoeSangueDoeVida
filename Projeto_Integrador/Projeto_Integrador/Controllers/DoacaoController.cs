@@ -45,7 +45,6 @@ namespace Projeto_Integrador.Controllers
         {
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var db = new DOACAO_SANGUEContext();
-
             var fichaExists = db.FichaDoacao.Any(x => x.IdUser == userid);
 
             if (ModelState.IsValid)
@@ -65,7 +64,7 @@ namespace Projeto_Integrador.Controllers
                 }
             }
 
-            return RedirectToAction("Index");
+            return View(doacao);
         }
 
         [HttpGet]

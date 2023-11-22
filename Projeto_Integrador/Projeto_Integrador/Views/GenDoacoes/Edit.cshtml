@@ -1,4 +1,4 @@
-﻿@model Projeto_Integrador.Models.Models.CadDoacao
+﻿@model Projeto_Integrador.ViewModel.GenDoacoesVM
 @{
     ViewData["Title"] = "Edit";
     Layout = null;
@@ -16,27 +16,36 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row-md-6">
                 <div class="form-group">
-                    <label asp-for="Id" class="control-label">Código da Doação:</label>
-                    <input asp-for="Id" class="form-control" disabled/>
-                    <span asp-validation-for="Id" class="text-danger"></span>
+                    <label asp-for="IdDoa" class="control-label">Código da Doação:</label>
+                    <input asp-for="IdDoa" class="form-control" disabled />
+                    <span asp-validation-for="IdDoa" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="IdFichaUsuario" class="control-label">Doador:</label>
-                    <select class="form-select mb-2" asp-for="IdFichaUsuario" asp-items="@ViewBag.IdFichaUsuario" disabled>
-                    </select>
+                    <label asp-for="NomeDoador" class="control-label">Código da Doação:</label>
+                    <input asp-for="NomeDoador" class="form-control" disabled />
+                </div>
+                <div class="form-group">
+                    <input asp-for="IdFichaUsuario" class="form-control" hidden />
+                    <span asp-validation-for="IdFichaUsuario" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="IdData" class="control-label">Data e Hora:</label>
-                    <select class="form-select mb-2" asp-for="IdData" asp-items="@ViewBag.IdData" disabled>
-                    </select>
+                    <label asp-for="DataDisp" class="control-label">Código da Doação:</label>
+                    <input asp-for="DataDisp" class="form-control" disabled />
+                </div>
+                <div class="form-group">
+                    <input asp-for="IdData" class="form-control" hidden />
+                    <span asp-validation-for="IdData" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="IdLocal" class="control-label">Local:</label>
-                    <select class="form-select mb-2" asp-for="IdLocal" asp-items="@ViewBag.IdLocal" disabled>
-                    </select>
+                    <label asp-for="NomeLocal" class="control-label">Código da Doação:</label>
+                    <input asp-for="NomeLocal" class="form-control" disabled />
+                </div>
+                <div class="form-group">
+                    <input asp-for="IdLocal" class="form-control" hidden />
+                    <span asp-validation-for="IdLocal" class="text-danger"></span>
                 </div>
             </div>
 
@@ -46,7 +55,7 @@
                     <option selected value="">Modifique o Status</option>
                 </select>
             </div>
-            
+
             <div class="modal-footer bg-light">
                 <div class="ms-auto">
                     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
@@ -57,5 +66,7 @@
 }
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

@@ -35,7 +35,14 @@
                 @Html.DisplayNameFor(model => model.Disponivel)
             </dt>
             <dd class="col-sm-5 align-middle">
-                @Html.DisplayFor(model => model.Disponivel)
+                @if (Model.Disponivel == 0)
+                {
+                    <span class="badge badge-success rounded-pill d-inline" style="background: #cff6dd; color: #1fa750">Sim</span>
+                }
+                else
+                {
+                    <span class="badge badge-success rounded-pill d-inline" style="background: #fdf5dd; color: #cfa00c">Não</span>
+                }
             </dd>
         </div>
     </div>

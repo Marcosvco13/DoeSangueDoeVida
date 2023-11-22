@@ -36,9 +36,9 @@ namespace Projeto_Integrador.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Edit(int id)
+        public IActionResult Edit(int id)
         {
-            var doacao = await _ServiceGenDoacoes.oRepositoryDoaco.SelecionarPkAsync(id);
+            var doacao = GenDoacoesVM.SelecionarEdita(id);
             CarregaDadosViewBag();
             return View(doacao);
         }
@@ -47,7 +47,7 @@ namespace Projeto_Integrador.Controllers
         {
             if (ModelState.IsValid)
             {
-                var doacao = await _ServiceDoacao.oRepositoryDoaco.AlterarAsync(genDoacao);
+                await _ServiceDoacao.oRepositoryDoaco.AlterarAsync(genDoacao);
                 return RedirectToAction("Index");
             }
             ViewData["MensagemErro"] = "Ocorreu um erro";

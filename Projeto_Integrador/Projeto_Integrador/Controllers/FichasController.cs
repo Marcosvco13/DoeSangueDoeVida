@@ -42,6 +42,7 @@ namespace Projeto_Integrador.Controllers
             var userid = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var db = new DOACAO_SANGUEContext();
             var fichaExists = db.FichaDoacao.Any(x => x.IdUser == userid);
+
             if (ModelState.IsValid)
             {
                 if (!fichaExists)
@@ -53,7 +54,7 @@ namespace Projeto_Integrador.Controllers
                 {
                     ModelState.AddModelError(string.Empty, "Erro: Já existe uma ficha cadastrada. Caso queira fazer alguma alteração, favor ir para aba de edição da ficha.");
                 }
-                return RedirectToAction("Index");
+                return View(fichadoacao);
             }
             else
             {
