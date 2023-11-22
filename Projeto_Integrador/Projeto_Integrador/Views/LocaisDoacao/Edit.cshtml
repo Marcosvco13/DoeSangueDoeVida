@@ -19,13 +19,12 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                 <div class="form-group">
-                    <label asp-for="Id" class="control-label mt-3"></label>
-                    <input asp-for="Id" class="form-control mb-2" />
+                    <input asp-for="Id" class="form-control mb-2" hidden />
                     <span asp-validation-for="Id" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Nome" class="control-label"></label>
+                    <label asp-for="Nome" class="control-label mt-4"></label>
                     <input asp-for="Nome" class="form-control mb-2" />
                     <span asp-validation-for="Nome" class="text-danger"></span>
                 </div>
