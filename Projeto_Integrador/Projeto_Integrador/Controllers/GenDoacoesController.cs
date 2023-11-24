@@ -56,7 +56,7 @@ namespace Projeto_Integrador.Controllers
 
         public IActionResult Detail(int id)
         {
-            var doacao = GenDoacoesVM.SelecionarDoacao(id);
+            var doacao = GenDoacoesVM.SelecionarFicha(id);
             return View(doacao);
         }
     }

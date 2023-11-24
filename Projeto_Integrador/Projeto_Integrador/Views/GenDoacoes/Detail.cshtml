@@ -1,62 +1,249 @@
 ﻿@model Projeto_Integrador.ViewModel.GenDoacoesVM
 
 @{
-    ViewData["Title"] = "Detail";
-    Layout = null;
+    ViewData["Title"] = "Details";
 }
 
-<div class="modal-header d-flex justify-content-between align-items-center bg-light">
-    <h5 class="modal-title">Detalhes</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
 
-<div class="container mt-4">
-    <div class="row m-0">
-        <div class="row-md-6">
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.IdDoa)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.IdDoa)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.status)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.status)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.NomeDoador)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.NomeDoador)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.DataDisp)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.DataDisp)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.NomeLocal)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.NomeLocal)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.status)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.status)
-            </dd>
+
+<div class="border container-lg justify-content-center">
+
+    <header class="mb-4 text-center" style="opacity: 50%">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-3 mb-2">
+                    <img src="~/imgs/logosus.png" class="img-fluid" style="max-width: 16rem; max-height: 6rem;" alt="Logo SUS">
+                </div>
+                <div class="col-md-3 mb-2">
+                    <img src="~/imgs/logogoverno.png" class="img-fluid" style="max-width: 18rem; max-height: 12rem;" alt="Logo Governo">
+                </div>
+                <div class="col-md-3 mb-2">
+                    <img src="~/imgs/logorio.png" class="img-fluid" style="max-width: 18rem; max-height: 12rem;" alt="Logo Clínica">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <table class="table mt-0 table-bordered border-5">
+                <tbody>
+                    <tr>
+                        <td>Tipo de Documento</td>
+                        <td>Formulário</td>
+                    </tr>
+                    <tr>
+                        <td>Título do Documento</td>
+                        <td>FICHA DE CADASTRO DE DOADORES DE SANGUE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </header>
+
+    <div class="row mt-0">
+        <div class="col">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td colspan="3">Nome: @Html.DisplayFor(model => model.nome)</td>
+                        <td colspan="3">CPF: @Html.DisplayFor(model => model.cpf)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">RG: @Html.DisplayFor(model => model.rg)</td>
+                        <td colspan="3">Órgão Expedidor: @Html.DisplayFor(model => model.orgExp)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Telefone: @Html.DisplayFor(model => model.telefone)</td>
+                        <td colspan="3">Data de Nascimento: @Html.DisplayFor(model => model.dataNasc)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            Sexo: @{
+                                string sexoTexto = "";
+                                switch (Model.sexo)
+                                {
+                                    case 0:
+                                        sexoTexto = "Masculino";
+                                        break;
+                                    case 1:
+                                        sexoTexto = "Feminino";
+                                        break;
+                                    default:
+                                        sexoTexto = "Outros";
+                                        break;
+                                }
+                                <text>@sexoTexto</text>
+                            }
+                        </td>
+                        <td colspan="3">Nome da Mãe: @Html.DisplayFor(model => model.nomeMae)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Nome do Pai: @Html.DisplayFor(model => model.nomePai)</td>
+                        <td colspan="3">Endereço: @Html.DisplayFor(model => model.logradouro)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">CEP: @Html.DisplayFor(model => model.cep)</td>
+                        <td colspan="3">Número: @Html.DisplayFor(model => model.numero)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Complemento: @Html.DisplayFor(model => model.complemento)</td>
+                        <td colspan="3">Bairro: @Html.DisplayFor(model => model.bairro)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Cidade: @Html.DisplayFor(model => model.cidade)</td>
+                        <td colspan="3">Estado: @Html.DisplayFor(model => model.estado)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Profissão: @Html.DisplayFor(model => model.profissao)</td>
+                        <td colspan="2">Religião: @Html.DisplayFor(model => model.religiao)</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Ajuste na separação das tabelas -->
+            <div class="mt-4"></div>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td colspan="1">1. JÁ FEZ DOAÇÃO DE SANGUE? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">2. TEM BOA SAÚDE * </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">3. CIRURGIA * DOENÇA CRONICA* </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">4. USO DE MEDICAÇÃO/ÁLCOOL/FUMO/DROGAS </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">5. RECEBEU TRANSFUSÃO ANTERIORMENTE? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">6. TOMOU VACINA RECENTEMENTE? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">7. SANGRAMENTO ANORMAL/ORTODONTIA? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">8. HEPATITE/ICTERÍCA? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">9. TUBERCULOSE/ASMA/RESFRIADO? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">10. ZICA/DENGUE/CHICUNGUNYA? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">11. COVID/CONTATO CONFIRMADO? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">12. DIARRÉIA? FEBRE? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">13. CARDIOPATIA/HIPERTENSÃO? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">14. REUMATISMO/ALERGIA? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">15. DIABETES/EPILEPSIA? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">16. VIDA SEXUAL ATIVA? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">17. IST/COMPORTAMENTO DE RISCO? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">18. PARCEIRO(A) JÁ TEVE DST? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">19. TATUAGENS/PIERCING? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">20. ACIDENTE COM MATERIAL BIOLÓGICO? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">21. REALIZOU ALGUM TRANSPLANTE? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">22. ALIMENTOU-SE HOJE? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">23. COLHER HEMOGRAMA? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">24. CADASTRAR PARA AFÉRESE? </td>
+                        <td colspan="1">(  ) Sim  (  ) Não </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mt-4"></div>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td colspan="2">APTO ( )</td>
+                        <td colspan="2">INAPTO ( )</td>
+                        <td colspan="2">MOTIVO:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Data: ___ / ___ / _____</td>
+                        <td colspan="4">Responsável pela Triagem: _______________________</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-
-    <div class="modal-footer bg-light">
-        <div class="ms-auto">
-        </div>
-    </div>
 </div>
-
-
 
