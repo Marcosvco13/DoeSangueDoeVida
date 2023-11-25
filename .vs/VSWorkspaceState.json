@@ -7,8 +7,9 @@
     "\\Projeto_Integrador\\Projeto_Integrador.Models\\Models",
     "\\Projeto_Integrador\\Projeto_Integrador\\Controllers",
     "\\Projeto_Integrador\\Projeto_Integrador\\Views",
-    "\\Projeto_Integrador\\Projeto_Integrador\\Views\\Doacao"
+    "\\Projeto_Integrador\\Projeto_Integrador\\Views\\Doacao",
+    "\\Projeto_Integrador\\Projeto_Integrador\\Views\\Home"
   ],
-  "SelectedNode": "\\Projeto_Integrador\\Projeto_Integrador\\Controllers\\DoacaoController.cs",
+  "SelectedNode": "\\Projeto_Integrador\\Projeto_Integrador\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
